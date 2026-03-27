@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <title>Refund Policy - SenticMoney</title>
+    <meta name="description" content="SenticMoney refund policy. Learn about our 30-day money-back guarantee, how to request a refund, and what to expect during the refund process.">
+    <link rel="canonical" href="https://senticmoney.com/refund">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <style>
+        /* Font Awesome font-display override for better performance */
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-display: swap;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-color: #10B981;
+            --secondary-color: #059669;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            background: none;
+            border: none;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+                .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 82px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 999;
+            flex-direction: column;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+                .mobile-menu.active {
+            display: flex;
+            max-height: 660px;
+        }
+
+                .mobile-menu-logo {
+            display: none;
+        }
+
+        
+
+                .mobile-menu a {
+            font-size: 1rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1rem 2rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+                .mobile-menu a:hover {
+            background: #f8f8f8;
+            color: var(--primary-color);
+            padding-left: 2.5rem;
+        }
+
+                .mobile-menu a i {
+            width: 20px;
+            text-align: center;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+                .mobile-menu .close-btn {
+            display: none;
+        }
+
+        
+
+        .hero {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            color: var(--text-dark);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .legal-content h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: var(--text-dark);
+        }
+        .legal-content p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        .legal-content strong {
+            color: var(--text-dark);
+        }
+        .legal-content ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .legal-content ul li {
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+        }
+        .highlight-box {
+            background: #f0fdf4;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        .highlight-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+    
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .nav-links { display: none; }
+            .hamburger { display: flex; }
+        }
+    </style>
+</head>
+<body>
+    <nav aria-label="Main navigation">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="/images/sentic-money-logo-transparent.webp" alt="SenticMoney"></a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/videos">Videos</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="https://sentic-web-demo.onrender.com" target="_blank">Live Demo</a></li>
+                <li><a href="/support">Support</a></li>
+                <li><a href="/books/money-management-for-teens.html">Books</a></li>
+                <li><a href="/map">Map</a></li>
+            </ul>
+            <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="/" onclick="toggleMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="/features" onclick="toggleMenu()"><i class="fas fa-star"></i> Features</a>
+        <a href="/pricing" onclick="toggleMenu()"><i class="fas fa-tags"></i> Pricing</a>
+        <a href="/blog" onclick="toggleMenu()"><i class="fas fa-newspaper"></i> Blog</a>
+        <a href="/videos" onclick="toggleMenu()"><i class="fas fa-video"></i> Videos</a>
+        <a href="/download" onclick="toggleMenu()"><i class="fas fa-download"></i> Download</a>
+        <a href="https://sentic-web-demo.onrender.com" target="_blank" onclick="toggleMenu()"><i class="fas fa-play-circle"></i> Live Demo</a>
+        <a href="/support" onclick="toggleMenu()"><i class="fas fa-life-ring"></i> Support</a>
+        <a href="/books/money-management-for-teens.html" onclick="toggleMenu()"><i class="fas fa-book"></i> Books</a>
+        <a href="/map" onclick="toggleMenu()"><i class="fas fa-sitemap"></i> Map</a>
+    </nav>
+
+    <main>
+    <section class="hero">
+        <div class="container">
+            <h1>Refund Policy</h1>
+        </div>
+    </section>
+
+    <div class="legal-content">
+        <p><strong>Last Updated:</strong> January 2026</p>
+
+        <div class="highlight-box">
+            <h3>30-Day Money-Back Guarantee</h3>
+            <p style="margin-bottom: 0;">We offer a full refund within 30 days of your subscription purchase. No questions asked.</p>
+        </div>
+
+        <h2>Free Tier</h2>
+        <p>The Free tier is free forever. There's nothing to refund.</p>
+
+        <h2>Standard Subscription</h2>
+        <p>If you're not satisfied with your subscription, email us within 30 days of purchase and we'll process a full refund of your subscription payment.</p>
+
+        <h2>How to Request a Refund</h2>
+        <ol style="color: var(--text-light); padding-left: 2rem;">
+            <li style="padding: 0.5rem 0;"><strong>Email us:</strong> Send a request to <a href="mailto:support@senticmoney.com">support@senticmoney.com</a></li>
+            <li style="padding: 0.5rem 0;"><strong>Include:</strong> Your email address used for the subscription</li>
+            <li style="padding: 0.5rem 0;"><strong>We process:</strong> Within 2-3 business days</li>
+            <li style="padding: 0.5rem 0;"><strong>You receive:</strong> Refund to original payment method within 5-10 business days</li>
+        </ol>
+
+        <h2>What We Need</h2>
+        <p>To process your refund, we need:</p>
+        <ul>
+            <li>Your subscription email address</li>
+            <li>Confirmation that you're requesting a refund (we won't ask why)</li>
+        </ul>
+        <p>That's it. No long forms, no complicated process.</p>
+
+        <h2>After the Refund</h2>
+        <ul>
+            <li>Your subscription will be cancelled immediately</li>
+            <li>The app will revert to Free tier features</li>
+            <li>Your local data files remain yours and are not affected</li>
+            <li>You can re-subscribe at any time</li>
+        </ul>
+
+        <h2>Cancellation vs. Refund</h2>
+        <p><strong>Cancellation:</strong> You can cancel your subscription anytime by emailing us at <a href="mailto:support@senticmoney.com">support@senticmoney.com</a>. Your subscription will remain active until the end of the current billing period, then revert to Free.</p>
+        <p><strong>Refund:</strong> If you're within 30 days of purchase and want your money back, we'll refund your payment and immediately revert your account to Free.</p>
+
+        <h2>Exceptions</h2>
+        <p>Refunds are available for Standard subscriptions only. The Free tier has no purchase to refund.</p>
+        
+        <p>After 30 days, we generally cannot process refunds, but contact us if there are extenuating circumstances&mdash;we want you to be satisfied.</p>
+
+        <h2>Questions?</h2>
+        <p>If you have any questions about refunds before or after subscribing, email us at:</p>
+        <p><strong><a href="mailto:support@senticmoney.com">support@senticmoney.com</a></strong></p>
+
+        <div class="highlight-box" style="margin-top: 3rem;">
+            <h3>Our Promise</h3>
+            <p style="margin-bottom: 0;">We want you to love SenticMoney. If it's not right for you within the first 30 days, we'll refund your subscription&mdash;no hassle, no hard feelings.</p>
+        </div>
+    </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/download">Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="/support">FAQ &amp; Help</a></li>
+                        <li><a href="mailto:contact@senticmoney.com">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                        <li><a href="/refund">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p>E-Comm Solutions LLC<br>Wyoming, USA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 E-Comm Solutions LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            if (menu && hamburger && menu.classList.contains('active')) {
+                if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                    toggleMenu();
+                }
+            }
+        });
+    </script>
+<script src="/track.js"></script>
+</body>
+</html>

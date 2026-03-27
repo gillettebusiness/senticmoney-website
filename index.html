@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SenticMoney - AI-Powered Personal Finance</title>
+    <meta name="description" content="SenticMoney: AI-powered personal finance management that respects your privacy. Your data stays on your device, not in the cloud.">
+    <link rel="canonical" href="https://senticmoney.com/">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" as="image" href="/images/screenshots/dashboard_1.webp" fetchpriority="high">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <style>
+        /* Font Awesome font-display override for better performance */
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #10B981;
+            --secondary-color: #059669;
+            --accent-color: #34D399;
+            --dark-bg: #064E3B;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 82px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 999;
+            flex-direction: column;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+            max-height: 660px;
+        }
+
+        .mobile-menu-logo {
+            display: none;
+        }
+
+        .mobile-menu a {
+            font-size: 1rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1rem 2rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .mobile-menu a:hover {
+            background: #f8f8f8;
+            color: var(--primary-color);
+            padding-left: 2.5rem;
+        }
+
+        .mobile-menu a i {
+            width: 20px;
+            text-align: center;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+        .mobile-menu .close-btn {
+            display: none;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            color: var(--text-dark);
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-screenshot {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-screenshot img {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-screenshot img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: var(--dark-bg);
+            color: white;
+            border: 2px solid var(--dark-bg);
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(6, 78, 59, 0.3);
+        }
+        
+        .btn-secondary {
+            background: var(--dark-bg);
+            color: white;
+            border: 2px solid var(--dark-bg);
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(6, 78, 59, 0.3);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .trust-badge i {
+            color: var(--accent-color);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--dark-bg);
+            padding: 1.5rem 2rem;
+            color: white;
+        }
+
+        .stats-bar .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* Preview Gallery */
+        .preview-gallery {
+            padding: 5rem 2rem;
+            background: linear-gradient(180deg, #f9fafb 0%, white 100%);
+        }
+
+        .preview-gallery .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .preview-gallery h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1rem;
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .preview-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: white;
+        }
+
+        .preview-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .preview-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .preview-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .preview-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 2rem 1rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+
+        .preview-label i {
+            color: var(--accent-color);
+        }
+
+        .preview-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(16, 185, 129, 0.9);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .preview-item:hover .preview-overlay {
+            opacity: 1;
+        }
+
+        .preview-cta {
+            text-align: center;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-caption {
+            color: white;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            z-index: 10001;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 5rem 2rem;
+            background: white;
+            text-align: center;
+        }
+
+        .video-section .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .video-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .video-section .section-subtitle {
+            margin-bottom: 2rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            cursor: pointer;
+            background: #000;
+            border: none;
+            padding-top: 0;
+            padding-left: 0;
+            padding-right: 0;
+            display: block;
+            font: inherit;
+        }
+
+        .video-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-wrapper .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 72px;
+            height: 72px;
+            background: rgba(16, 185, 129, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .video-wrapper .play-btn::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 12px 0 12px 22px;
+            border-color: transparent transparent transparent white;
+            margin-left: 4px;
+        }
+
+        .video-wrapper:hover .play-btn {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: rgba(16, 185, 129, 1);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: color 0.3s;
+        }
+
+        .video-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .how-it-works .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            position: relative;
+        }
+
+        .steps::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            z-index: 0;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .step p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 5rem 2rem;
+            background: #f9fafb;
+        }
+        
+        .features .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* Comparison Section */
+        .comparison {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .comparison .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .comparison h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .comparison-table {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        th, td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        th {
+            background: var(--dark-bg);
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .check {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        .cross {
+            color: #ef4444;
+            font-size: 1.5rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+        }
+
+        .testimonials .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .testimonials-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.15);
+        }
+
+        .testimonial-rating {
+            color: #fbbf24;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            color: var(--text-dark);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .author-info {
+            text-align: left;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        .author-role {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            color: var(--text-dark);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+        
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-screenshot {
+                order: -1;
+            }
+
+            .hero-screenshot img {
+                transform: none;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .trust-badges {
+                justify-content: center;
+            }
+
+            .steps::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .stats-bar .container {
+                gap: 1.5rem;
+            }
+
+            .stat-item {
+                flex: 1 1 40%;
+            }
+
+            .preview-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .preview-gallery h2 {
+                font-size: 2rem;
+            }
+
+            .video-section h2 {
+                font-size: 2rem;
+            }
+
+            .lightbox {
+                padding: 1rem;
+            }
+
+            .lightbox-content img {
+                max-height: 70vh;
+            }
+
+            .lightbox-close {
+                top: 0.5rem;
+                right: 0.5rem;
+                width: 45px;
+                height: 45px;
+                font-size: 1.25rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .testimonials h2 {
+                font-size: 2rem;
+            }
+
+            .testimonials-subtitle {
+                font-size: 1rem;
+            }
+
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .btn {
+                padding: 0.875rem 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav aria-label="Main navigation">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="/images/sentic-money-logo-transparent.webp" alt="SenticMoney" width="150" height="50">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/videos">Videos</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="https://sentic-web-demo.onrender.com" target="_blank">Live Demo</a></li>
+                <li><a href="/support">Support</a></li>
+                <li><a href="/books/money-management-for-teens.html">Books</a></li>
+                <li><a href="/map">Map</a></li>
+            </ul>
+            <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="/" onclick="toggleMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="/features" onclick="toggleMenu()"><i class="fas fa-star"></i> Features</a>
+        <a href="/pricing" onclick="toggleMenu()"><i class="fas fa-tags"></i> Pricing</a>
+        <a href="/blog" onclick="toggleMenu()"><i class="fas fa-newspaper"></i> Blog</a>
+        <a href="/videos" onclick="toggleMenu()"><i class="fas fa-video"></i> Videos</a>
+        <a href="/download" onclick="toggleMenu()"><i class="fas fa-download"></i> Download</a>
+        <a href="https://sentic-web-demo.onrender.com" target="_blank" onclick="toggleMenu()"><i class="fas fa-play-circle"></i> Live Demo</a>
+        <a href="/support" onclick="toggleMenu()"><i class="fas fa-life-ring"></i> Support</a>
+        <a href="/books/money-management-for-teens.html" onclick="toggleMenu()"><i class="fas fa-book"></i> Books</a>
+        <a href="/map" onclick="toggleMenu()"><i class="fas fa-sitemap"></i> Map</a>
+    </nav>
+
+    <main>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your Money. Your Device. Your Privacy.</h1>
+                <p class="subtitle">Zero-based, envelope, 50/30/20, or your own hybrid &mdash; budget your way with AI guidance from the SenticMoney Genie. All your data stays on your device.</p>
+                <div class="cta-buttons">
+                    <a href="/download" class="btn btn-primary">Download Free</a>
+                    <a href="https://sentic-web-demo.onrender.com" target="_blank" class="btn btn-secondary">Try Live Demo</a>
+                    <a href="/features" class="btn btn-secondary">See Features</a>
+                </div>
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Local Storage</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-lock"></i>
+                        <span>No Cloud Required</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-gift"></i>
+                        <span>Free Forever Tier</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-screenshot">
+                <img src="/images/screenshots/dashboard_1.webp" alt="SenticMoney Dashboard" fetchpriority="high">
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stat-item">
+                <div class="stat-value">&lt;1s</div>
+                <div class="stat-label">Instant Answers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Private &amp; Local</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">$0</div>
+                <div class="stat-label">Free Tier</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">AI</div>
+                <div class="stat-label">Powered Insights</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Gallery Section -->
+    <section class="preview-gallery">
+        <div class="container">
+            <h2>See SenticMoney in Action</h2>
+            <p class="section-subtitle">Click any image to view full screen</p>
+            <div class="preview-grid">
+                <div class="preview-item" onclick="openLightbox('images/screenshots/AI_dashboard_1.webp', 'AI-Powered Chat')">
+                    <img src="images/screenshots/AI_dashboard_1.webp" alt="AI Chatbot" width="800" height="500" loading="lazy">
+                    <div class="preview-label">
+                        <i class="fas fa-brain"></i>
+                        <span>AI-Powered Chat</span>
+                    </div>
+                    <div class="preview-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="preview-item" onclick="openLightbox('images/screenshots/budget.webp', 'Visual Budget Tracking')">
+                    <img src="images/screenshots/budget.webp" alt="Budgets" width="800" height="500" loading="lazy">
+                    <div class="preview-label">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Visual Budgets</span>
+                    </div>
+                    <div class="preview-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="preview-item" onclick="openLightbox('images/screenshots/financial_health.webp', 'Financial Health Dashboard')">
+                    <img src="images/screenshots/financial_health.webp" alt="Health Score" width="800" height="500" loading="lazy">
+                    <div class="preview-label">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Financial Health</span>
+                    </div>
+                    <div class="preview-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="preview-item" onclick="openLightbox('images/screenshots/transactins_1.webp', 'Transaction Management')">
+                    <img src="images/screenshots/transactins_1.webp" alt="Transactions" width="800" height="500" loading="lazy">
+                    <div class="preview-label">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Transaction Management</span>
+                    </div>
+                    <div class="preview-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-cta">
+                <a href="/features" class="btn btn-secondary">See All Features &amp; Screenshots →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <button type="button" class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close lightbox">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Enlarged screenshot">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2>Watch SenticMoney in Action</h2>
+            <p class="section-subtitle">An 8-minute walkthrough of everything SenticMoney can do</p>
+            <div class="video-wrapper" onclick="loadVideo(this)" role="button" tabindex="0" aria-label="Play video: SenticMoney Full Walkthrough">
+                <img src="https://img.youtube.com/vi/8vBedZxYqSM/hqdefault.jpg" alt="SenticMoney Full Walkthrough" width="480" height="360" loading="lazy">
+                <span class="play-btn"></span>
+            </div>
+            <a href="/videos" class="video-link">See all videos →</a>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>1. Download</h3>
+                    <p>Install SenticMoney on your Windows PC. No account required.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-file-import"></i>
+                    </div>
+                    <h3>2. Import</h3>
+                    <p>Import bank statements (CSV/Excel) or add transactions manually.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-comments-dollar"></i>
+                    </div>
+                    <h3>3. Ask Questions</h3>
+                    <p>"How does this month compare to last?" The AI sees your complete financial picture and answers instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose SenticMoney?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI That Understands You</h3>
+                    <p>Powered by Gemini 3.1 Pro. The Genie knows every feature inside and out &mdash; ask it to walk you through setting up budgets, configuring Runway periods, or importing bank statements, and it guides you through the exact buttons and fields.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Your Data Stays Yours</h3>
+                    <p>Unlike Mint or YNAB, your financial data never leaves your device. No cloud storage, no data mining, no targeted ads.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>Affordable Plans</h3>
+                    <p>Free tier available with core features. The Standard plan starts at just $39/year. No expensive monthly subscriptions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Smart Import and Categorization</h3>
+                    <p>Import bank statements (CSV, XLSX, OFX, QFX, PDF) with automatic categorization. AI learns your spending patterns.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-receipt"></i></div>
+                    <h3>Receipt Scanning</h3>
+                    <p>Scan receipts with your camera. AI extracts itemized data so you can track exactly what you bought.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Personal Setup Coach</h3>
+                    <p>The AI is trained on every feature &mdash; every button, form field, and workflow. Ask "How do I set up Carry Forward?" or "What should I do next?" and it teaches you step by step, like having the developer sitting next to you.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-calculator"></i></div>
+                    <h3>Free Financial Calculators</h3>
+                    <p>Plan your debt payoff and savings goals. Loan payoff, credit card payoff, compound interest, and snowball vs avalanche&mdash;all free.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Multi-Device Access</h3>
+                    <p>Install on one PC, access from any device on your home network — iPhone, iPad, Mac, Android. No cloud sync needed.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-plane-departure"></i></div>
+                    <h3>Runway Cash Flow</h3>
+                    <p>Know exactly how much you have to live on until your next paycheck. Plan payday-to-payday with Living Money and $/Day metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison">
+        <div class="container">
+            <h2>How We Compare</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Feature</th>
+                            <th scope="col">SenticMoney</th>
+                            <th scope="col">Mint / YNAB</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Data Privacy (Local Storage)</td>
+                            <td><span class="check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="cross"><i class="fas fa-times"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>AI-Powered Insights</td>
+                            <td><span class="check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="cross"><i class="fas fa-times"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Multiple Budgeting Methods</td>
+                            <td><span class="check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="cross"><i class="fas fa-times"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Affordable Pricing</td>
+                            <td><span class="check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="cross"><i class="fas fa-times"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Receipt Itemization</td>
+                            <td><span class="check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="cross"><i class="fas fa-times"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>No Ads</td>
+                            <td><span class="check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="cross"><i class="fas fa-times"></i></span></td>
+                        </tr>
+                        <tr>
+                            <td>Works Offline</td>
+                            <td><span class="check"><i class="fas fa-check"></i></span></td>
+                            <td><span class="cross"><i class="fas fa-times"></i></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Users Are Saying</h2>
+            <p class="testimonials-subtitle">Real feedback from privacy-conscious users</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Finally, a finance app that doesn't sell my data! The AI chat is incredible—I just ask questions and get real answers about my spending."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <div class="author-name">Sarah M.</div>
+                            <div class="author-role">Small Business Owner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"I switched from Mint after they announced shutdown. SenticMoney is better anyway—my data stays on MY computer, and the AI features are more powerful."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JT</div>
+                        <div class="author-info">
+                            <div class="author-name">James T.</div>
+                            <div class="author-role">IT Professional</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The receipt scanning is amazing. Take a photo, and it extracts everything—itemized! Plus knowing my financial data isn't being mined for ads is priceless."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <div class="author-name">Maria R.</div>
+                            <div class="author-role">Freelance Designer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Love that it works offline. I travel internationally and can still track expenses without internet. When I get home, everything syncs from my local database."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DK</div>
+                        <div class="author-info">
+                            <div class="author-name">David K.</div>
+                            <div class="author-role">Travel Consultant</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best $39 I've spent. The AI understands natural language perfectly. 'How much did I spend on coffee last month?' Boom—instant answer. No clicking through menus."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AL</div>
+                        <div class="author-info">
+                            <div class="author-name">Alex L.</div>
+                            <div class="author-role">Software Engineer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"After years of YNAB, I was skeptical. But SenticMoney's privacy-first approach won me over. Plus the AI insights are way beyond anything cloud apps offer."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LP</div>
+                        <div class="author-info">
+                            <div class="author-name">Lisa P.</div>
+                            <div class="author-role">Financial Advisor</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Take Control?</h2>
+            <p>Download SenticMoney today. Free tier available with all core features.</p>
+            <a href="/download" class="btn btn-primary">Get Started Free</a>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/download">Download</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="/support">FAQ &amp; Help</a></li>
+                        <li><a href="mailto:contact@senticmoney.com">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                        <li><a href="/refund">Refund Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p>E-Comm Solutions LLC<br>
+                    Wyoming, USA<br>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 E-Comm Solutions LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Video facade — load YouTube iframe only on click
+        function loadVideo(wrapper) {
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube.com/embed/8vBedZxYqSM?autoplay=1';
+            iframe.title = 'SenticMoney - Full Walkthrough';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            wrapper.innerHTML = '';
+            wrapper.appendChild(iframe);
+            wrapper.style.cursor = 'default';
+            wrapper.onclick = null;
+        }
+
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            if (menu && hamburger && menu.classList.contains('active')) {
+                if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                    toggleMenu();
+                }
+            }
+        });
+
+        // Lightbox functions
+        function openLightbox(imageSrc, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            lightboxImg.src = imageSrc;
+            lightboxCaption.textContent = caption;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            // Close if clicking on the overlay or close button
+            if (event.target.id === 'lightbox' || event.target.closest('.lightbox-close')) {
+                const lightbox = document.getElementById('lightbox');
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const lightbox = document.getElementById('lightbox');
+                if (lightbox.classList.contains('active')) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    </script>
+<script src="/track.js"></script>
+</body>
+</html>

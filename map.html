@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Map - SenticMoney</title>
+    <meta name="description" content="Explore SenticMoney's complete feature map: AI-powered budgeting, privacy-first local storage, Runway cash flow planning, financial calculators, and more.">
+    <link rel="canonical" href="https://senticmoney.com/map">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <style>
+        /* Font Awesome font-display override for better performance */
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-display: swap;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary-color: #10B981;
+            --primary: #10B981;
+            --secondary-color: #059669;
+            --secondary: #059669;
+            --accent-color: #34D399;
+            --accent: #34D399;
+            --dark-bg: #064E3B;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --border: #e5e7eb;
+            --border-hover: #d1d5db;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(180deg, #DAFBEA 0%, var(--bg-light) 40%, var(--white) 100%);
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 82px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 999;
+            flex-direction: column;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+            max-height: 660px;
+        }
+
+        .mobile-menu a {
+            font-size: 1rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1rem 2rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .mobile-menu a:hover {
+            background: #f8f8f8;
+            color: var(--primary-color);
+            padding-left: 2.5rem;
+        }
+
+        .mobile-menu a i {
+            width: 20px;
+            text-align: center;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Map Content */
+        .map-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 48px 24px 64px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        /* Badge row */
+        .badge-row {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 36px;
+            flex-wrap: wrap;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            background: var(--dark-bg);
+            color: var(--accent);
+        }
+
+        .badge-pill i {
+            font-size: 0.75rem;
+        }
+
+        /* Grid */
+        .mind-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        /* Branch card */
+        .branch {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .branch:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .branch.open {
+            border-color: var(--primary);
+            box-shadow: 0 4px 16px rgba(16, 185, 129, 0.15);
+        }
+
+        .branch-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 20px;
+        }
+
+        .branch-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            flex-shrink: 0;
+            background: #ecfdf5;
+            border: 1px solid #d1fae5;
+        }
+
+        .branch-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text-dark);
+            flex: 1;
+        }
+
+        .branch-count {
+            font-size: 0.72rem;
+            color: var(--text-light);
+            background: var(--bg-light);
+            padding: 2px 10px;
+            border-radius: 100px;
+            flex-shrink: 0;
+            border: 1px solid var(--border);
+        }
+
+        .branch-chevron {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            color: var(--text-light);
+        }
+
+        .branch.open .branch-chevron {
+            transform: rotate(90deg);
+            color: var(--primary);
+        }
+
+        /* Leaves */
+        .branch-leaves {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .branch.open .branch-leaves {
+            max-height: 600px;
+        }
+
+        .leaf-list {
+            padding: 0 20px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .leaf {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 14px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid transparent;
+            transition: border-color 0.2s, background 0.2s;
+            animation: leafReveal 0.3s ease-out both;
+        }
+
+        .leaf:hover {
+            border-color: var(--border);
+            background: #ecfdf5;
+        }
+
+        @keyframes leafReveal {
+            from { opacity: 0; transform: translateX(-6px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .leaf:nth-child(1) { animation-delay: 0.05s; }
+        .leaf:nth-child(2) { animation-delay: 0.1s; }
+        .leaf:nth-child(3) { animation-delay: 0.15s; }
+        .leaf:nth-child(4) { animation-delay: 0.2s; }
+        .leaf:nth-child(5) { animation-delay: 0.25s; }
+
+        .leaf-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--primary);
+            flex-shrink: 0;
+            margin-top: 7px;
+        }
+
+        .leaf-content { flex: 1; }
+
+        .leaf-name {
+            font-weight: 600;
+            font-size: 0.88rem;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .leaf-desc {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 32px;
+            background: var(--dark-bg);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 2px solid var(--dark-bg);
+            transition: all 0.3s;
+        }
+
+        .footer-cta a:hover {
+            background: var(--secondary);
+            border-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(6, 78, 59, 0.3);
+        }
+
+        .footer-cta p {
+            color: var(--text-light);
+            font-size: 0.8rem;
+            margin-top: 12px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .mind-grid { grid-template-columns: 1fr; }
+            .header h2 { font-size: 1.7rem; }
+            .map-container { padding: 32px 16px 48px; }
+        }
+    </style>
+</head>
+<body>
+    <nav aria-label="Main navigation">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="/images/sentic-money-logo-transparent.webp" alt="SenticMoney">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/videos">Videos</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="https://sentic-web-demo.onrender.com" target="_blank">Live Demo</a></li>
+                <li><a href="/support">Support</a></li>
+                <li><a href="/books/money-management-for-teens.html">Books</a></li>
+                <li><a href="/map" class="active">Map</a></li>
+            </ul>
+            <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="/" onclick="toggleMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="/features" onclick="toggleMenu()"><i class="fas fa-star"></i> Features</a>
+        <a href="/pricing" onclick="toggleMenu()"><i class="fas fa-tags"></i> Pricing</a>
+        <a href="/blog" onclick="toggleMenu()"><i class="fas fa-newspaper"></i> Blog</a>
+        <a href="/videos" onclick="toggleMenu()"><i class="fas fa-video"></i> Videos</a>
+        <a href="/download" onclick="toggleMenu()"><i class="fas fa-download"></i> Download</a>
+        <a href="https://sentic-web-demo.onrender.com" target="_blank" onclick="toggleMenu()"><i class="fas fa-play-circle"></i> Live Demo</a>
+        <a href="/support" onclick="toggleMenu()"><i class="fas fa-life-ring"></i> Support</a>
+        <a href="/books/money-management-for-teens.html" onclick="toggleMenu()"><i class="fas fa-book"></i> Books</a>
+        <a href="/map" class="active" onclick="toggleMenu()"><i class="fas fa-sitemap"></i> Map</a>
+    </nav>
+
+    <main>
+    <div class="map-container">
+
+        <div class="header">
+            <h2>Explore SenticMoney</h2>
+            <p>AI-powered personal finance that lives on your computer. Click any category to explore.</p>
+        </div>
+
+        <div class="badge-row">
+            <span class="badge-pill"><i class="fas fa-shield-halved"></i> Privacy-First</span>
+            <span class="badge-pill"><i class="fas fa-hard-drive"></i> Local-First</span>
+            <span class="badge-pill"><i class="fas fa-wand-magic-sparkles"></i> AI-Powered</span>
+        </div>
+
+        <div class="mind-grid">
+
+            <!-- Core Philosophy -->
+            <div class="branch" onclick="toggleBranch(this)">
+                <div class="branch-header">
+                    <div class="branch-icon">&#x1f6e1;&#xfe0f;</div>
+                    <div class="branch-title">Core Philosophy</div>
+                    <div class="branch-count">4 items</div>
+                    <svg class="branch-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg>
+                </div>
+                <div class="branch-leaves">
+                    <div class="leaf-list">
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">100% Local Storage</div>
+                                <div class="leaf-desc">Your financial data never leaves your computer. No cloud databases, no third-party servers.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Data Privacy</div>
+                                <div class="leaf-desc">Bank account numbers, passwords, and sensitive details are stored in encrypted local fields &mdash; never shared with AI.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">No Cloud Required</div>
+                                <div class="leaf-desc">No account creation, no subscription to a cloud service. Install and own it.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Offline Functionality</div>
+                                <div class="leaf-desc">Core features work without internet. AI features use a brief summary when online &mdash; never raw data.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Features -->
+            <div class="branch" onclick="toggleBranch(this)">
+                <div class="branch-header">
+                    <div class="branch-icon">&#x1f9de;</div>
+                    <div class="branch-title">SenticMoney Genie</div>
+                    <div class="branch-count">5 items</div>
+                    <svg class="branch-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg>
+                </div>
+                <div class="branch-leaves">
+                    <div class="leaf-list">
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Powered by Gemini 3.1 Pro</div>
+                                <div class="leaf-desc">Advanced AI with multi-provider fallback ensures the Genie is always available to help.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Natural Language Questions</div>
+                                <div class="leaf-desc">Ask &ldquo;How much did I spend on groceries?&rdquo; or &ldquo;Am I over budget?&rdquo; in plain English.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Personal Setup Coach</div>
+                                <div class="leaf-desc">Walks you through setup step by step &mdash; income, categories, budgets, bills &mdash; tailored to your data.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Automatic Categorization</div>
+                                <div class="leaf-desc">Maps bank descriptions to your categories. Learns your patterns and saves them for future imports.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">AI Receipt &amp; Bill Scanning</div>
+                                <div class="leaf-desc">Attach receipts or bills to the chat. AI extracts line items, totals, and vendor info automatically.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Budgeting & Analysis -->
+            <div class="branch" onclick="toggleBranch(this)">
+                <div class="branch-header">
+                    <div class="branch-icon">&#x1f4ca;</div>
+                    <div class="branch-title">Budgeting &amp; Analysis</div>
+                    <div class="branch-count">5 items</div>
+                    <svg class="branch-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg>
+                </div>
+                <div class="branch-leaves">
+                    <div class="leaf-list">
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Multiple Methods</div>
+                                <div class="leaf-desc">Zero-based, 50/30/20, or custom &mdash; set budgets monthly, quarterly, or yearly with carry-forward support.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Runway Cash Flow Tracking</div>
+                                <div class="leaf-desc">Plan paycheck to paycheck. See exactly what&rsquo;s coming in, going out, and what&rsquo;s left &mdash; period by period.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Visual Budgets</div>
+                                <div class="leaf-desc">Color-coded progress bars, trend arrows, and charts show where you stand at a glance.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Financial Health Score</div>
+                                <div class="leaf-desc">A 0&ndash;100 score across four dimensions: income stability, expense management, savings rate, and emergency preparedness.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Living Money &amp; $/Day</div>
+                                <div class="leaf-desc">Your real spending power: balance + income &minus; bills &minus; budgets &minus; reserves, broken into a daily rate.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Management -->
+            <div class="branch" onclick="toggleBranch(this)">
+                <div class="branch-header">
+                    <div class="branch-icon">&#x1f4be;</div>
+                    <div class="branch-title">Data Management</div>
+                    <div class="branch-count">4 items</div>
+                    <svg class="branch-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg>
+                </div>
+                <div class="branch-leaves">
+                    <div class="leaf-list">
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Import CSV, XLSX, OFX &amp; PDF</div>
+                                <div class="leaf-desc">Import bank statements in any format. AI-powered column detection when your bank&rsquo;s layout is unfamiliar.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Transaction Management</div>
+                                <div class="leaf-desc">Split transactions across categories, tag for filtering, attach receipts, and track running balances.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Multi-Device Local Access</div>
+                                <div class="leaf-desc">Access from any device on your WiFi &mdash; phone, tablet, or another PC. No cloud needed.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Manual Entry</div>
+                                <div class="leaf-desc">Quick-add transactions by hand. Create category mappings on the fly for future imports.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing -->
+            <div class="branch" onclick="toggleBranch(this)">
+                <div class="branch-header">
+                    <div class="branch-icon">&#x1f4b0;</div>
+                    <div class="branch-title">Pricing &amp; Availability</div>
+                    <div class="branch-count">4 items</div>
+                    <svg class="branch-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg>
+                </div>
+                <div class="branch-leaves">
+                    <div class="leaf-list">
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Free Forever Tier</div>
+                                <div class="leaf-desc">Core budgeting, transaction tracking, and financial calculators &mdash; free with no time limit.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Standard Plan &mdash; $39/year</div>
+                                <div class="leaf-desc">AI Genie, bank statement imports, receipt scanning, Runway, and all premium features.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Windows PC Installation</div>
+                                <div class="leaf-desc">Download and install in minutes. Runs as a local server on your machine. Mac coming soon.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">No Ads. Ever.</div>
+                                <div class="leaf-desc">Your financial data is never monetized. No tracking, no ads, no data brokers.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Free Tools -->
+            <div class="branch" onclick="toggleBranch(this)">
+                <div class="branch-header">
+                    <div class="branch-icon">&#x1f9ee;</div>
+                    <div class="branch-title">Free Financial Tools</div>
+                    <div class="branch-count">3 items</div>
+                    <svg class="branch-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"/></svg>
+                </div>
+                <div class="branch-leaves">
+                    <div class="leaf-list">
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Loan Payoff Calculator</div>
+                                <div class="leaf-desc">See how extra payments shorten your loan and save on interest &mdash; mortgage, auto, or student loans.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Compound Interest Calculator</div>
+                                <div class="leaf-desc">Project savings growth over time with monthly contributions and compound interest.</div>
+                            </div>
+                        </div>
+                        <div class="leaf">
+                            <div class="leaf-dot"></div>
+                            <div class="leaf-content">
+                                <div class="leaf-name">Snowball vs Avalanche Planner</div>
+                                <div class="leaf-desc">Compare debt payoff strategies side-by-side. See which saves more interest and which builds momentum.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-cta">
+            <a href="/download">
+                <i class="fas fa-download"></i> Download Free
+            </a>
+            <p>Your money. Your computer. Your control.</p>
+        </div>
+
+    </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/download">Download</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="/support">FAQ &amp; Help</a></li>
+                        <li><a href="mailto:contact@senticmoney.com">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                        <li><a href="/refund">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p>E-Comm Solutions LLC<br>
+                    Wyoming, USA<br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 E-Comm Solutions LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('mobileMenu');
+            var hamburger = document.querySelector('.hamburger');
+            if (menu && hamburger && menu.classList.contains('active')) {
+                if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                    toggleMenu();
+                }
+            }
+        });
+
+        function toggleBranch(el) {
+            var wasOpen = el.classList.contains('open');
+            document.querySelectorAll('.branch').forEach(function(b) { b.classList.remove('open'); });
+            if (!wasOpen) el.classList.add('open');
+        }
+    </script>
+    <script src="/track.js"></script>
+</body>
+</html>

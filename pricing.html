@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <title>Pricing - SenticMoney</title>
+    <meta name="description" content="Simple, transparent pricing for SenticMoney. Start free, upgrade when you need AI-powered insights and bank imports.">
+    <link rel="canonical" href="https://senticmoney.com/pricing">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <style>
+        /* Font Awesome font-display override for better performance */
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #10B981;
+            --secondary-color: #059669;
+            --accent-color: #34D399;
+            --dark-bg: #064E3B;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+        
+        .logo svg {
+            margin-right: 12px;
+        }
+        
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            background: none;
+            border: none;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+        
+                .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 82px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 999;
+            flex-direction: column;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+                .mobile-menu.active {
+            display: flex;
+            max-height: 660px;
+        }
+
+                .mobile-menu-logo {
+            display: none;
+        }
+
+        
+
+                .mobile-menu a {
+            font-size: 1rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1rem 2rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+                .mobile-menu a:hover {
+            background: #f8f8f8;
+            color: var(--primary-color);
+            padding-left: 2.5rem;
+        }
+
+                .mobile-menu a i {
+            width: 20px;
+            text-align: center;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+                .mobile-menu .close-btn {
+            display: none;
+        }
+
+        
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            color: var(--text-dark);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 5rem 2rem;
+            background: #f9fafb;
+        }
+        
+        .pricing .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid var(--primary-color);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card .badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .pricing-card .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-card .price-note {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-card ul li {
+            padding: 0.75rem 0;
+            color: var(--text-light);
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .pricing-card ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-card ul li.included:before {
+            content: "\2713  ";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .pricing-card ul li.not-included:before {
+            content: "\2717  ";
+            color: #9ca3af;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .pricing-card ul li.not-included {
+            color: #9ca3af;
+        }
+        
+        .ai-badge {
+            display: inline-block;
+            background: #f3f4f6;
+            color: var(--text-light);
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        /* Comparison Table */
+        .comparison {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .comparison .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .comparison h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .comparison-table th {
+            background: #f9fafb;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .comparison-table th:first-child,
+        .comparison-table td:first-child {
+            text-align: left;
+        }
+        
+        .comparison-table .check {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+        }
+        
+        .comparison-table .cross {
+            color: #d1d5db;
+            font-size: 1.25rem;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 2rem;
+            background: #f9fafb;
+        }
+        
+        .faq .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .faq-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        
+        .faq-item p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .faq-item a {
+            color: var(--primary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+        
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+    
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .nav-links {
+                display: none;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav aria-label="Main navigation">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="/images/sentic-money-logo-transparent.webp" alt="SenticMoney"></a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/videos">Videos</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="https://sentic-web-demo.onrender.com" target="_blank">Live Demo</a></li>
+                <li><a href="/support">Support</a></li>
+                <li><a href="/books/money-management-for-teens.html">Books</a></li>
+                <li><a href="/map">Map</a></li>
+            </ul>
+            <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="/" onclick="toggleMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="/features" onclick="toggleMenu()"><i class="fas fa-star"></i> Features</a>
+        <a href="/pricing" onclick="toggleMenu()"><i class="fas fa-tags"></i> Pricing</a>
+        <a href="/blog" onclick="toggleMenu()"><i class="fas fa-newspaper"></i> Blog</a>
+        <a href="/videos" onclick="toggleMenu()"><i class="fas fa-video"></i> Videos</a>
+        <a href="/download" onclick="toggleMenu()"><i class="fas fa-download"></i> Download</a>
+        <a href="https://sentic-web-demo.onrender.com" target="_blank" onclick="toggleMenu()"><i class="fas fa-play-circle"></i> Live Demo</a>
+        <a href="/support" onclick="toggleMenu()"><i class="fas fa-life-ring"></i> Support</a>
+        <a href="/books/money-management-for-teens.html" onclick="toggleMenu()"><i class="fas fa-book"></i> Books</a>
+        <a href="/map" onclick="toggleMenu()"><i class="fas fa-sitemap"></i> Map</a>
+    </nav>
+
+    <main>
+    <section class="hero">
+        <div class="container">
+            <h1>Simple, Transparent Pricing</h1>
+            <p>Start free, upgrade when you need AI-powered automation.</p>
+        </div>
+    </section>
+
+   <section class="pricing">
+    <div class="container">
+        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border: 2px solid var(--primary-color); border-radius: 12px; padding: 1.25rem 2rem; margin-bottom: 2rem; text-align: center;">
+            <span style="font-size: 1.1rem; color: var(--text-dark);"><i class="fas fa-tag" style="color: var(--primary-color); margin-right: 0.5rem;"></i>New subscriber? Save 20% your first year with code <strong style="color: var(--primary-color); font-size: 1.2rem; letter-spacing: 1px;">WELCOME20</strong> at checkout &mdash; just $31.20</span>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Free</h3>
+                <div class="price">$0</div>
+                <div class="price-note">Forever free</div>
+                <ul>
+                    <li class="included">Manual transaction entry</li>
+                    <li class="included">Dashboard &amp; spending charts</li>
+                    <li class="included">Budgeting with progress tracking</li>
+                    <li class="included">Category &amp; subcategory tracking</li>
+                    <li class="included">Financial Goals &amp; progress bars</li>
+                    <li class="included">Bills &amp; subscription tracking</li>
+                    <li class="included">Income source tracking</li>
+                    <li class="included">Financial Calendar (3-month view)</li>
+                    <li class="included">Financial Health Score (0-100)</li>
+                    <li class="included">Reminders with recurrence</li>
+                    <li class="included">Tags for cross-category tracking</li>
+                    <li class="included">Reconciliation</li>
+                    <li class="included">Backup management</li>
+                    <li class="included">Financial Calculators</li>
+                    <li class="included">Light &amp; dark themes</li>
+                    <li class="included">Unlimited transactions</li>
+                    <li class="not-included">Bank imports</li>
+                    <li class="not-included">Receipt scanning</li>
+                    <li class="not-included">AI assistant</li>
+                    <li class="not-included">Runway cash flow planning</li>
+                    <li class="not-included">Advanced reports &amp; export</li>
+                </ul>
+                <a href="/download?tier=free" class="btn btn-secondary">Download Free</a>
+            </div>
+
+            <div class="pricing-card featured">
+                <span class="badge">BEST VALUE</span>
+                <h3>Standard</h3>
+                <div class="price">$39</div>
+                <div class="price-note">per year</div>
+                <ul>
+                    <li class="included">Everything in Free, plus:</li>
+                    <li class="included">Smart Bank imports - 15+ presets<br><small class="text-muted">CSV • Excel • OFX • QFX • PDF</small></li>
+                    <li class="included">Receipt scanning (AI Vision)</li>
+                    <li class="included">SenticMoney Genie</li>
+                    <li class="included">Runway cash flow planning<br><small style="color: #6B7280; font-size: 0.85rem;">Living Money, $/Day, actual vs planned tracking</small></li>
+                    <li class="included">Auto-categorization</li>
+                    <li class="included">Advanced reporting</li>
+                    <li class="included">Export to Excel/PDF</li>
+                    <li class="included">Email support</li>
+                </ul>
+                <a href="/download?tier=standard" class="btn btn-primary">Download Free - Subscribe to Standard</a>
+            </div>
+
+            <!-- BETA: Pro tier hidden until differentiation features implemented -->
+        </div>
+    </div>
+</section>
+
+
+    <section class="comparison">
+        <div class="container">
+            <h2>Compare Plans</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Feature</th>
+                        <th scope="col">Free</th>
+                        <th scope="col">Standard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Price</td>
+                        <td>$0</td>
+                        <td>$39/year</td>
+                    </tr>
+                    <tr>
+                        <td>Manual Entry &amp; Budgeting</td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td>Financial Calculators</td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td>Dashboard &amp; Charts</td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td>Financial Goals</td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td>Bills &amp; Subscriptions</td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td>Financial Health Score</td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td>Financial Calendar</td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td>Bank Statement Import</td>
+                        <td><span class="cross"><i class="fas fa-times"></i></span></td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td>Receipt Scanning (AI Vision)</td>
+                        <td><span class="cross"><i class="fas fa-times"></i></span></td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td>SenticMoney Genie</td>
+                        <td><span class="cross"><i class="fas fa-times"></i></span></td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td>Runway Cash Flow Planning</td>
+                        <td><span class="cross"><i class="fas fa-times"></i></span></td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td>Auto-Categorization</td>
+                        <td><span class="cross"><i class="fas fa-times"></i></span></td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                    </tr>
+                    <tr>
+                        <td>Advanced Reports &amp; Export</td>
+                        <td><span class="cross"><i class="fas fa-times"></i></span></td>
+                        <td><span class="check"><i class="fas fa-check"></i></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>What budgeting methods does SenticMoney support?</h3>
+                <p>SenticMoney supports zero-based budgeting, envelope budgeting, the 50/30/20 rule, pay-yourself-first, and our exclusive Runway cash flow method for paycheck-to-paycheck planning. You can also combine methods &mdash; for example, use envelope budgets for spending categories while tracking cash flow with Runway. The AI Genie can recommend the best approach based on your goals.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I try the app before subscribing?</h3>
+                <p>Absolutely! The Free tier is fully functional for manual budgeting and never expires. Use it as long as you like, then upgrade when you want automation features like bank imports and AI.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What AI features are included?</h3>
+                <p>Standard includes the SenticMoney Genie powered by Gemini 3.1 Pro. Ask questions like "How much did I spend on groceries?" or "Am I on track with my budget?" and get instant, intelligent answers based on your data. The AI knows what page you're on and can guide you through setup step by step.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do I need my own API key?</h3>
+                <p>No! Your subscription includes all AI features. We handle the AI infrastructure so you don't have to manage API keys or worry about usage costs.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What's your refund policy?</h3>
+                <p>We offer a 30-day money-back guarantee on all subscriptions. If you're not satisfied, we'll refund your payment, no questions asked. See our <a href="/refund">Refund Policy</a> for details.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I upgrade later?</h3>
+                <p>Yes! You can upgrade from Free to Standard at any time. Just purchase a license key and activate it in the app.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What happens if I cancel?</h3>
+                <p>Your subscription remains active until the end of your billing period. After that, your app reverts to Free tier. All your data stays on your computer&mdash;we never touch it.</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/download">Download</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="/support">FAQ &amp; Help</a></li>
+                        <li><a href="mailto:contact@senticmoney.com">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                        <li><a href="/refund">Refund Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p>E-Comm Solutions LLC<br>
+                    Wyoming, USA<br>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 E-Comm Solutions LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            if (menu && hamburger && menu.classList.contains('active')) {
+                if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                    toggleMenu();
+                }
+            }
+        });
+    </script>
+<script src="/track.js"></script>
+</body>
+</html>

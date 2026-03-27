@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Management for Teens | Frank D Campbell</title>
+    <meta name="description" content="Money Management for Teens by Frank D Campbell - A comprehensive guide teaching teens budgeting, saving, investing, and credit management for lifelong financial success.">
+    <link rel="canonical" href="https://senticmoney.com/books/money-management-for-teens.html">
+
+    <meta property="og:title" content="Money Management for Teens by Frank D Campbell">
+    <meta property="og:description" content="A beginner's guide to personal finance for teens. Learn budgeting, saving, investing, and credit management.">
+    <meta property="og:type" content="book">
+    <meta property="og:url" content="https://senticmoney.com/books/money-management-for-teens.html">
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" as="image" href="/images/money_management_for_teens.webp" fetchpriority="high">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <style>
+        /* Font Awesome font-display override for better performance */
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-display: swap;
+        }
+        :root {
+            --primary-color: #10B981;
+            --secondary-color: #059669;
+            --accent-color: #34D399;
+            --dark-bg: #064E3B;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --bg-light: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+
+        .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; z-index: 9999; }
+        .skip-link:focus { position: fixed; top: 0; left: 0; width: auto; height: auto; padding: 1rem 1.5rem; background: #000; color: #fff; text-decoration: none; font-weight: 600; }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif; line-height: 1.6; color: var(--text-dark); }
+        a { color: var(--primary-color); text-decoration: none; }
+        a:hover { color: var(--secondary-color); }
+
+        /* Navigation */
+        nav { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav .container { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo img { height: 50px; width: auto; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-dark); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary-color); }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; background: none; border: none; padding: 0; }
+        .hamburger span { width: 25px; height: 3px; background: var(--text-dark); border-radius: 3px; }
+
+        /* Mobile Menu */
+        .mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 999; flex-direction: column; padding: 1rem 0; }
+        .mobile-menu.active { display: flex; }
+        .mobile-menu a { padding: 1rem 2rem; color: var(--text-dark); text-decoration: none; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 0.75rem; }
+        .mobile-menu a:hover { background: var(--bg-light); color: var(--primary-color); }
+        .mobile-menu a i { width: 20px; color: var(--primary-color); }
+
+        /* Book Hero */
+        .book-hero { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); padding: 4rem 2rem; }
+        .book-hero-container { max-width: 900px; margin: 0 auto; display: flex; gap: 2.5rem; align-items: flex-start; }
+        .book-hero-cover { flex-shrink: 0; min-width: 200px; min-height: 300px; }
+        .book-hero-cover img { width: 200px; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+        .book-hero-cover .placeholder { width: 200px; height: 300px; background: rgba(16,185,129,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--text-light); font-size: 0.9rem; text-align: center; padding: 1rem; border: 2px dashed var(--primary-color); }
+        .book-hero-content { flex: 1; color: var(--text-dark); }
+        .book-category { display: inline-block; background: var(--primary-color); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem; text-transform: uppercase; }
+        .book-hero h1 { font-size: 2.25rem; margin-bottom: 0.5rem; line-height: 1.2; color: var(--text-dark); }
+        .book-subtitle { font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-light); }
+
+        .answer-capsule { background: white; border-left: 4px solid var(--primary-color); padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .answer-capsule p { margin: 0; color: var(--text-dark); font-size: 1rem; line-height: 1.6; }
+
+        .buy-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+        .btn { padding: 0.875rem 1.5rem; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1rem; text-decoration: none; transition: all 0.3s; }
+        .btn-amazon { background: #ff9900; color: #000; }
+        .btn-amazon:hover { background: #e68a00; color: #000; transform: translateY(-2px); }
+        .btn-secondary { background: white; color: var(--text-dark); border: 2px solid var(--border-color); }
+        .btn-secondary:hover { border-color: var(--primary-color); color: var(--primary-color); }
+
+        .book-meta { display: flex; gap: 2rem; flex-wrap: wrap; color: var(--text-light); font-size: 0.95rem; }
+        .book-meta span { display: flex; align-items: center; gap: 0.5rem; }
+        .book-meta i { color: var(--primary-color); }
+
+        /* Sections */
+        .section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+        .section h2 { font-size: 1.75rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary-color); color: var(--text-dark); }
+        .section p { margin-bottom: 1rem; color: var(--text-light); }
+        .section ul { list-style: none; margin-bottom: 1.5rem; }
+        .section li { padding: 0.75rem 0; border-bottom: 1px solid var(--border-color); display: flex; align-items: flex-start; gap: 0.75rem; }
+        .section li:last-child { border-bottom: none; }
+        .section li i { color: var(--primary-color); margin-top: 0.25rem; flex-shrink: 0; }
+
+        /* TOC Grid */
+        .toc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+        .toc-item { background: var(--bg-light); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color); }
+        .toc-item h4 { font-size: 1rem; margin-bottom: 0.25rem; color: var(--primary-color); }
+        .toc-item p { font-size: 0.9rem; margin: 0; color: var(--text-light); }
+
+        /* Author Box */
+        .author-box { background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; margin-top: 2rem; }
+        .author-box h3 { margin-bottom: 1rem; color: var(--text-dark); }
+        .author-box p { margin-bottom: 1rem; color: var(--text-light); }
+
+        /* Related Section */
+        .related-section { background: var(--bg-light); border-top: 1px solid var(--border-color); padding: 4rem 2rem; }
+        .related-section h2 { text-align: center; margin-bottom: 2rem; color: var(--text-dark); }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+        .related-card { background: white; border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s; }
+        .related-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .related-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-dark); }
+        .related-card p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 1rem; }
+
+        /* Book Metadata */
+        .book-details-section { background: white; border-top: 1px solid var(--border-color); padding: 3rem 2rem; }
+        .book-details-section h2 { max-width: 900px; margin: 0 auto 1.5rem; font-size: 1.5rem; color: var(--text-dark); }
+        .book-metadata { max-width: 900px; margin: 0 auto; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; }
+        .book-metadata ul { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+        .book-metadata li { padding: 0.5rem 0; border-bottom: none; display: block; color: var(--text-light); }
+        .book-metadata li strong { color: var(--text-dark); }
+
+        /* Footer */
+        footer { background: #1f2937; color: white; padding: 2rem; text-align: center; }
+        footer p { color: #9ca3af; font-size: 0.9rem; }
+        footer a { color: var(--primary-color); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .book-hero-container { flex-direction: column; align-items: center; text-align: center; }
+            .book-hero-cover img, .book-hero-cover .placeholder { width: 160px; height: auto; }
+            .book-hero h1 { font-size: 1.75rem; }
+            .book-meta { flex-direction: column; gap: 0.5rem; justify-content: center; }
+            .buy-buttons { justify-content: center; }
+            .book-metadata ul { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": "Money Management for Teens: A Beginner's Guide to Personal Finance",
+        "author": {
+            "@type": "Person",
+            "name": "Frank D Campbell",
+            "url": "https://senticmoney.com/author/frank-d-campbell"
+        },
+        "datePublished": "2024-04-22",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Independently Published"
+        },
+        "isbn": "979-8322440529",
+        "numberOfPages": 163,
+        "inLanguage": "en",
+        "bookFormat": "https://schema.org/Paperback",
+        "description": "A comprehensive guide teaching teens budgeting, saving, investing, and credit management. Learn essential money skills to build wealth and achieve financial freedom.",
+        "genre": ["Personal Finance", "Teen Finance", "Money Management", "Financial Literacy"],
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "price": "14.99",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B0D2CKMF49",
+            "itemCondition": "https://schema.org/NewCondition"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": "Money Management for Teens: A Beginner's Guide to Personal Finance (Kindle Edition)",
+        "author": {
+            "@type": "Person",
+            "name": "Frank D Campbell",
+            "url": "https://senticmoney.com/author/frank-d-campbell"
+        },
+        "datePublished": "2024-04-09",
+        "publisher": {
+            "@type": "Organization",
+            "name": "WisdomSpring Media"
+        },
+        "inLanguage": "en",
+        "bookFormat": "https://schema.org/EBook",
+        "description": "A comprehensive guide teaching teens budgeting, saving, investing, and credit management. Learn essential money skills to build wealth and achieve financial freedom.",
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "price": "4.99",
+            "priceCurrency": "USD",
+            "url": "https://www.amazon.com/dp/B0D1F1HJB5",
+            "itemCondition": "https://schema.org/NewCondition"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Who is Money Management for Teens for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "This book is written for teenagers, high school students, and young adults who want to learn essential money management skills. Parents and educators also find it valuable for teaching financial literacy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need any prior financial knowledge?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No prior financial knowledge is required. The book starts with basics and uses relatable examples and conversational language to make complex concepts accessible to beginners."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What topics does this book cover?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The book covers budgeting, saving, compound interest, investing basics, credit management, preparing for college costs, entrepreneurship, and emerging topics like cryptocurrency and blockchain."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+    <div class="container">
+        <a href="/" class="logo">
+            <img src="/images/sentic-money-logo-transparent.webp" alt="SenticMoney" width="150" height="50">
+        </a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/features">Features</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/videos">Videos</a></li>
+            <li><a href="/download">Download</a></li>
+            <li><a href="https://sentic-web-demo.onrender.com" target="_blank">Live Demo</a></li>
+            <li><a href="/support">Support</a></li>
+            <li><a href="/books/money-management-for-teens.html">Books</a></li>
+        </ul>
+        <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="/" onclick="toggleMenu()"><i class="fas fa-home"></i> Home</a>
+    <a href="/features" onclick="toggleMenu()"><i class="fas fa-star"></i> Features</a>
+    <a href="/pricing" onclick="toggleMenu()"><i class="fas fa-tag"></i> Pricing</a>
+    <a href="/blog" onclick="toggleMenu()"><i class="fas fa-newspaper"></i> Blog</a>
+    <a href="/videos" onclick="toggleMenu()"><i class="fas fa-video"></i> Videos</a>
+    <a href="/download" onclick="toggleMenu()"><i class="fas fa-download"></i> Download</a>
+    <a href="https://sentic-web-demo.onrender.com" target="_blank" rel="noopener"><i class="fas fa-play-circle"></i> Live Demo</a>
+    <a href="/support" onclick="toggleMenu()"><i class="fas fa-question-circle"></i> Support</a>
+    <a href="/books/money-management-for-teens.html" onclick="toggleMenu()"><i class="fas fa-book"></i> Books</a>
+</nav>
+
+<main id="main-content">
+
+<section class="book-hero">
+    <div class="book-hero-container">
+        <div class="book-hero-cover">
+            <img src="/images/money_management_for_teens.webp" alt="Money Management for Teens book cover by Frank D Campbell" width="200" height="300" fetchpriority="high">
+        </div>
+        <div class="book-hero-content">
+            <span class="book-category">Personal Finance</span>
+            <h1>Money Management for Teens</h1>
+            <p class="book-subtitle">A Beginner's Guide to Personal Finance: Master Essential Skills to Manage Money, Build Wealth, and Achieve Financial Freedom</p>
+
+            <div class="answer-capsule">
+                <p><strong>Quick Summary:</strong> Money Management for Teens is a comprehensive guide teaching young people essential financial skills including budgeting, saving, investing, and credit management. Through relatable examples and practical exercises, teens learn to make informed financial decisions that set the foundation for lifelong financial success.</p>
+            </div>
+
+            <div class="buy-buttons">
+                <a href="https://www.amazon.com/dp/B0D2CKMF49" class="btn btn-amazon" target="_blank" rel="noopener"><i class="fab fa-amazon"></i> Paperback</a>
+                <a href="https://www.amazon.com/dp/B0D1F1HJB5" class="btn btn-amazon" target="_blank" rel="noopener"><i class="fab fa-amazon"></i> Kindle</a>
+            </div>
+
+            <div class="book-meta">
+                <span><i class="fas fa-user"></i> Frank D Campbell</span>
+                <span><i class="fas fa-book"></i> 163 Pages</span>
+                <span><i class="fas fa-calendar"></i> April 2024</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>What You'll Learn</h2>
+    <ul>
+        <li><i class="fas fa-check"></i> <div><strong>Budgeting Fundamentals</strong> - Understanding income, expenses, and creating a budget that works for your lifestyle</div></li>
+        <li><i class="fas fa-check"></i> <div><strong>Smart Spending Habits</strong> - Developing the mindset to distinguish needs from wants and make informed purchases</div></li>
+        <li><i class="fas fa-check"></i> <div><strong>The Power of Saving</strong> - Harnessing compound interest and building emergency funds for financial security</div></li>
+        <li><i class="fas fa-check"></i> <div><strong>Investing Basics</strong> - Exploring investment options suitable for young investors starting early</div></li>
+        <li><i class="fas fa-check"></i> <div><strong>Credit Management</strong> - Building and managing credit responsibly to prepare for adult financial life</div></li>
+        <li><i class="fas fa-check"></i> <div><strong>College Financial Planning</strong> - Preparing for education costs, scholarships, and minimizing student debt</div></li>
+        <li><i class="fas fa-check"></i> <div><strong>Entrepreneurial Mindset</strong> - Cultivating business thinking and creating income opportunities</div></li>
+        <li><i class="fas fa-check"></i> <div><strong>Future of Money</strong> - Navigating cryptocurrencies, blockchain, and digital finance trends</div></li>
+    </ul>
+</section>
+
+<section class="section">
+    <h2>Who This Book Is For</h2>
+    <p>This book is written for anyone looking to build a strong financial foundation early in life:</p>
+    <ul>
+        <li><i class="fas fa-user-graduate"></i> <div><strong>High School Students</strong> - Start building money skills before entering the real world</div></li>
+        <li><i class="fas fa-users"></i> <div><strong>Young Adults</strong> - Gain confidence managing your first paychecks and financial decisions</div></li>
+        <li><i class="fas fa-home"></i> <div><strong>Parents</strong> - A resource to teach your teens about money in an engaging way</div></li>
+        <li><i class="fas fa-chalkboard-teacher"></i> <div><strong>Educators</strong> - Supplement financial literacy curriculum with practical content</div></li>
+        <li><i class="fas fa-gift"></i> <div><strong>Gift Givers</strong> - The perfect graduation or birthday gift with lasting value</div></li>
+    </ul>
+</section>
+
+<section class="section">
+    <h2>What's Inside</h2>
+    <div class="toc-grid">
+        <div class="toc-item"><h4>Chapter 1</h4><p>Money Management 101: Understanding the Basics</p></div>
+        <div class="toc-item"><h4>Chapter 2</h4><p>Creating a Budget That Works for You</p></div>
+        <div class="toc-item"><h4>Chapter 3</h4><p>Saving Strategies for Teens: Building Your Financial Foundation</p></div>
+        <div class="toc-item"><h4>Chapter 4</h4><p>Smart Spending Habits: Making the Most of Your Money</p></div>
+        <div class="toc-item"><h4>Chapter 5</h4><p>Earning Money: Part-Time Jobs and Side Hustles</p></div>
+        <div class="toc-item"><h4>Chapter 6</h4><p>Introduction to Banking: Checking and Savings</p></div>
+        <div class="toc-item"><h4>Chapter 7</h4><p>The Basics of Credit: What Every Teen Needs to Know</p></div>
+        <div class="toc-item"><h4>Chapter 8</h4><p>Investing for Teens: Getting Started with Stocks and Funds</p></div>
+        <div class="toc-item"><h4>Chapter 9</h4><p>Financial Planning for College and Beyond</p></div>
+        <div class="toc-item"><h4>Chapter 10</h4><p>Developing an Entrepreneurial Mindset</p></div>
+        <div class="toc-item"><h4>Chapter 11</h4><p>Navigating the Digital Frontier: Cryptocurrencies and Blockchain</p></div>
+    </div>
+
+    <div class="author-box">
+        <h3>About the Author</h3>
+        <p>Frank D. Campbell draws from a lifetime of financial experience to provide practical, actionable guidance for the next generation. His engaging and conversational writing style makes complex financial concepts accessible and applicable to daily life, empowering teens to take control of their financial destinies.</p>
+    </div>
+</section>
+
+<section class="related-section">
+    <h2>Put Your Knowledge Into Practice</h2>
+    <div class="related-grid">
+        <div class="related-card">
+            <h3>Track Your Budget</h3>
+            <p>Apply what you learn with SenticMoney - our privacy-first finance app that keeps your data on your device.</p>
+            <a href="/features">See Features <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="related-card">
+            <h3>Get Started Free</h3>
+            <p>Download the free edition of SenticMoney and start tracking your income and expenses today.</p>
+            <a href="/download">Download Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<section class="book-details-section">
+    <h2>Book Details</h2>
+    <div class="book-metadata">
+        <ul>
+            <li><strong>ISBN-13:</strong> 979-8322440529</li>
+            <li><strong>ASIN:</strong> B0D2CKMF49</li>
+            <li><strong>Pages:</strong> 163</li>
+            <li><strong>Publisher:</strong> Independently Published</li>
+            <li><strong>Publication Date:</strong> April 22, 2024</li>
+            <li><strong>Language:</strong> English</li>
+            <li><strong>Format:</strong> Paperback</li>
+            <li><strong>Weight:</strong> 10.7 ounces</li>
+        </ul>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 E-CommSolutions, LLC. <a href="/">SenticMoney</a> | <a href="https://www.amazon.com/dp/B0D2CKMF49" target="_blank" rel="noopener">Buy on Amazon</a></p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.querySelector('.hamburger').classList.toggle('active');
+    document.getElementById('mobileMenu').classList.toggle('active');
+}
+</script>
+<script src="/track.js"></script>
+</body>
+</html>

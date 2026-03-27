@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <title>Download - SenticMoney</title>
+    <meta name="description" content="Download SenticMoney for Windows. Free personal finance software with AI-powered insights and complete privacy.">
+    <link rel="canonical" href="https://senticmoney.com/download">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <style>
+        /* Font Awesome font-display override for better performance */
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-display: swap;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-color: #10B981;
+            --secondary-color: #059669;
+            --accent-color: #34D399;
+            --dark-bg: #064E3B;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            background: none;
+            border: none;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 82px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 999;
+            flex-direction: column;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+            max-height: 660px;
+        }
+
+        .mobile-menu-logo {
+            display: none;
+        }
+
+        .mobile-menu a {
+            font-size: 1rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1rem 2rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .mobile-menu a:hover {
+            background: #f8f8f8;
+            color: var(--primary-color);
+            padding-left: 2.5rem;
+        }
+
+        .mobile-menu a i {
+            width: 20px;
+            text-align: center;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+        .mobile-menu .close-btn {
+            display: none;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            color: var(--text-dark);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+        .download-section {
+            padding: 5rem 2rem;
+            background: #f9fafb;
+            text-align: center;
+        }
+        .download-section .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            font-size: 1.2rem;
+            padding: 1.25rem 3rem;
+        }
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Platform Tabs */
+        .platform-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .platform-tab {
+            padding: 0.6rem 1.5rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            background: white;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: inherit;
+        }
+        .platform-tab:hover {
+            border-color: var(--primary-color);
+            color: var(--text-dark);
+        }
+        .platform-tab.active {
+            border-color: var(--primary-color);
+            background: #f0fdf4;
+            color: var(--text-dark);
+        }
+        .platform-tab i {
+            font-size: 1rem;
+        }
+        .platform-panel {
+            display: none;
+        }
+        .platform-panel.active {
+            display: block;
+        }
+
+        /* Direct Download Card */
+        .download-card {
+            background: white;
+            border: 2px solid var(--primary-color);
+            padding: 3rem 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .download-card h2 {
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+        .download-card .download-subtitle {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+        }
+        .btn-download {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #ffffff !important;
+            font-size: 1.4rem;
+            padding: 1.25rem 3.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 16px rgba(16, 185, 129, 0.35);
+        }
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.45);
+        }
+        .btn-download i {
+            font-size: 1.3rem;
+        }
+        .btn-download-disabled {
+            background: #d1d5db;
+            color: #ffffff !important;
+            font-size: 1.4rem;
+            padding: 1.25rem 3.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: default;
+            box-shadow: none;
+        }
+        .btn-download-disabled i {
+            font-size: 1.3rem;
+        }
+        .download-meta {
+            margin-top: 1.25rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        .download-meta span {
+            margin: 0 0.5rem;
+        }
+        .download-meta span::before {
+            content: "•";
+            margin-right: 0.5rem;
+            opacity: 0.5;
+        }
+        .download-meta span:first-child::before {
+            content: none;
+        }
+        .quick-start-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .quick-start-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Mac Coming Soon */
+        .coming-soon-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #FEF3C7;
+            color: #92400E;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+        }
+        .coming-soon-badge i {
+            font-size: 0.85rem;
+        }
+        .mac-notify-text {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-top: 1.5rem;
+            line-height: 1.7;
+        }
+        .also-available {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e5e7eb;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        .also-available a {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .also-available a:hover {
+            text-decoration: underline;
+        }
+
+        .upgrade-note {
+            background: #f0fdf4;
+            border: 1px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .upgrade-note h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .upgrade-note p {
+            margin-bottom: 0;
+            color: var(--text-light);
+        }
+
+        /* Download Info Box */
+        .download-info-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #f9fafb;
+            border-radius: 8px;
+        }
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            text-align: center;
+        }
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        .info-item span {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        /* What Happens Next */
+        .what-happens-next {
+            background: #f9fafb;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+        .what-happens-next h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+        .what-happens-next h2 i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+        .steps-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline-step {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .timeline-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 23px;
+            top: 50px;
+            bottom: -32px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+        }
+        .step-number {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        .step-content {
+            flex: 1;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .step-content h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .step-content p {
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.6;
+        }
+        .step-content code {
+            background: #f3f4f6;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        .help-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        .help-cta i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+        .help-cta a {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .help-cta a:hover {
+            text-decoration: underline;
+        }
+        .system-requirements {
+            background: white;
+            padding: 3rem 2rem;
+        }
+        .system-requirements .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .system-requirements h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+        .system-requirements ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .system-requirements ul li {
+            padding: 0.75rem 0;
+            color: var(--text-light);
+        }
+        .system-requirements ul li:before {
+            content: "\2713  ";
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.1rem; }
+    
+            .logo img {
+                height: 50px;
+                width: auto;
+            }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            
+            .download-card {
+                padding: 2rem 1.5rem;
+            }
+            .download-card h2 {
+                font-size: 1.5rem;
+            }
+            .btn-download,
+            .btn-download-disabled {
+                font-size: 1.15rem;
+                padding: 1.1rem 2.5rem;
+            }
+            .platform-tabs {
+                gap: 0.4rem;
+            }
+            .platform-tab {
+                padding: 0.5rem 1.25rem;
+                font-size: 0.9rem;
+            }
+            .download-info-box {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .what-happens-next {
+                padding: 2rem 1.5rem;
+            }
+            .what-happens-next h2 {
+                font-size: 1.5rem;
+            }
+            .timeline-step {
+                gap: 1rem;
+            }
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+            }
+            .timeline-step:not(:last-child)::after {
+                left: 19px;
+            }
+            .step-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav aria-label="Main navigation">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="/images/sentic-money-logo-transparent.webp" alt="SenticMoney" width="150" height="50"></a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/videos">Videos</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="https://sentic-web-demo.onrender.com" target="_blank">Live Demo</a></li>
+                <li><a href="/support">Support</a></li>
+                <li><a href="/books/money-management-for-teens.html">Books</a></li>
+                <li><a href="/map">Map</a></li>
+            </ul>
+            <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="/" onclick="toggleMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="/features" onclick="toggleMenu()"><i class="fas fa-star"></i> Features</a>
+        <a href="/pricing" onclick="toggleMenu()"><i class="fas fa-tags"></i> Pricing</a>
+        <a href="/blog" onclick="toggleMenu()"><i class="fas fa-newspaper"></i> Blog</a>
+        <a href="/videos" onclick="toggleMenu()"><i class="fas fa-video"></i> Videos</a>
+        <a href="/download" onclick="toggleMenu()"><i class="fas fa-download"></i> Download</a>
+        <a href="https://sentic-web-demo.onrender.com" target="_blank" onclick="toggleMenu()"><i class="fas fa-play-circle"></i> Live Demo</a>
+        <a href="/support" onclick="toggleMenu()"><i class="fas fa-life-ring"></i> Support</a>
+        <a href="/books/money-management-for-teens.html" onclick="toggleMenu()"><i class="fas fa-book"></i> Books</a>
+        <a href="/map" onclick="toggleMenu()"><i class="fas fa-sitemap"></i> Map</a>
+    </nav>
+
+    <main>
+    <section class="hero">
+        <div class="container">
+            <h1>Download SenticMoney</h1>
+            <p>Zero-based, envelope, 50/30/20, or your own approach &mdash; start budgeting your way with complete privacy.</p>
+        </div>
+    </section>
+
+    <section class="download-section">
+        <div class="container">
+            <div class="demo-card" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; text-align: center;">
+                <h2 style="color: white; margin-bottom: 0.5rem;"><i class="fas fa-play-circle"></i> Try Before You Download</h2>
+                <p style="opacity: 0.95; margin-bottom: 1.5rem;">See SenticMoney in action with our live web demo. No installation required.</p>
+                <a href="https://sentic-web-demo.onrender.com" target="_blank" class="btn" style="background: white; color: #059669; padding: 1rem 2rem; font-weight: 600;"><i class="fas fa-external-link-alt"></i> Launch Live Demo</a>
+            </div>
+            
+            <!-- Direct Download -->
+            <div class="download-card">
+                <h2><i class="fas fa-download" style="color: var(--primary-color); margin-right: 0.5rem;"></i> Download SenticMoney Free</h2>
+                <p class="download-subtitle">One click. No email required. No account needed.</p>
+
+                <div class="platform-tabs">
+                    <button class="platform-tab active" id="tab-windows" onclick="showPlatform('windows')">
+                        <i class="fab fa-windows"></i> Windows
+                    </button>
+                    <button class="platform-tab" id="tab-mac" onclick="showPlatform('mac')">
+                        <i class="fab fa-apple"></i> Mac
+                    </button>
+                </div>
+
+                <!-- Windows Panel -->
+                <div class="platform-panel active" id="panel-windows">
+                    <a href="https://senticmoney.com/senticmoney-download/SenticMoney-Setup-v2.4.3.exe" class="btn-download" onclick="trackDownload('windows', '2.4.3')">
+                        <i class="fas fa-download"></i> Download for Windows
+                    </a>
+
+                    <div class="download-meta">
+                        <span>Version 2.4.3</span>
+                        <span>~93 MB</span>
+                        <span>Windows 10/11</span>
+                    </div>
+
+                    <a href="/resources/senticmoney-quick-start.pdf" class="quick-start-link" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Download Quick Start Guide (PDF)
+                    </a>
+                </div>
+
+                <!-- Mac Panel -->
+                <div class="platform-panel" id="panel-mac">
+                    <div class="coming-soon-badge">
+                        <i class="fas fa-clock"></i> Coming Soon
+                    </div>
+
+                    <div class="btn-download-disabled">
+                        <i class="fab fa-apple"></i> Mac Version Coming Soon
+                    </div>
+
+                    <div class="mac-notify-text">
+                        SenticMoney for Mac launches this month.<br>
+                        Compatible with macOS and Apple Silicon (M1/M2/M3/M4).<br>
+                        Check back soon or <a href="mailto:support@senticmoney.com" style="color: var(--primary-color); font-weight: 600;">email us</a> to be notified when it's ready.
+                    </div>
+
+                    <div class="also-available">
+                        Need it now? <a href="#" onclick="showPlatform('windows'); return false;">Download the Windows version</a>
+                    </div>
+                </div>
+
+                <div class="download-info-box">
+                    <div class="info-item">
+                        <i class="fas fa-desktop"></i>
+                        <span>Windows 10/11</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-hdd"></i>
+                        <span>~93 MB</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>2-3 min install</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Local</span>
+                    </div>
+                </div>
+
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-light);">Free Forever &bull; No credit card required</p>
+                <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-light);">Already a customer? <a href="/update" style="color: var(--primary-color); font-weight: 600;">Download your update here</a></p>
+
+                <div class="upgrade-note">
+                    <h3><i class="fas fa-star"></i> Want Bank Imports &amp; AI Features?</h3>
+                    <p>Upgrade to <a href="/pricing" style="color: var(--primary-color); font-weight: 600;">Standard ($39/year)</a> for bank imports, receipt scanning, SenticMoney Genie, and Runway cash flow planning. You can upgrade anytime from within the app.</p>
+                    <p style="margin-top: 0.75rem;"><i class="fas fa-tag" style="color: var(--primary-color); margin-right: 0.5rem;"></i>Use code <strong style="color: var(--primary-color);">WELCOME20</strong> at checkout to save 20% your first year &mdash; just $31.20</p>
+                </div>
+            </div>
+
+            <!-- What Happens Next Section -->
+            <div class="what-happens-next">
+                <h2><i class="fas fa-route"></i> What Happens After Download?</h2>
+                <div class="steps-timeline">
+                    <div class="timeline-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Run the Installer</h3>
+                            <p>Double-click the downloaded <code>SenticMoney-Setup-v2.4.3.exe</code> file. If prompted by Windows SmartScreen, click "More info" → "Run anyway".</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Follow the Installation Wizard</h3>
+                            <p>Choose your installation location and follow the prompts. The installer will set up everything automatically.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Launch SenticMoney</h3>
+                            <p>Open SenticMoney from your Start Menu or desktop shortcut. Your browser will open to <code>http://localhost:5007</code>.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Login &amp; Explore</h3>
+                            <p>Use these credentials: <strong>demo / demo123</strong>. You'll see a few pre-loaded transactions to explore all features.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Start Fresh or Keep Demo Data</h3>
+                            <p>Create your own account or continue with the demo. Your data stays on your computer—completely private.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="help-cta">
+                    <p><i class="fas fa-question-circle"></i> Need help? Check our <a href="/support">Support &amp; FAQ page</a> or email <a href="mailto:support@senticmoney.com">support@senticmoney.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="system-requirements">
+        <div class="container">
+            <h3>System Requirements</h3>
+            <ul>
+                <li>Windows 10 or Windows 11 (64-bit)</li>
+                <li>4 GB RAM minimum (8 GB recommended)</li>
+                <li>500 MB free disk space</li>
+                <li>1280x720 screen resolution or higher</li>
+                <li>Internet connection (required for AI features in Standard)</li>
+            </ul>
+
+            <p style="margin-top: 1.5rem; color: var(--text-light);"><i class="fab fa-apple" style="color: var(--primary-color); margin-right: 0.5rem;"></i><strong style="color: var(--text-dark);">Mac version coming soon</strong> &mdash; compatible with Apple Silicon (M1/M2/M3/M4) and Intel Macs.</p>
+
+            <h3 style="margin-top: 2rem;">Installation Instructions</h3>
+            <ol style="color: var(--text-light); padding-left: 2rem;">
+                <li style="padding: 0.5rem 0;">Download the installer file</li>
+                <li style="padding: 0.5rem 0;">Double-click the downloaded file</li>
+                <li style="padding: 0.5rem 0;">Follow the installation wizard</li>
+                <li style="padding: 0.5rem 0;">Launch SenticMoney from your Start Menu</li>
+            </ol>
+
+            <p style="margin-top: 2rem; color: var(--text-light);">Need help? Visit our <a href="/support" style="color: var(--primary-color); font-weight: 600;">Support page</a> or email us at <a href="mailto:support@senticmoney.com" style="color: var(--primary-color); font-weight: 600;">support@senticmoney.com</a></p>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/download">Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="/support">FAQ &amp; Help</a></li>
+                        <li><a href="mailto:support@senticmoney.com">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/cookies">Cookie Policy</a></li>
+                        <li><a href="/refund">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p>E-Comm Solutions LLC<br>Wyoming, USA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 E-Comm Solutions LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ============================================================
+        // Platform detection & tab switching
+        // ============================================================
+        // MAC_LIVE: Set to true and update the .dmg URL when Mac ships.
+        //           That's it — the rest is automatic.
+        // ============================================================
+        var MAC_LIVE = true;
+        var MAC_DMG_URL = 'https://senticmoney.com/senticmoney-download/SenticMoney-v2.5.3-mac.dmg';
+        var TRACK_ENDPOINT = 'https://sentic-proxy-server.onrender.com/track';
+
+        // ============================================================
+        // Download click tracking
+        // Fires a beacon to the same endpoint as track.js so download
+        // events appear alongside pageview data in your admin dashboard.
+        // ============================================================
+        function trackDownload(platform, version) {
+            var vid = localStorage.getItem('_snt_vid') || 'unknown';
+            var payload = {
+                event: 'download',
+                path: '/download',
+                platform: platform,
+                version: version,
+                referrer: document.referrer || '',
+                visitor_id: vid,
+                utm_source: sessionStorage.getItem('utm_source') || '',
+                utm_medium: sessionStorage.getItem('utm_medium') || '',
+                utm_campaign: sessionStorage.getItem('utm_campaign') || '',
+                screen_width: screen.width,
+                ua: navigator.userAgent
+            };
+            var data = JSON.stringify(payload);
+            if (navigator.sendBeacon) {
+                navigator.sendBeacon(TRACK_ENDPOINT, data);
+            } else {
+                fetch(TRACK_ENDPOINT, { method: 'POST', body: data, keepalive: true }).catch(function() {});
+            }
+        }
+
+        function showPlatform(platform) {
+            document.querySelectorAll('.platform-tab').forEach(function(t) { t.classList.remove('active'); });
+            document.querySelectorAll('.platform-panel').forEach(function(p) { p.classList.remove('active'); });
+            document.getElementById('tab-' + platform).classList.add('active');
+            document.getElementById('panel-' + platform).classList.add('active');
+        }
+
+        // Auto-detect OS and show the right tab first
+        (function() {
+            // If Mac version is live, swap in the real download button for all visitors
+            if (MAC_LIVE && MAC_DMG_URL) {
+                var panel = document.getElementById('panel-mac');
+                panel.innerHTML =
+                    '<a href="' + MAC_DMG_URL + '" class="btn-download" onclick="trackDownload(\'mac\', \'2.5.3\')">' +
+                        '<i class="fab fa-apple"></i> Download for Mac' +
+                    '</a>' +
+                    '<div class="download-meta">' +
+                        '<span>Version 2.5.3</span>' +
+                        '<span>macOS 12+ (Monterey)</span>' +
+                        '<span>Apple Silicon &amp; Intel</span>' +
+                    '</div>' +
+                    '<a href="/resources/senticmoney-quick-start.pdf" class="quick-start-link" target="_blank">' +
+                        '<i class="fas fa-file-pdf"></i> Download Quick Start Guide (PDF)' +
+                    '</a>' +
+                    '<div class="also-available">' +
+                        'Also available: <a href="#" onclick="showPlatform(\'windows\'); return false;">Windows version</a>' +
+                    '</div>';
+            }
+
+            var ua = navigator.userAgent || navigator.platform || '';
+            var isMac = /Macintosh|MacIntel|MacPPC|Mac OS X|Mac_PowerPC/i.test(ua);
+            if (isMac) {
+                showPlatform('mac');
+            }
+        })();
+
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            if (menu && hamburger && menu.classList.contains('active')) {
+                if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                    toggleMenu();
+                }
+            }
+        });
+    </script>
+<script src="/track.js"></script>
+</body>
+</html>

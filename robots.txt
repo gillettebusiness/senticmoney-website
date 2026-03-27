@@ -1,0 +1,8 @@
+# Robots.txt for SenticMoney
+# https://senticmoney.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://senticmoney.com/sitemap.xml

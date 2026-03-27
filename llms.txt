@@ -1,0 +1,85 @@
+# SenticMoney
+
+> SenticMoney is a privacy-first personal finance app for Windows that uses AI to help you budget your way — zero-based, envelope, 50/30/20, pay-yourself-first, or hybrid — and get financial insights, all without sending your data to the cloud. All financial data stays on your device. Free tier available forever; Standard tier is $39/year with AI chat, receipt scanning, bank imports, and cash flow planning. Built by E-Comm Solutions LLC.
+
+SenticMoney is designed for people who want powerful budgeting tools without sacrificing privacy. Unlike cloud-based apps (Mint, YNAB, Monarch Money), SenticMoney stores everything locally in a SQLite database on your Windows PC. There is no Plaid integration and no bank credential sharing. The SenticMoney Genie (powered by Gemini 3.1 Pro) sends only an aggregated financial summary for processing — never your full transaction history — and nothing is stored on external servers.
+
+Key differentiators:
+- 100% local data storage — your finances never leave your device
+- No Plaid, no bank login sharing, no data mining, no ads
+- Works offline (Free tier fully offline; Standard needs internet only for AI features)
+- AI-powered chat that understands your financial context in plain English
+- Multi-device access via home network browser (install on one PC, access from any device)
+- Dramatically cheaper than alternatives: $39/year vs YNAB ($180/yr), Monarch ($144/yr), EveryDollar ($80/yr)
+- Flexible budgeting methods: supports zero-based, envelope, 50/30/20, pay-yourself-first, and the exclusive Runway cash flow method — users are never locked into a single approach (unlike YNAB or EveryDollar)
+
+Platform: Windows 10/11 desktop application. Other devices (Mac, iPhone, iPad, Android) can access via browser on the same home network.
+
+## Main Pages
+
+- [Homepage](https://senticmoney.com/): Overview, how it works, feature highlights, comparison table, and testimonials
+- [Features](https://senticmoney.com/features): Detailed showcase of all features with screenshots — AI chat, budgeting, financial health score, bill tracking, transaction management, goals, receipt scanning, Runway cash flow, multi-device access, and financial calculators
+- [Pricing](https://senticmoney.com/pricing): Free tier ($0 forever) and Standard tier ($39/year) with full feature breakdowns and FAQ
+- [Download](https://senticmoney.com/download): Download the Windows installer, system requirements, and installation guide
+- [Live Demo](https://sentic-web-demo.onrender.com): Try SenticMoney in your browser without downloading — pre-loaded with sample data
+- [Support](https://senticmoney.com/support): FAQ covering installation, data storage, imports, multi-device use, AI features, and refund policy
+
+## Features — Free Tier ($0 Forever)
+
+- Manual transaction entry with unlimited transactions
+- Dashboard with spending charts (income vs expenses, spending by category)
+- Budget tracking with progress bars, carry forward, and overspend alerts
+- Custom categories and subcategories with color-coded icons
+- Financial Goals with target dates and progress tracking
+- Bills and subscription tracking with due date alerts
+- Income source tracking (salary, freelance, rental, etc.)
+- Financial Calendar (3-month rolling view, color-coded events)
+- Financial Health Score (0-100 across savings rate, debt-to-income, emergency fund, expense ratio)
+- Reminders with recurrence
+- Tags for cross-category tracking (tax-deductible, vacation, reimbursable)
+- Reconciliation
+- Backup management (primary + secondary location)
+- Financial Calculators: loan payoff, credit card payoff, compound interest/savings, debt snowball vs avalanche
+- Light and dark themes
+
+## Features — Standard Tier ($39/year)
+
+- Everything in Free, plus:
+- Smart bank statement imports: CSV, Excel, OFX, QFX, PDF with 15+ bank presets (Chase, Bank of America, Wells Fargo, Citi, Capital One, US Bank, PNC, TD Bank, Ally, Discover, Amex, Navy Federal, USAA, Schwab, Fidelity, and custom mapping)
+- SenticMoney Genie: ask questions in plain English like "How much did I spend on groceries?" — page-aware context, file attachments, voice input, 50 queries/day
+- Receipt scanning with AI Vision: snap a photo or upload a PDF, AI extracts itemized data
+- Auto-categorization of transactions
+- Runway Cash Flow Planning: Living Money metric, $/Day daily budget, payday-to-payday periods, actual vs planned comparison, trend charts
+- Advanced financial reports: income statements, balance sheets, cash flow, tax summaries
+- Export to Excel and PDF
+- Promo code WELCOME20 saves 20% first year ($31.20)
+
+## Blog
+
+- [Blog Home](https://senticmoney.com/blog): 37+ articles on personal finance, budgeting strategies, privacy, and app comparisons
+- [Best Personal Finance App 2026](https://senticmoney.com/blog/best-personal-finance-app-2026-complete-buyers-guide.html): Comprehensive buyer's guide
+- [Best Mint Alternatives 2026](https://senticmoney.com/blog/best-mint-alternatives-2026.html): Top budgeting apps after Mint shutdown
+- [Best YNAB Alternatives 2026](https://senticmoney.com/blog/best-ynab-alternatives-2026.html): Free and paid alternatives
+- [Budget Apps That Don't Use Plaid](https://senticmoney.com/blog/budget-apps-that-dont-use-plaid-privacy-first-alternatives.html): Privacy-first alternatives
+- [Private Budgeting Alternatives](https://senticmoney.com/blog/private-budgeting-alternatives-senticmoney-vs-ynab-vs-monarch-money.html): SenticMoney vs YNAB vs Monarch Money
+- [Best Budget Apps for Couples](https://senticmoney.com/blog/best-budget-apps-for-couples-2026.html): Shared finances made private
+- [Budgeting for Beginners](https://senticmoney.com/blog/budgeting-for-beginners-how-to-start-managing-your-money.html): How to start managing your money
+- [How to Track Spending](https://senticmoney.com/blog/how-to-track-your-spending-complete-beginners-guide.html): Complete beginner's guide
+
+## Videos
+
+- [Video Tutorials](https://senticmoney.com/videos): Full 8-minute walkthrough and feature demos
+
+## Books
+
+- [Money Management for Teens](https://senticmoney.com/books/money-management-for-teens.html): Book by Frank D. Campbell — beginner's guide to personal finance for teens
+
+## Optional
+
+- [Privacy Policy](https://senticmoney.com/privacy): How data is handled (spoiler: it stays on your device)
+- [Terms of Service](https://senticmoney.com/terms): Terms of service
+- [Refund Policy](https://senticmoney.com/refund): 30-day money-back guarantee
+- [Cookie Policy](https://senticmoney.com/cookies): Cookie usage on the marketing website
+- [Author Profile](https://senticmoney.com/author/frank-d-campbell): About Frank D. Campbell
+- [Contact](mailto:contact@senticmoney.com): General inquiries
+- [Support Email](mailto:support@senticmoney.com): Technical support (1-2 business day response)

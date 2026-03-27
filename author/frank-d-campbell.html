@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frank D. Campbell - Creator of SenticMoney</title>
+    <meta name="description" content="Frank D. Campbell is the creator of SenticMoney, a privacy-first personal finance application. Writing about budgeting, financial privacy, and fintech.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="canonical" href="https://senticmoney.com/author/frank-d-campbell">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Frank D. Campbell",
+      "url": "https://senticmoney.com/author/frank-d-campbell",
+      "description": "Creator of SenticMoney, personal finance and fintech writer",
+      "sameAs": [],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "SenticMoney",
+        "url": "https://senticmoney.com"
+      },
+      "knowsAbout": ["Personal Finance", "Budgeting", "Financial Privacy", "Fintech", "Software Development"],
+      "author": {
+        "@type": "Book",
+        "name": "Money Management for Teens: A Beginner's Guide to Personal Finance",
+        "url": "https://www.amazon.com/Money-Management-Teens-Beginners-Essential/dp/B0D2CKMF49"
+      }
+    }
+    </script>
+
+    <style>
+        /* Font Awesome font-display override for better performance */
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #10B981;
+            --secondary-color: #059669;
+            --accent-color: #34D399;
+            --dark-bg: #064E3B;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 82px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 999;
+            flex-direction: column;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+            max-height: 660px;
+        }
+
+        .mobile-menu a {
+            font-size: 1rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 1rem 2rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .mobile-menu a:hover {
+            background: #f8f8f8;
+            color: var(--primary-color);
+            padding-left: 2.5rem;
+        }
+
+        .mobile-menu a i {
+            width: 20px;
+            text-align: center;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Main Content */
+        .author-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .author-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .author-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark-bg);
+            margin-bottom: 0.5rem;
+        }
+
+        .author-title {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .author-bio {
+            margin-bottom: 3rem;
+        }
+
+        .author-bio h2 {
+            font-size: 1.5rem;
+            color: var(--dark-bg);
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1rem;
+        }
+
+        .author-bio p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .expertise-section {
+            margin-bottom: 3rem;
+        }
+
+        .expertise-section h2 {
+            font-size: 1.5rem;
+            color: var(--dark-bg);
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1rem;
+        }
+
+        .expertise-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .expertise-list li {
+            background: #f0fdf4;
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .expertise-list i {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+        }
+
+        .articles-section {
+            margin-bottom: 3rem;
+        }
+
+        .articles-section h2 {
+            font-size: 1.5rem;
+            color: var(--dark-bg);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 1rem;
+        }
+
+        .article-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .article-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .article-list li:last-child {
+            border-bottom: none;
+        }
+
+        .article-list a {
+            color: var(--dark-bg);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .article-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 2px solid var(--primary-color);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-box h3 {
+            color: var(--dark-bg);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .cta-box p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .author-header h1 {
+                font-size: 2rem;
+            }
+
+            .author-page {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav aria-label="Main navigation">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="/images/sentic-money-logo-transparent.webp" alt="SenticMoney">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/videos">Videos</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="https://sentic-web-demo.onrender.com" target="_blank">Live Demo</a></li>
+                <li><a href="/support">Support</a></li>
+                <li><a href="/books/money-management-for-teens.html">Books</a></li>
+                <li><a href="/map">Map</a></li>
+            </ul>
+            <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="/" onclick="toggleMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="/features" onclick="toggleMenu()"><i class="fas fa-star"></i> Features</a>
+        <a href="/pricing" onclick="toggleMenu()"><i class="fas fa-tags"></i> Pricing</a>
+        <a href="/blog" onclick="toggleMenu()"><i class="fas fa-newspaper"></i> Blog</a>
+        <a href="/videos" onclick="toggleMenu()"><i class="fas fa-video"></i> Videos</a>
+        <a href="/download" onclick="toggleMenu()"><i class="fas fa-download"></i> Download</a>
+        <a href="https://sentic-web-demo.onrender.com" target="_blank" onclick="toggleMenu()"><i class="fas fa-play-circle"></i> Live Demo</a>
+        <a href="/support" onclick="toggleMenu()"><i class="fas fa-life-ring"></i> Support</a>
+        <a href="/books/money-management-for-teens.html" onclick="toggleMenu()"><i class="fas fa-book"></i> Books</a>
+        <a href="/map" onclick="toggleMenu()"><i class="fas fa-sitemap"></i> Map</a>
+    </nav>
+
+    <main class="author-page">
+        <header class="author-header">
+            <h1>Frank D. Campbell</h1>
+            <p class="author-title">Creator of SenticMoney</p>
+        </header>
+
+        <section class="author-bio">
+            <h2>About</h2>
+            <p>Frank D. Campbell is the creator of SenticMoney, a privacy-first personal finance application that keeps your financial data on your device—not in the cloud.</p>
+
+            <p>With a background in software development and a passion for financial privacy, Frank built SenticMoney to solve a problem he experienced firsthand: the trade-off between convenient budgeting tools and control over sensitive financial data.</p>
+
+            <p>Most budgeting apps require you to share your bank credentials with third-party aggregators like Plaid. SenticMoney takes a different approach—local-first architecture means your transactions, budgets, and financial reports never leave your computer unless you choose to back them up.</p>
+
+            <p>Frank writes about personal finance, budgeting strategies, financial privacy, and the intersection of technology and money management. He is also the author of <em>Money Management for Teens</em>, a beginner's guide to personal finance for young adults.</p>
+        </section>
+
+        <section class="books-section" style="margin-bottom: 3rem;">
+            <h2 style="font-size: 1.5rem; color: var(--dark-bg); margin-bottom: 1.5rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">Books</h2>
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start; padding: 1.5rem; background: #f9fafb; border-radius: 12px;">
+                    <i class="fas fa-piggy-bank" style="font-size: 2.5rem; color: var(--primary-color); min-width: 50px;"></i>
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.1rem;"><a href="/books/money-management-for-teens.html" style="color: var(--dark-bg); text-decoration: none;">Money Management for Teens: A Beginner's Guide to Personal Finance</a></h3>
+                        <p style="color: var(--text-light); margin-bottom: 0.75rem;">Master essential skills to manage money, build wealth, and achieve financial freedom. Covers budgeting, saving, investing, credit, and more.</p>
+                        <a href="/books/money-management-for-teens.html" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Learn More →</a>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1.5rem; align-items: flex-start; padding: 1.5rem; background: #f9fafb; border-radius: 12px;">
+                    <i class="fas fa-brain" style="font-size: 2.5rem; color: var(--primary-color); min-width: 50px;"></i>
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.1rem;"><a href="https://www.amazon.com/dp/B0CZHL7TWY" target="_blank" rel="noopener" style="color: var(--dark-bg); text-decoration: none;">The Growth Mindset Advantage: The Young Adult's Guide to Personal Development</a></h3>
+                        <p style="color: var(--text-light); margin-bottom: 0.75rem;">A transformative guide for navigating high school and beyond. Learn to embrace challenges, develop resilience, and unlock your potential.</p>
+                        <a href="https://www.amazon.com/dp/B0CZHL7TWY" target="_blank" rel="noopener" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">View on Amazon →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="expertise-section">
+            <h2>Topics</h2>
+            <ul class="expertise-list">
+                <li><i class="fas fa-shield-alt"></i> Financial Privacy</li>
+                <li><i class="fas fa-wallet"></i> Personal Budgeting</li>
+                <li><i class="fas fa-chart-line"></i> Expense Tracking</li>
+                <li><i class="fas fa-laptop-code"></i> Fintech</li>
+                <li><i class="fas fa-piggy-bank"></i> Saving Strategies</li>
+                <li><i class="fas fa-lock"></i> Data Security</li>
+                <li><i class="fas fa-graduation-cap"></i> Teen Finance</li>
+            </ul>
+        </section>
+
+        <section class="articles-section">
+            <h2>Recent Articles</h2>
+            <ul class="article-list">
+                <li>
+                    <a href="/blog/best-expense-management-apps-2026">Best Expense Management Apps in 2026: Track Every Dollar</a>
+                    <p class="article-meta">March 2026 · App Comparisons</p>
+                </li>
+                <li>
+                    <a href="/blog/best-money-tracker-apps-2026">Best Money Tracker Apps in 2026: See Where Every Dollar Goes</a>
+                    <p class="article-meta">March 2026 · App Comparisons</p>
+                </li>
+                <li>
+                    <a href="/blog/best-apps-to-save-money-2026">Best Apps to Save Money in 2026: Build Wealth</a>
+                    <p class="article-meta">March 2026 · App Comparisons</p>
+                </li>
+                <li>
+                    <a href="/blog/best-expense-tracker-2026">Best Expense Trackers in 2026 That Protect Your Data</a>
+                    <p class="article-meta">March 2026 · App Comparisons</p>
+                </li>
+                <li>
+                    <a href="/blog/expense-tracker-app-guide">How to Track Expenses: A Complete Guide to Expense Tracker Apps</a>
+                    <p class="article-meta">March 2026 · Expense Tracking</p>
+                </li>
+                <li>
+                    <a href="/blog/free-expense-tracker-privacy">Free Expense Trackers That Respect Your Privacy</a>
+                    <p class="article-meta">March 2026 · Privacy &amp; Security</p>
+                </li>
+                <li>
+                    <a href="/blog/teaching-teens-to-budget">Teaching Teens to Budget: A Parent's Guide (2026)</a>
+                    <p class="article-meta">February 2026 · Teen Finance</p>
+                </li>
+                <li>
+                    <a href="/blog/is-plaid-safe">Is Plaid Safe? What to Know Before Sharing Bank Info</a>
+                    <p class="article-meta">February 2026 · Privacy &amp; Security</p>
+                </li>
+                <li>
+                    <a href="/blog/goodbudget-vs-sentic-money">GoodBudget vs SenticMoney: Envelope Budget Comparison</a>
+                    <p class="article-meta">February 2026 · Competitor</p>
+                </li>
+                <li>
+                    <a href="/blog/best-personal-finance-app-2026">Best Personal Finance App in 2026 — Complete Buyer's Guide</a>
+                    <p class="article-meta">February 2026 · App Comparisons</p>
+                </li>
+                <li>
+                    <a href="/blog/personal-finance-software-local-vs-cloud">Personal Finance Software: Local vs Cloud — Which Is Safer for Your Data?</a>
+                    <p class="article-meta">February 2026 · Privacy &amp; Security</p>
+                </li>
+                <li>
+                    <a href="/blog/money-management-apps-2026">Best Money Management Apps in 2026: Complete Buyer's Guide</a>
+                    <p class="article-meta">February 2026 · App Comparisons</p>
+                </li>
+                <li>
+                    <a href="/blog/quicken-simplifi-alternatives">Best Quicken Simplifi Alternatives in 2026: Privacy-First Options</a>
+                    <p class="article-meta">February 2026 · Competitor</p>
+                </li>
+                <li>
+                    <a href="/blog/free-financial-calculators">Free Financial Calculators: Plan Your Debt Payoff &amp; Savings Goals</a>
+                    <p class="article-meta">February 2026 · Feature</p>
+                </li>
+                <li>
+                    <a href="/blog/is-ynab-worth-it">Is YNAB Worth It? Honest Cost-Benefit Analysis for 2026</a>
+                    <p class="article-meta">February 2026 · Competitor</p>
+                </li>
+                <li>
+                    <a href="/blog/couples-budgeting">Couples Budgeting: Joint, Separate, or Hybrid Finances?</a>
+                    <p class="article-meta">February 2026 · Couples</p>
+                </li>
+                <li>
+                    <a href="/blog/budget-software-for-couples">Budget Software for Couples: Shared Finances Made Private</a>
+                    <p class="article-meta">February 2026 · Couples</p>
+                </li>
+                <li>
+                    <a href="/blog/best-ways-to-budget-your-money">Best Ways to Budget Your Money: 7 Proven Methods That Work</a>
+                    <p class="article-meta">February 2026 · Budgeting</p>
+                </li>
+                <li>
+                    <a href="/blog/how-to-create-a-monthly-budget">How to Create a Monthly Budget: Step-by-Step Guide for 2026</a>
+                    <p class="article-meta">February 2026 · Budgeting</p>
+                </li>
+                <li>
+                    <a href="/blog/financial-management-for-teens">Financial Management for Teens: Essential Money Skills</a>
+                    <p class="article-meta">February 2026 · Teen Finance</p>
+                </li>
+                <li>
+                    <a href="/blog/debt-payoff-strategies">Debt Payoff Strategies: Snowball vs Avalanche Method</a>
+                    <p class="article-meta">February 2026 · Debt</p>
+                </li>
+                <li>
+                    <a href="/blog/money-management-for-youth">Money Management for Youth: Essential Skills for Ages 13-19</a>
+                    <p class="article-meta">February 2026 · Teen Finance</p>
+                </li>
+                <li>
+                    <a href="/blog/how-to-set-financial-goals">How to Set Financial Goals You'll Actually Achieve</a>
+                    <p class="article-meta">February 2026 · Budgeting</p>
+                </li>
+                <li>
+                    <a href="/blog/budget-by-paycheck">How to Budget by Paycheck: The Complete Guide</a>
+                    <p class="article-meta">January 2026 · Budgeting</p>
+                </li>
+                <li>
+                    <a href="/blog/christian-budgeting-apps">Best Christian Budgeting Apps 2026: Faith-Based Alternatives to EveryDollar</a>
+                    <p class="article-meta">January 2026 · Christian Finance</p>
+                </li>
+                <li>
+                    <a href="/blog/how-to-budget-for-tithing">How to Budget for Tithing: A Practical Guide for Christians</a>
+                    <p class="article-meta">January 2026 · Christian Finance</p>
+                </li>
+                <li>
+                    <a href="/blog/biblical-money-management">Biblical Money Management: 7 Principles for Christian Finances</a>
+                    <p class="article-meta">January 2026 · Christian Finance</p>
+                </li>
+                <li>
+                    <a href="/blog/how-to-save-money-on-tight-budget">How to Save Money on a Tight Budget: 15 Practical Tips</a>
+                    <p class="article-meta">January 2026 · Saving</p>
+                </li>
+                <li>
+                    <a href="/blog/budgeting-for-beginners">Budgeting for Beginners: How to Start Managing Your Money</a>
+                    <p class="article-meta">January 2026 · Budgeting</p>
+                </li>
+                <li>
+                    <a href="/blog/how-to-track-your-spending">How to Track Your Spending: A Complete Beginner's Guide</a>
+                    <p class="article-meta">January 2026 · Expense Tracking</p>
+                </li>
+                <li>
+                    <a href="/blog/budget-apps-without-plaid">Budget Apps That Don't Use Plaid: 7 Privacy-First Alternatives</a>
+                    <p class="article-meta">January 2026 · Privacy &amp; Security</p>
+                </li>
+                <li>
+                    <a href="/blog/zero-based-budgeting-guide">Zero-Based Budgeting Guide: Give Every Dollar a Job</a>
+                    <p class="article-meta">January 2026 · Budgeting</p>
+                </li>
+                <li>
+                    <a href="/blog/pay-yourself-first-method">Pay Yourself First: The Savings Strategy That Actually Works</a>
+                    <p class="article-meta">January 2026 · Saving</p>
+                </li>
+                <li>
+                    <a href="/blog/budget-advice-for-young-adults">Budget Advice for Young Adults: Financial Habits for Your 20s</a>
+                    <p class="article-meta">January 2026 · Young Adults</p>
+                </li>
+                <li>
+                    <a href="/blog/envelope-budgeting-system-guide">Envelope Budgeting System: Complete Guide for Beginners</a>
+                    <p class="article-meta">January 2026 · Budgeting</p>
+                </li>
+                <li>
+                    <a href="/blog/how-to-build-emergency-fund">How to Build an Emergency Fund: Complete Guide</a>
+                    <p class="article-meta">January 2026 · Budgeting</p>
+                </li>
+                <li>
+                    <a href="/blog/50-30-20-budget-rule-guide">50/30/20 Budget Rule: A Complete Beginner's Guide</a>
+                    <p class="article-meta">January 2026 · Budgeting</p>
+                </li>
+                <li>
+                    <a href="/blog/everydollar-vs-sentic-money">EveryDollar vs SenticMoney: Full Comparison (2026)</a>
+                    <p class="article-meta">January 2026 · App Comparisons</p>
+                </li>
+                <li>
+                    <a href="/blog/best-budget-apps-for-couples-2026">Best Budget Apps for Couples in 2026: Shared Finances Made Private</a>
+                    <p class="article-meta">January 2026 · Budgeting</p>
+                </li>
+                <li>
+                    <a href="/blog/how-to-budget-as-a-teenager">How to Budget as a Teenager: A Complete Beginner's Guide</a>
+                    <p class="article-meta">January 2026 · Teen Finance</p>
+                </li>
+                <li>
+                    <a href="/blog/budget-management-software-guide">Budget Management Software: Complete Guide for 2026</a>
+                    <p class="article-meta">January 2026 · Budgeting</p>
+                </li>
+                <li>
+                    <a href="/blog/ynab-alternative">Private Budgeting Alternatives: SenticMoney vs YNAB vs Monarch Money</a>
+                    <p class="article-meta">December 2025 · App Comparisons</p>
+                </li>
+                <li>
+                    <a href="/blog/best-ynab-alternatives-2026">Best YNAB Alternatives in 2026 (Free &amp; Paid Options)</a>
+                    <p class="article-meta">January 2026 · App Comparisons</p>
+                </li>
+                <li>
+                    <a href="/blog/best-mint-alternatives-2026">Best Mint Alternatives in 2026: Top Budgeting Apps After Mint Shutdown</a>
+                    <p class="article-meta">January 2026 · App Comparisons</p>
+                </li>
+                <li>
+                    <a href="/blog/best-budgeting-software-2026">Best Budgeting Software for 2026: Private &amp; Offline Options</a>
+                    <p class="article-meta">January 2026 · Budgeting</p>
+                </li>
+                <li>
+                    <a href="/blog/best-personal-finance-apps-privacy-2026">Best Personal Finance Apps for Privacy in 2026</a>
+                    <p class="article-meta">January 2026 · Privacy &amp; Personal Finance</p>
+                </li>
+            </ul>
+            <p style="margin-top: 1.5rem;"><a href="/blog" style="color: #10b981; font-weight: 600;">View all articles →</a></p>
+        </section>
+
+        <div class="cta-box">
+            <h3>Try SenticMoney</h3>
+            <p>Experience privacy-first budgeting. Your data stays on your device.</p>
+            <a href="/download" class="btn btn-primary">Download Free</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/download">Download</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="/support">FAQ &amp; Help</a></li>
+                        <li><a href="mailto:contact@senticmoney.com">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/refund">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p>E-Comm Solutions LLC<br>Wyoming, USA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025-2026 SenticMoney. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            if (menu && hamburger && menu.classList.contains('active')) {
+                if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                    toggleMenu();
+                }
+            }
+        });
+    </script>
+
+<script src="/track.js"></script>
+</body>
+</html>
