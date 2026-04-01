@@ -724,24 +724,20 @@
                     </a>
                 </div>
 
-                <!-- Mac Panel -->
+                <!-- Mac Panel — populated by JS when MAC_LIVE=true -->
                 <div class="platform-panel" id="panel-mac">
-                    <div class="coming-soon-badge">
-                        <i class="fas fa-clock"></i> Coming Soon
-                    </div>
+                    <a href="#" class="btn-download" onclick="trackDownload('mac', '2.5.4')">
+                        <i class="fab fa-apple"></i> Download for Mac
+                    </a>
 
-                    <div class="btn-download-disabled">
-                        <i class="fab fa-apple"></i> Mac Version Coming Soon
-                    </div>
-
-                    <div class="mac-notify-text">
-                        SenticMoney for Mac launches this month.<br>
-                        Compatible with macOS and Apple Silicon (M1/M2/M3/M4).<br>
-                        Check back soon or <a href="mailto:support@senticmoney.com" style="color: var(--primary-color); font-weight: 600;">email us</a> to be notified when it's ready.
+                    <div class="download-meta">
+                        <span>Version 2.5.4</span>
+                        <span>macOS 12+ (Monterey)</span>
+                        <span>Apple Silicon &amp; Intel</span>
                     </div>
 
                     <div class="also-available">
-                        Need it now? <a href="#" onclick="showPlatform('windows'); return false;">Download the Windows version</a>
+                        Also available: <a href="#" onclick="showPlatform('windows'); return false;">Windows version</a>
                     </div>
                 </div>
 
@@ -832,7 +828,7 @@
                 <li>Internet connection (required for AI features in Standard)</li>
             </ul>
 
-            <p style="margin-top: 1.5rem; color: var(--text-light);"><i class="fab fa-apple" style="color: var(--primary-color); margin-right: 0.5rem;"></i><strong style="color: var(--text-dark);">Mac version coming soon</strong> &mdash; compatible with Apple Silicon (M1/M2/M3/M4) and Intel Macs.</p>
+            <p style="margin-top: 1.5rem; color: var(--text-light);"><i class="fab fa-apple" style="color: var(--primary-color); margin-right: 0.5rem;"></i><strong style="color: var(--text-dark);">Also available for Mac</strong> &mdash; compatible with Apple Silicon (M1/M2/M3/M4) and Intel Macs.</p>
 
             <h3 style="margin-top: 2rem;">Installation Instructions</h3>
             <ol style="color: var(--text-light); padding-left: 2rem;">
