@@ -971,11 +971,12 @@
         var MAC_LIVE = true;
         var MAC_DMG_URL = 'https://senticmoney.com/senticmoney-download/SenticMoney-v2.5.4-mac.dmg';
         var TRACK_ENDPOINT = 'https://sentic-proxy-server.onrender.com/track';
+        var DOWNLOAD_RECORD_ENDPOINT = 'https://sentic-proxy-server.onrender.com/track-website-download';
 
         // ============================================================
         // Download click tracking
-        // Fires a beacon to the same endpoint as track.js so download
-        // events appear alongside pageview data in your admin dashboard.
+        // 1. Fires a beacon to /track  → PageView table (Traffic tab)
+        // 2. Fires a beacon to /track-website-download → Download table (Downloads tab)
         // ============================================================
         function trackDownload(platform, version) {
             var vid = localStorage.getItem('_snt_vid') || 'unknown';
@@ -997,6 +998,18 @@
                 navigator.sendBeacon(TRACK_ENDPOINT, data);
             } else {
                 fetch(TRACK_ENDPOINT, { method: 'POST', body: data, keepalive: true }).catch(function() {});
+            }
+
+            // Also write a Download record so the event appears in the Downloads tab
+            var dlPayload = JSON.stringify({
+                platform: platform,
+                version: version,
+                referrer: document.referrer || ''
+            });
+            if (navigator.sendBeacon) {
+                navigator.sendBeacon(DOWNLOAD_RECORD_ENDPOINT, dlPayload);
+            } else {
+                fetch(DOWNLOAD_RECORD_ENDPOINT, { method: 'POST', body: dlPayload, keepalive: true }).catch(function() {});
             }
         }
 
