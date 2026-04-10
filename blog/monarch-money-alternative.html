@@ -581,4 +581,13 @@
         const menu = document.getElementById('mobileMenu');
         const hamburger = document.querySelector('.hamburger');
         if (menu && hamburger && menu.classList.contains('active')) {
-            if (!menu.contains(event.target) && !hambu
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                toggleMenu();
+            }
+        }
+    });
+</script>
+
+<script src="/track.js"></script>
+</body>
+</html>
