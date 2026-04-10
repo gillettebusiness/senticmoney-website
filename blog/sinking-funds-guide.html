@@ -186,7 +186,7 @@
             z-index: 1000;
         }
 
-        nav .nav-container {
+        nav .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 1rem 2rem;
@@ -232,7 +232,6 @@
             gap: 5px;
             background: none;
             border: none;
-            padding: 0;
         }
 
         .hamburger span {
@@ -740,44 +739,44 @@
 </head>
 <body>
 
-<nav aria-label="Main navigation">
-    <div class="nav-container">
-        <a href="/" class="logo">
-            <img src="/images/sentic-money-logo-transparent.webp" alt="SenticMoney">
-        </a>
-        <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/features">Features</a></li>
-            <li><a href="/pricing">Pricing</a></li>
-            <li><a href="/blog" class="active">Blog</a></li>
-            <li><a href="/videos">Videos</a></li>
-            <li><a href="/download">Download</a></li>
-            <li><a href="https://sentic-web-demo.onrender.com" target="_blank">Live Demo</a></li>
-            <li><a href="/support">Support</a></li>
-            <li><a href="/books/money-management-for-teens.html">Books</a></li>
-            <li><a href="/map">Map</a></li>
-        </ul>
-        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" type="button">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-</nav>
+    <nav aria-label="Main navigation">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="/images/sentic-money-logo-transparent.webp" alt="SenticMoney">
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/features">Features</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+                <li><a href="/blog" class="active">Blog</a></li>
+                <li><a href="/videos">Videos</a></li>
+                <li><a href="/download">Download</a></li>
+                <li><a href="https://sentic-web-demo.onrender.com" target="_blank">Live Demo</a></li>
+                <li><a href="/support">Support</a></li>
+                <li><a href="/books/money-management-for-teens.html">Books</a></li>
+                <li><a href="/map">Map</a></li>
+            </ul>
+            <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-<!-- Mobile Menu -->
-<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-    <a href="/" onclick="toggleMenu()"><i class="fas fa-home"></i> Home</a>
-    <a href="/features" onclick="toggleMenu()"><i class="fas fa-star"></i> Features</a>
-    <a href="/pricing" onclick="toggleMenu()"><i class="fas fa-tags"></i> Pricing</a>
-    <a href="/blog" onclick="toggleMenu()"><i class="fas fa-newspaper"></i> Blog</a>
-    <a href="/videos" onclick="toggleMenu()"><i class="fas fa-video"></i> Videos</a>
-    <a href="/download" onclick="toggleMenu()"><i class="fas fa-download"></i> Download</a>
-    <a href="https://sentic-web-demo.onrender.com" target="_blank" onclick="toggleMenu()"><i class="fas fa-play-circle"></i> Live Demo</a>
-    <a href="/support" onclick="toggleMenu()"><i class="fas fa-life-ring"></i> Support</a>
-    <a href="/books/money-management-for-teens.html" onclick="toggleMenu()"><i class="fas fa-book"></i> Books</a>
-    <a href="/map" onclick="toggleMenu()"><i class="fas fa-sitemap"></i> Map</a>
-</nav>
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="/" onclick="toggleMenu()"><i class="fas fa-home"></i> Home</a>
+        <a href="/features" onclick="toggleMenu()"><i class="fas fa-star"></i> Features</a>
+        <a href="/pricing" onclick="toggleMenu()"><i class="fas fa-tags"></i> Pricing</a>
+        <a href="/blog" onclick="toggleMenu()"><i class="fas fa-newspaper"></i> Blog</a>
+        <a href="/videos" onclick="toggleMenu()"><i class="fas fa-video"></i> Videos</a>
+        <a href="/download" onclick="toggleMenu()"><i class="fas fa-download"></i> Download</a>
+        <a href="https://sentic-web-demo.onrender.com" target="_blank" onclick="toggleMenu()"><i class="fas fa-play-circle"></i> Live Demo</a>
+        <a href="/support" onclick="toggleMenu()"><i class="fas fa-life-ring"></i> Support</a>
+        <a href="/books/money-management-for-teens.html" onclick="toggleMenu()"><i class="fas fa-book"></i> Books</a>
+        <a href="/map" onclick="toggleMenu()"><i class="fas fa-sitemap"></i> Map</a>
+    </nav>
 
 <article class="article-container">
     <header class="article-header">
@@ -1125,23 +1124,23 @@
     </div>
 </footer>
 
-<script>
-    function toggleMenu() {
-        document.querySelector('.hamburger').classList.toggle('active');
-        document.getElementById('mobileMenu').classList.toggle('active');
-    }
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const menu = document.getElementById('mobileMenu');
-        const hamburger = document.querySelector('.hamburger');
-        if (menu && hamburger && menu.classList.contains('active')) {
-            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
-                toggleMenu();
-            }
+    <script>
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.getElementById('mobileMenu').classList.toggle('active');
         }
-    });
-</script>
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            if (menu && hamburger && menu.classList.contains('active')) {
+                if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                    toggleMenu();
+                }
+            }
+        });
+    </script>
 
 <script src="/track.js"></script>
 </body>
