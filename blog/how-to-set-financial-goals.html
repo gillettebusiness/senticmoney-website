@@ -151,9 +151,10 @@
             z-index: 1000;
         }
 
-        .nav-container {
+        nav .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -195,7 +196,6 @@
             gap: 5px;
             background: none;
             border: none;
-            padding: 0;
         }
 
         .hamburger span { width: 25px; height: 3px; background: var(--text-dark); border-radius: 3px; transition: 0.3s; }
@@ -408,7 +408,7 @@
 </head>
 <body>
     <nav aria-label="Main navigation">
-        <div class="nav-container">
+        <div class="container">
             <a href="/" class="logo">
                 <img src="/images/sentic-money-logo-transparent.webp" alt="SenticMoney" style="height: 50px; width: auto;">
             </a>
