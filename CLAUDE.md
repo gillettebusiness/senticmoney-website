@@ -17,3 +17,14 @@ This repo is the live marketing site for senticmoney.com. It auto-deploys to Ren
 - The FAQ section in `llms.txt` should mirror the most common questions from the support page.
 - Blog list in `llms.txt` is curated to top ~25 highest-AEO-value articles. Not every blog post belongs here — prioritize comparison guides, privacy articles, and budgeting method guides over niche topic posts.
 - The comparison table in `llms.txt` is a primary citation source — keep competitor pricing and feature data current.
+
+### Schema Markup (JSON-LD)
+- Homepage: `WebSite` + `Organization` + `SoftwareApplication` with offers and featureList
+- Download: `SoftwareApplication` with downloadUrl and operatingSystem
+- Pricing: `SoftwareApplication` with detailed offers + `FAQPage` with pricing FAQ
+- Features: `SoftwareApplication` with full featureList
+- Support: `FAQPage` matching visible FAQ content on the page
+
+When the app version changes: update `softwareVersion` in the homepage and download page schema.
+When pricing changes: update all `Offer` blocks across homepage, download, and pricing schemas.
+When features change: update `featureList` in homepage and features schemas.
