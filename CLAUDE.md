@@ -28,3 +28,17 @@ This repo is the live marketing site for senticmoney.com. It auto-deploys to Ren
 When the app version changes: update `softwareVersion` in the homepage and download page schema.
 When pricing changes: update all `Offer` blocks across homepage, download, and pricing schemas.
 When features change: update `featureList` in homepage and features schemas.
+
+---
+
+## _docs Folder — Article Writing System
+
+The `_docs/` folder in this repo is the single source of truth for all article writing guides, templates, and content planning. Previously duplicated in `senticmoney-marketing` — consolidated here April 2026.
+
+Key files:
+- `ARTICLE-WRITING-GUIDE.md` (v3.3) — mandatory rules for every blog article, including AEO capsule sequencing
+- `ARTICLE-TEMPLATE.html` — base HTML template for all blog posts
+- `ARTICLE-STATUS.txt` — published/scheduled slug tracking
+- `FEATURE-REFERENCE.md` — accurate feature list per tier
+- `CONTENT-CALENDAR.md` — keyword targets and scheduling
+- `ARTICLE-EXAMPLES.md` — good vs bad capsule and Win Throughout examples
