@@ -85,10 +85,11 @@ When moving article from scheduled to published:
 2. [ ] Update blog/index.html (add card at top)
 3. [ ] Update author/frank-d-campbell.html
 4. [ ] Update sitemap.xml
-5. [ ] Run: npx html-validate blog/[slug].html
-6. [ ] Add to _docs/INDEXING-TRACKER.md
-7. [ ] Update this file (move from SCHEDULED to PUBLISHED)
-8. [ ] git add -A && git commit && git push
+5. [ ] Update llms-full.txt (add entry in correct blog section with exact H1 title)
+6. [ ] Run: npx html-validate blog/[slug].html
+7. [ ] Add to _docs/INDEXING-TRACKER.md
+8. [ ] Update this file (move from SCHEDULED to PUBLISHED)
+9. [ ] git add -A && git commit && git push
 
 ============================================
 NOTES
