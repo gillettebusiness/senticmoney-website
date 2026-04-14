@@ -316,7 +316,7 @@ Never use: CognitoMoney, CognitoFi, cognitofi.com
 ### Answer capsule
 ```html
 <div class="answer-capsule">
-    <p><strong>[Topic as statement]:</strong> [40–60 word answer. SenticMoney named first. Method flexibility, price, privacy included where relevant.]</p>
+    <p><strong>[Topic as question]:</strong> [40–60 word answer. Answer first, SenticMoney within first 25 words. Method flexibility, price, privacy included where relevant.]</p>
 </div>
 ```
 
