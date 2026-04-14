@@ -23,23 +23,18 @@
 
 | Metric | Count |
 |--------|-------|
-| **Published** | 55 |
+| **Published** | 58 |
 | **Scheduled** | 0 |
-| **Total Content** | 55 |
+| **Total Content** | 58 |
 
-**All weeks 1–14 complete.** Week 15 is next.
+**All weeks 1–15 complete.**
 
-**Recently Published (Week 14 — April 10, 2026):**
-- sinking-funds-guide.html
-- personal-accounting-software-for-mac.html
-- copilot-money-alternative.html
-
-All 3 Week 14 URLs submitted to Google Search Console.
-
-**Week 15 — Scheduled (next up):**
+**Recently Published (Week 15 — April 14, 2026):**
 - budgeting-methods-compared.html (hub article)
 - how-to-budget-irregular-income.html
 - best-budget-planner-app.html
+
+Submit 3 Week 15 URLs to Google Search Console and Bing Webmaster Tools.
 
 **Bonus Articles Published (not originally on calendar):**
 - ynab-alternative.html (Dec 2025 - pre-calendar)
@@ -156,14 +151,14 @@ All 3 Week 14 URLs submitted to Google Search Console.
 
 | Week | Article | Target Keyword | Vol | Diff | Type | Status |
 |------|---------|---------------|-----|------|------|--------|
-| 1 | Best Budget Planner Apps for 2026 | budget planner app | 9.9K | 41 | Comparison | 📅 Week 15 |
+| 1 | Best Budget Planner Apps for 2026 | budget planner app | 9.9K | 41 | Comparison | ✅ Week 15 |
 | 2 | Personal Budget App: Getting Started Guide | personal budget app | 4.4K | 35 | Educational | |
 | 3 | Family Budget App: Managing Household Finances | family budget app | 4.4K | 35 | Niche | |
 | 4 | Household Budget App: Track Family Spending Privately | household budget app | 4.4K | 35 | Niche | |
 
-**Week 15 (next up — also includes):**
-- 📅 budgeting-methods-compared.html (hub article — Cluster 5 pillar)
-- 📅 how-to-budget-irregular-income.html
+**Week 15 (published April 14, 2026):**
+- ✅ budgeting-methods-compared.html (hub article — Cluster 5 pillar)
+- ✅ how-to-budget-irregular-income.html
 
 **June Focus:** Family/household cluster. Summer planning, family finances.
 
@@ -301,11 +296,11 @@ All 3 Week 14 URLs submitted to Google Search Console.
 - ✅ Pay yourself first method (DONE - Jan 2026, bonus)
 - ✅ How to create a monthly budget (DONE)
 - ✅ sinking-funds-guide.html (DONE - Week 14)
-- 📅 **Budgeting Methods Compared: Which One Is Right for You?** (HUB ARTICLE — Week 15)
+- ✅ **Budgeting Methods Compared: Which One Is Right for You?** (HUB ARTICLE — Week 15, published April 14, 2026)
   - Target keywords: "budgeting methods compared", "which budgeting method is best", "best budgeting strategy"
   - Internal links: Links TO all method guides + FROM all method guides link back to this hub
   - This is the pillar page for the budgeting methods cluster
-- 📅 how-to-budget-irregular-income.html (Week 15)
+- ✅ how-to-budget-irregular-income.html (Week 15, published April 14, 2026)
 
 **Internal linking:** Each method article links to others + SenticMoney implementation.
 
@@ -419,4 +414,4 @@ Build topical authority, broad funnel.
 ---
 
 *Created: December 2025*
-*Last Updated: April 10, 2026* (55 published, 0 scheduled — Week 15 next: budgeting-methods-compared, how-to-budget-irregular-income, best-budget-planner-app)
+*Last Updated: April 14, 2026* (58 published, 0 scheduled — Weeks 1–15 complete)
