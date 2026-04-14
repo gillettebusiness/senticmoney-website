@@ -1,0 +1,95 @@
+SENTICMONEY BLOG - ARTICLE STATUS TRACKER
+============================================
+Last Updated: April 10, 2026
+
+This file tracks published vs scheduled articles.
+Update this file whenever you publish or schedule new content.
+
+============================================
+PUBLISHED ARTICLES (Live on senticmoney.com/blog)
+============================================
+
+1. best-personal-finance-apps-privacy-2026.html
+2. best-budgeting-software-2026.html
+3. best-mint-alternatives-2026.html
+4. budget-management-software-guide.html
+5. ynab-alternative.html
+6. best-ynab-alternatives-2026.html
+7. everydollar-vs-sentic-money.html
+8. best-budget-apps-for-couples-2026.html
+9. budget-apps-without-plaid.html
+10. how-to-budget-as-a-teenager.html
+11. budget-advice-for-young-adults.html
+12. zero-based-budgeting-guide.html
+13. 50-30-20-budget-rule-guide.html
+14. envelope-budgeting-system-guide.html
+15. pay-yourself-first-method.html
+16. how-to-build-emergency-fund.html
+17. how-to-track-your-spending.html
+18. budgeting-for-beginners.html
+19. how-to-save-money-on-tight-budget.html
+20. biblical-money-management.html
+21. christian-budgeting-apps.html
+22. how-to-budget-for-tithing.html
+23. budget-by-paycheck.html
+24. how-to-set-financial-goals.html
+25. money-management-for-youth.html
+26. debt-payoff-strategies.html
+27. financial-management-for-teens.html
+28. how-to-create-a-monthly-budget.html
+29. best-ways-to-budget-your-money.html
+30. is-ynab-worth-it.html
+31. couples-budgeting.html
+32. budget-software-for-couples.html
+33. free-financial-calculators.html
+34. quicken-simplifi-alternatives.html
+35. money-management-apps-2026.html
+36. personal-finance-software-local-vs-cloud.html
+37. best-personal-finance-app-2026.html
+38. goodbudget-vs-sentic-money.html
+39. is-plaid-safe.html
+40. teaching-teens-to-budget.html
+41. best-expense-tracker-2026.html
+42. expense-tracker-app-guide.html
+43. free-expense-tracker-privacy.html
+44. best-expense-management-apps-2026.html
+45. best-money-tracker-apps-2026.html
+46. best-apps-to-save-money-2026.html
+47. ai-budgeting-app.html
+48. subscription-tracker-app.html
+49. windows-personal-finance-software.html
+50. monarch-money-alternative.html
+51. how-to-stop-living-paycheck-to-paycheck.html
+52. debt-snowball-vs-avalanche-calculator.html
+53. sinking-funds-guide.html
+54. personal-accounting-software-for-mac.html
+55. copilot-money-alternative.html
+
+Total Published: 55
+
+============================================
+SCHEDULED ARTICLES (In blog/scheduled/)
+============================================
+
+Total Scheduled: 0
+
+============================================
+PUBLISHING CHECKLIST
+============================================
+When moving article from scheduled to published:
+
+1. [ ] Move file from blog/scheduled/week-X/ to blog/
+2. [ ] Update blog/index.html (add card at top)
+3. [ ] Update author/frank-d-campbell.html
+4. [ ] Update sitemap.xml
+5. [ ] Run: npx html-validate blog/[slug].html
+6. [ ] Add to _docs/INDEXING-TRACKER.md
+7. [ ] Update this file (move from SCHEDULED to PUBLISHED)
+8. [ ] git add -A && git commit && git push
+
+============================================
+NOTES
+============================================
+- This .txt file is used instead of updating CONTENT-CALENDAR.md
+  to avoid Google Drive sync issues with markdown files
+- Keep this file updated after every publish
