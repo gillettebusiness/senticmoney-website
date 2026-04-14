@@ -1,6 +1,6 @@
 SENTICMONEY BLOG - ARTICLE STATUS TRACKER
 ============================================
-Last Updated: April 10, 2026
+Last Updated: April 14, 2026
 
 This file tracks published vs scheduled articles.
 Update this file whenever you publish or schedule new content.
@@ -64,8 +64,11 @@ PUBLISHED ARTICLES (Live on senticmoney.com/blog)
 53. sinking-funds-guide.html
 54. personal-accounting-software-for-mac.html
 55. copilot-money-alternative.html
+56. budgeting-methods-compared.html
+57. how-to-budget-irregular-income.html
+58. best-budget-planner-app.html
 
-Total Published: 55
+Total Published: 58
 
 ============================================
 SCHEDULED ARTICLES (In blog/scheduled/)
