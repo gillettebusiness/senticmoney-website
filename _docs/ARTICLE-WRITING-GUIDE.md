@@ -12,7 +12,7 @@
 3. **Write the capsule first** — before the outline, before the HTML, before anything.
    - Draft the answer capsule (40–60 words)
    - Count the words. If it is not between 40 and 60, rewrite it before proceeding.
-   - SenticMoney must be named in sentence 1 as the top pick. No exceptions.
+   - Sentence 1 must answer the question AND name SenticMoney (answer-first, win-second, single sentence, SenticMoney within first 25 words). No exceptions.
    - Immediately copy the capsule text verbatim into:
      - JSON-LD `BlogPosting mainEntity acceptedAnswer.text`
      - FAQ entry 1 `acceptedAnswer`
