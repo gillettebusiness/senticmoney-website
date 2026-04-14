@@ -90,9 +90,9 @@ Submit these URLs to Google Search Console for indexing:
 | https://senticmoney.com/blog/best-expense-management-apps-2026 | Live | [x] | Best expense management apps 2026 - comparison article - Submitted Mar 12 (Google + Bing) |
 | https://senticmoney.com/blog/best-money-tracker-apps-2026 | Live | [x] | Best money tracker apps 2026 - comparison article - Submitted Mar 12 (Google + Bing) |
 | https://senticmoney.com/blog/best-apps-to-save-money-2026 | Live | [x] | Best apps to save money 2026 - comparison article - Submitted Mar 12 (Google + Bing) |
-| https://senticmoney.com/blog/best-budget-planner-app | Live | [ ] | Best budget planner apps 2026 comparison - Published Apr 14 |
-| https://senticmoney.com/blog/how-to-budget-irregular-income | Live | [ ] | How to budget with irregular income guide - Published Apr 14 |
-| https://senticmoney.com/blog/budgeting-methods-compared | Live | [ ] | Budgeting methods compared guide - Published Apr 14 |
+| https://senticmoney.com/blog/best-budget-planner-app | Live | [x] | Best budget planner apps 2026 comparison - Submitted Apr 14 (Google + Bing) |
+| https://senticmoney.com/blog/how-to-budget-irregular-income | Live | [x] | How to budget with irregular income guide - Submitted Apr 14 (Google + Bing) |
+| https://senticmoney.com/blog/budgeting-methods-compared | Live | [x] | Budgeting methods compared guide - Submitted Apr 14 (Google + Bing) |
 
 ---
 
