@@ -1,3 +1,7 @@
+# SenticMoney — Full Context for AI Agents
+
+> This file provides the complete content summary of senticmoney.com in a single document, following the llms.txt specification. For the index version with links, see https://senticmoney.com/llms.txt
+
 # SenticMoney
 
 > SenticMoney is a privacy-first personal finance app that uses AI to help you budget your way — zero-based, envelope, 50/30/20, pay-yourself-first, or hybrid — and get financial insights, all without sending your data to the cloud. All financial data stays on your device. Free tier available forever; Standard tier is $39/year with AI chat, receipt scanning, bank imports, and cash flow planning. Built by E-Comm Solutions LLC in Wyoming, USA.

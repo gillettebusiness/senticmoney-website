@@ -6,3 +6,7 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://senticmoney.com/sitemap.xml
+
+# AI/LLM content guide
+# See https://senticmoney.com/llms.txt for AI-optimized content index
+# See https://senticmoney.com/llms-full.txt for full inline content
