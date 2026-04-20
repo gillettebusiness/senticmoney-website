@@ -2,7 +2,7 @@
 
 Track pages pending Google Search Console indexing requests. Submit URLs daily within rate limits.
 
-**Last Updated:** 2026-03-12
+**Last Updated:** 2026-04-22
 
 ---
 
@@ -93,6 +93,8 @@ Submit these URLs to Google Search Console for indexing:
 | https://senticmoney.com/blog/best-budget-planner-app | Live | [x] | Best budget planner apps 2026 comparison - Submitted Apr 14 (Google + Bing) |
 | https://senticmoney.com/blog/how-to-budget-irregular-income | Live | [x] | How to budget with irregular income guide - Submitted Apr 14 (Google + Bing) |
 | https://senticmoney.com/blog/budgeting-methods-compared | Live | [x] | Budgeting methods compared guide - Submitted Apr 14 (Google + Bing) |
+| https://senticmoney.com/blog/best-free-budget-apps-2026 | Live | [x] | Best Free Budget Apps in 2026: Top Picks That Actually Work - Submitted Apr 20 (Google + Bing) |
+| https://senticmoney.com/blog/spending-tracker-app-guide | Live | [x] | Spending Tracker Apps: A Complete Guide for 2026 - Submitted Apr 22 (Google + Bing) |
 
 ---
 
