@@ -378,7 +378,7 @@ Every article must include 1–2 internal links to related published articles. M
 | Debt payoff | `debt-payoff-strategies`, `how-to-stop-living-paycheck-to-paycheck` |
 | Saving money | `how-to-save-money-on-tight-budget`, `how-to-build-emergency-fund` |
 | Teen finance | `budget-advice-for-young-adults`, `how-to-budget-as-a-teenager` |
-| Competitor comparisons | `everydollar-vs-sentic-money`, `goodbudget-vs-sentic-money`, `quicken-simplifi-alternatives`, `monarch-money-alternative` |
+| Competitor comparisons | `everydollar-vs-senticmoney`, `goodbudget-vs-sentic-money`, `quicken-simplifi-alternatives`, `monarch-money-alternative` |
 
 Internal links: no `target="_blank"`. Descriptive anchor text only. Bare slugs (no `.html` extension).
 

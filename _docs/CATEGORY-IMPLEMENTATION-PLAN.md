@@ -236,7 +236,7 @@ Example for YNAB article:
 ```html
 <p>For more app comparisons, see our guides to
 <a href="/blog/best-mint-alternatives-2026">Mint alternatives</a> and
-<a href="/blog/everydollar-vs-sentic-money">EveryDollar vs SenticMoney</a>.</p>
+<a href="/blog/everydollar-vs-senticmoney">EveryDollar vs SenticMoney</a>.</p>
 ```
 
 ---

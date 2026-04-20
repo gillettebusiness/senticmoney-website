@@ -343,7 +343,7 @@ Targets Christian audience searching for biblical money management and faith-bas
 
 **SenticMoney Angle:** Privacy as stewardship (your finances between you and God, not on corporate servers). Alternative to EveryDollar without Plaid.
 
-**Internal linking:** All link to each other + everydollar-vs-sentic-money + budget-apps-without-plaid.
+**Internal linking:** All link to each other + everydollar-vs-senticmoney + budget-apps-without-plaid.
 
 **External sources:** Bible Gateway, Crown Financial Ministries, Barna Group, Ramsey Solutions.
 

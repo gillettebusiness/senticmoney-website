@@ -52,7 +52,7 @@ Submit these URLs to Google Search Console for indexing:
 | https://senticmoney.com/blog/biblical-money-management | Live | [x] | Christian finance - Submitted Jan 15 |
 | https://senticmoney.com/blog/best-mint-alternatives-2026 | Live | [ ] | Comparison |
 | https://senticmoney.com/blog/best-budgeting-software-2026 | Live | [ ] | Listicle |
-| https://senticmoney.com/blog/everydollar-vs-sentic-money | Live | [ ] | Comparison |
+| https://senticmoney.com/blog/everydollar-vs-senticmoney | Live | [ ] | Comparison |
 | https://senticmoney.com/blog/50-30-20-budget-rule-guide | Live | [ ] | Method guide |
 | https://senticmoney.com/blog/how-to-build-emergency-fund | Live | [ ] | Guide |
 | https://senticmoney.com/blog/envelope-budgeting-system-guide | Live | [ ] | Method guide |
