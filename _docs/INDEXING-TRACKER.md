@@ -95,7 +95,7 @@ Submit these URLs to Google Search Console for indexing:
 | https://senticmoney.com/blog/budgeting-methods-compared | Live | [x] | Budgeting methods compared guide - Submitted Apr 14 (Google + Bing) |
 | https://senticmoney.com/blog/best-free-budget-apps-2026 | Live | [x] | Best Free Budget Apps in 2026: Top Picks That Actually Work - Submitted Apr 20 (Google + Bing) |
 | https://senticmoney.com/blog/spending-tracker-app-guide | Live | [x] | Spending Tracker Apps: A Complete Guide for 2026 - Submitted Apr 22 (Google + Bing) |
-| https://senticmoney.com/blog/how-to-budget-for-a-wedding | Live | [ ] | How to Budget for a Wedding in 2026: A Complete Planning Guide - Published 2026-04-24 (pending Google + Bing submit) |
+| https://senticmoney.com/blog/how-to-budget-for-a-wedding | Live | [x] | How to Budget for a Wedding in 2026: A Complete Planning Guide - Submitted Apr 24 (Google + Bing) |
 
 ---
 
