@@ -19,20 +19,20 @@
 
 ---
 
-## Current Status (as of April 22, 2026)
+## Current Status (as of April 24, 2026)
 
 | Metric | Count |
 |--------|-------|
-| **Published** | 60 |
+| **Published** | 61 |
 | **Scheduled** | 0 |
-| **Total Content** | 60 |
+| **Total Content** | 61 |
 
-**Weeks 1–15 complete. Week 16 in progress (2 of 3 articles done).**
+**Weeks 1–16 complete. Week 16 COMPLETE (3 of 3 articles done).**
 
-**Week 16 (April 20–22, 2026):**
+**Week 16 (April 20–24, 2026):**
 - ✅ best-free-budget-apps-2026.html — published April 20, 2026 (target: "free budget app" 33.1K vol)
 - ✅ spending-tracker-app-guide.html — published April 22, 2026 (target: "spending tracker app" 8.1K vol)
-- [Pending] wedding budgeting article — target: wedding cluster ~18.6K combined volume
+- ✅ how-to-budget-for-a-wedding.html — published April 24, 2026 (target: wedding cluster ~18.6K combined volume)
 
 **Week 15 (April 14, 2026):**
 - budgeting-methods-compared.html (hub article)
@@ -419,4 +419,4 @@ Build topical authority, broad funnel.
 ---
 
 *Created: December 2025*
-*Last Updated: April 22, 2026* (60 published, 0 scheduled — Week 16 in progress: 2 of 3 articles done)
+*Last Updated: April 24, 2026* (61 published, 0 scheduled — Week 16 COMPLETE: 3 of 3 articles done)
