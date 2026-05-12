@@ -96,8 +96,8 @@ Submit these URLs to Google Search Console for indexing:
 | https://senticmoney.com/blog/best-free-budget-apps-2026 | Live | [x] | Best Free Budget Apps in 2026: Top Picks That Actually Work - Submitted Apr 20 (Google + Bing) |
 | https://senticmoney.com/blog/spending-tracker-app-guide | Live | [x] | Spending Tracker Apps: A Complete Guide for 2026 - Submitted Apr 22 (Google + Bing) |
 | https://senticmoney.com/blog/how-to-budget-for-a-wedding | Live | [x] | How to Budget for a Wedding in 2026: A Complete Planning Guide - Submitted Apr 24 (Google + Bing) |
-| https://senticmoney.com/blog/how-much-does-it-cost-to-build-a-house | Live | [x] | How Much Does It Cost to Build a House in 2026? A Complete Cost Breakdown - Submitted May 13 (Google + Bing) |
-| https://senticmoney.com/blog/how-much-does-a-wedding-cost | Live | [x] | How Much Does a Wedding Cost in 2026? Complete Breakdown by Category - Submitted May 14 (Google + Bing) |
+| https://senticmoney.com/blog/how-much-does-it-cost-to-build-a-house | Live | [x] | How Much Does It Cost to Build a House in 2026? A Complete Cost Breakdown - Submitted May 12 (Google + Bing) |
+| https://senticmoney.com/blog/how-much-does-a-wedding-cost | Live | [x] | How Much Does a Wedding Cost in 2026? Complete Breakdown by Category - Submitted May 12 (Google + Bing) |
 | https://senticmoney.com/blog/how-to-make-a-home-budget | Live | [x] | How to Make a Home Budget in 2026: A Complete Step-by-Step Guide - Submitted May 12 (Google + Bing) |
 
 ---

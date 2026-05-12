@@ -30,8 +30,8 @@
 **Weeks 1–17 complete. Week 17 COMPLETE (3 of 3 articles done).**
 
 **Week 17 (May 2026):**
-- ✅ how-much-does-it-cost-to-build-a-house.html — published May 13, 2026 (target: "cost to build a house" 521K combined volume)
-- ✅ how-much-does-a-wedding-cost.html — published May 14, 2026 (target: wedding cost 141K combined volume)
+- ✅ how-much-does-it-cost-to-build-a-house.html — published May 8, 2026 (target: "cost to build a house" 521K combined volume)
+- ✅ how-much-does-a-wedding-cost.html — published May 11, 2026 (target: wedding cost 141K combined volume)
 - ✅ how-to-make-a-home-budget.html — published May 12, 2026 (target: "how to make a home budget" ~1K combined volume)
 
 **Week 16 (April 20–24, 2026):**
