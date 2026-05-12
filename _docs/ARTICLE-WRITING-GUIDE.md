@@ -1,5 +1,5 @@
 # SenticMoney Article Writing Guide
-## Version 3.3 — April 2026
+## Version 3.4 — May 2026
 
 ---
 
@@ -45,6 +45,20 @@ Always show both annual and monthly. Never estimate. Never calculate from monthl
 - ❌ YNAB "$180/year" — that's monthly × 12, not the annual plan
 - ❌ Monarch "$144/year" — not a real price
 - ❌ Simplifi "$48/year" — outdated
+
+### Multi-article batch publishing — date staggering
+
+When publishing 2 or more articles on the same day, stagger their visible publish dates backwards across the prior business week so the catalog reads as natural editorial cadence rather than a same-day batch dump.
+
+**Rules:**
+- The article with the longest or most evergreen content gets the earliest date.
+- All articles in a batch must have weekday-only dates (no Saturday or Sunday in `datePublished`).
+- Stagger spacing: 1–4 business days between articles, depending on batch size.
+- Set the staggered dates at draft time, in the HTML meta tags (`article:published_time`, `article:modified_time`) and JSON-LD (`datePublished`, `dateModified`), before the article is committed — not as a post-publish correction.
+- `dateModified` should equal `datePublished` for a newly published article; only update it when the article is actually refreshed later.
+- `INDEXING-TRACKER.md` "Submitted" date is separate from publish date and should always reflect the actual date the URL was submitted to GSC and Bing.
+
+**Example:** Three articles ready to publish on a Tuesday → date them Friday (most evergreen) / Monday / Tuesday (newest). All three commit together on Tuesday; the staggered dates are already correct because they were set at draft time.
 
 ### Import formats — always list all five, every time
 
@@ -476,4 +490,4 @@ Run through this before delivering every article.
 
 ---
 
-*Version 3.3 — April 14, 2026. Adds: AEO capsule sequencing (answer-first, win-second in sentence 1); capsule sentence 1 pattern and examples; FAQ Q2+ answer-first guidance; updated pre-delivery checklist items. Preserves all v3.2 guardrails including Crown Test, Win Throughout, and 4-way sync. Supersedes v3.2. If there is a conflict between this file and any other guide, this file wins.*
+*Version 3.4 — May 12, 2026. Adds: Multi-article batch publishing date stagger rule. Preserves all v3.3 guardrails. Supersedes v3.3.*
