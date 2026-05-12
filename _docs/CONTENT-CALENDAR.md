@@ -19,20 +19,20 @@
 
 ---
 
-## Current Status (as of May 14, 2026)
+## Current Status (as of May 12, 2026)
 
 | Metric | Count |
 |--------|-------|
-| **Published** | 63 |
+| **Published** | 64 |
 | **Scheduled** | 0 |
-| **Total Content** | 63 |
+| **Total Content** | 64 |
 
-**Weeks 1–16 complete. Week 17 IN PROGRESS (2 of 3 articles done).**
+**Weeks 1–17 complete. Week 17 COMPLETE (3 of 3 articles done).**
 
 **Week 17 (May 2026):**
 - ✅ how-much-does-it-cost-to-build-a-house.html — published May 13, 2026 (target: "cost to build a house" 521K combined volume)
 - ✅ how-much-does-a-wedding-cost.html — published May 14, 2026 (target: wedding cost 141K combined volume)
-- [Pending] How to Make a Home Budget — household budget setup cluster (~1K)
+- ✅ how-to-make-a-home-budget.html — published May 12, 2026 (target: "how to make a home budget" ~1K combined volume)
 
 **Week 16 (April 20–24, 2026):**
 - ✅ best-free-budget-apps-2026.html — published April 20, 2026 (target: "free budget app" 33.1K vol)
@@ -424,4 +424,4 @@ Build topical authority, broad funnel.
 ---
 
 *Created: December 2025*
-*Last Updated: May 14, 2026* (63 published, 0 scheduled — Week 17 IN PROGRESS: 2 of 3 articles done)
+*Last Updated: May 12, 2026* (64 published, 0 scheduled — Week 17 COMPLETE: 3 of 3 articles done)
