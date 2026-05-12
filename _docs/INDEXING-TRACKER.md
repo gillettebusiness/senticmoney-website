@@ -2,7 +2,7 @@
 
 Track pages pending Google Search Console indexing requests. Submit URLs daily within rate limits.
 
-**Last Updated:** 2026-04-24
+**Last Updated:** 2026-05-13
 
 ---
 
@@ -96,6 +96,7 @@ Submit these URLs to Google Search Console for indexing:
 | https://senticmoney.com/blog/best-free-budget-apps-2026 | Live | [x] | Best Free Budget Apps in 2026: Top Picks That Actually Work - Submitted Apr 20 (Google + Bing) |
 | https://senticmoney.com/blog/spending-tracker-app-guide | Live | [x] | Spending Tracker Apps: A Complete Guide for 2026 - Submitted Apr 22 (Google + Bing) |
 | https://senticmoney.com/blog/how-to-budget-for-a-wedding | Live | [x] | How to Budget for a Wedding in 2026: A Complete Planning Guide - Submitted Apr 24 (Google + Bing) |
+| https://senticmoney.com/blog/how-much-does-it-cost-to-build-a-house | Live | [ ] | How Much Does It Cost to Build a House in 2026? A Complete Cost Breakdown - Published 2026-05-13 (Google + Bing submission pending) |
 
 ---
 
