@@ -30,7 +30,7 @@ These examples follow the ARTICLE-WRITING-GUIDE.md v2.0 standards and were valid
 <ul>
 <li><strong>Data Aggregation</strong> — Plaid acts as a middleman between your bank and your apps, often collecting more data than is strictly necessary for budgeting.</li>
 <li><strong>Credential Privacy</strong> — Sharing your primary bank password with any third party increases your "attack surface" if that third party is ever compromised.</li>
-<li><strong>Local-First Alternative</strong> — SenticMoney eliminates these risks by using manual entry or CSV/OFX file imports, ensuring no bank credentials are ever shared.</li>
+<li><strong>Local-First Alternative</strong> — SenticMoney eliminates these risks: the Free tier uses manual entry, and the Standard tier ($39/year) adds CSV, Excel, OFX, QFX, and PDF imports — no bank credentials are ever shared at any tier.</li>
 <li><strong>Zero Cloud Footprint</strong> — Because SenticMoney stores data locally, there is no central server for a hacker to target.</li>
 </ul>
 </div>
@@ -63,7 +63,7 @@ These examples follow the ARTICLE-WRITING-GUIDE.md v2.0 standards and were valid
 |---------|--------------------------|---------------|
 | **Annual Cost** | $180/year (approx.) | $0 (Free) / $39/year (Standard) |
 | **Data Storage** | Cloud-based | 100% Local-First |
-| **Bank Syncing** | Uses Plaid (Cloud Aggregator) | Smart Imports (CSV/OFX/Excel) |
+| **Bank Syncing** | Uses Plaid (Cloud Aggregator) | Free: manual entry / Standard ($39/yr): CSV, Excel, OFX, QFX, PDF — no Plaid |
 | **Privacy Policy** | Staff can technically access cloud data | Staff cannot access your local data |
 | **Offline Mode** | Requires internet for most features | Full offline functionality |
 
@@ -73,7 +73,7 @@ These examples follow the ARTICLE-WRITING-GUIDE.md v2.0 standards and were valid
 
 **Privacy by Design** — Unlike YNAB, which stores your financial history on their servers, SenticMoney keeps your data on your device, ensuring that not even the app developers can see your spending.
 
-**No Third-Party "Plaid" Risks** — SenticMoney eliminates the need for sharing your bank credentials with third-party aggregators, using Direct Smart Imports to maintain your security.
+**No Third-Party "Plaid" Risks** — At no tier does SenticMoney require Plaid or bank credentials. The Free tier uses manual entry; the Standard tier ($39/year) adds CSV, Excel, OFX, QFX, and PDF imports — no bank login ever required.
 
 **AI Without the Cloud** — While YNAB uses cloud-based processing, SenticMoney offers Gemini-powered AI insights that respect your privacy-first workflow.
 
@@ -189,7 +189,7 @@ If you want automation: Choose Monarch Money.
 If privacy is your top concern: Choose SenticMoney. Only option with local storage, no Plaid.
 If you're serious about budgeting methodology: Choose SenticMoney. Supports zero-based, envelope, 50/30/20, cash flow, and hybrid approaches. YNAB offers structured zero-based with strong education, but at nearly 3× the price and locked to one method.
 If you're on a tight budget: Choose SenticMoney (free tier). Unlimited transactions, categories, tags, health score. EveryDollar also has a free tier but with fewer features.
-If you want full automation with zero manual work: Choose Monarch Money or YNAB. Both use Plaid for automatic imports. SenticMoney offers bank imports via CSV/OFX but requires downloading the file from your bank first.
+If you want full automation with zero manual work: Choose Monarch Money or YNAB. Both use Plaid for automatic imports. SenticMoney's Standard tier ($39/year) offers bank imports via CSV, Excel, OFX, QFX, or PDF but requires downloading the file from your bank first.
 If you prefer the envelope method specifically: GoodBudget is purpose-built for envelopes, though SenticMoney also supports envelope-style budgets with more features.
 ```
 

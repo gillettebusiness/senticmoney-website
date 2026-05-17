@@ -78,7 +78,7 @@ Then paste the brief below.
 
 **Title:** Best Personal Finance Software for Windows in 2026: Desktop Apps That Keep Your Data Local
 
-**Meta description (158 chars):** SenticMoney is a Windows desktop finance app with AI insights, bank imports, and local storage — accessible from any device on your network. Free to start.
+**Meta description (158 chars):** SenticMoney is a Windows desktop finance app with AI insights, bank imports (Standard, $39/yr), and local storage — accessible from any device on your network. Free to start.
 
 **Search intent:** Windows users specifically looking for desktop software, not browser-based SaaS. Many are Quicken refugees or privacy-conscious users who want their data on their machine.
 
@@ -102,7 +102,7 @@ Then paste the brief below.
 - Windows install + multi-device browser access (CRITICAL: not "Windows only")
 - Multi-user via separate Windows accounts (family members get isolated databases)
 - Bank import presets for 15+ banks (Chase, BofA, Wells Fargo, etc.)
-- Import formats: CSV, Excel, OFX, QFX, PDF
+- Import formats: CSV, Excel, OFX, QFX, PDF (Standard tier, $39/year)
 - Accounting dashboard (Income Statement, Balance Sheet, Cash Flow, Tax Report)
 - Backup management (local backups, restore points)
 
@@ -199,7 +199,7 @@ Then paste the brief below.
 **Comparison table must include these rows:**
 - Annual cost: SenticMoney $0–$39 vs Monarch $99.99/yr or $14.99/mo (~$180/yr)
 - Data storage: Local vs Cloud
-- Bank connection: CSV/Excel/OFX/QFX/PDF import vs Plaid/Finicity
+- Bank connection: Standard tier ($39/yr) CSV/Excel/OFX/QFX/PDF import vs Plaid/Finicity
 - AI assistant: Genie (Gemini 3.1 Pro, local) vs Monarch AI (cloud)
 - Budgeting methods: Any method vs Passive tracking + goals
 - Offline mode: Full vs Requires internet
