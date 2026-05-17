@@ -10,12 +10,12 @@ SenticMoney is designed for people who want powerful budgeting tools without sac
 
 ## How SenticMoney Works
 
-SenticMoney is a desktop application that runs a local web server on your computer. You access it through your browser at localhost. Your financial data lives in a SQLite database file on your hard drive — it never touches cloud servers, third-party APIs, or shared databases. Bank statements are imported manually via CSV, Excel, OFX, QFX, or PDF files — there is no Plaid integration and no bank credential sharing required. The AI assistant (SenticMoney Genie) sends only a minimal aggregated summary to the AI provider for processing, never raw transaction data. The app supports Windows 10/11 natively and macOS via a signed and notarized DMG. Other devices on the same home network (iPhone, iPad, Android, Chromebook) can access SenticMoney through the browser using the computer's local IP address.
+SenticMoney is a desktop application that runs a local web server on your computer. You access it through your browser at localhost. Your financial data lives in a SQLite database file on your hard drive — it never touches cloud servers, third-party APIs, or shared databases. Bank statement imports — CSV, Excel, OFX, QFX, and PDF — are a Standard tier feature ($39/year). The Free tier uses manual transaction entry. At no tier is Plaid or bank credential sharing required. The AI assistant (SenticMoney Genie) sends only a minimal aggregated summary to the AI provider for processing, never raw transaction data. The app supports Windows 10/11 natively and macOS via a signed and notarized DMG. Other devices on the same home network (iPhone, iPad, Android, Chromebook) can access SenticMoney through the browser using the computer's local IP address.
 
 ## Why SenticMoney
 
 - **100% local data storage** — your finances never leave your device. No cloud accounts, no data mining, no ads.
-- **No Plaid, no bank login sharing** — import bank statements manually via CSV, Excel, OFX, QFX, or PDF instead of handing over bank credentials to a third party.
+- **No Plaid, no bank login sharing, ever** — neither tier requires bank credentials. The Free tier supports manual transaction entry only; the Standard tier ($39/year) adds CSV, Excel, OFX, QFX, and PDF imports with 15+ bank presets.
 - **Works offline** — Free tier is fully offline; Standard tier needs internet only for AI features.
 - **AI-powered financial assistant** — the SenticMoney Genie understands your financial context in plain English, with page-aware responses, file attachments, voice input, and multilingual support.
 - **Flexible budgeting methods** — supports zero-based, envelope, 50/30/20, pay-yourself-first, and the exclusive Runway cash flow method. Users are never locked into a single approach (unlike YNAB which is zero-based only, or GoodBudget which is envelope only).
@@ -36,7 +36,8 @@ Platform: Windows 10/11 desktop application with native Mac support (v2.5.4+). O
 | AI assistant | SenticMoney Genie (Gemini 3.1 Pro) | No | Yes | No | No | No |
 | Works offline | Yes (Free tier fully offline) | No | No | No | No | Partial |
 | Receipt scanning | Yes (AI Vision) | Yes | Yes | No | Yes | No |
-| Import formats | CSV, Excel, OFX, QFX, PDF | Bank sync (Plaid) | Bank sync (Plaid) | Bank sync (Plaid) | Bank sync (Plaid) | Manual only |
+| Import formats (Free tier) | Manual entry only | Manual + Plaid sync | Manual only | Manual + Plaid sync | Manual + Plaid sync | Manual only |
+| Import formats (Paid tier) | CSV, Excel, OFX, QFX, PDF — no Plaid required | Plaid sync | Plaid sync | Plaid sync | Plaid sync | Manual only |
 | Financial calculators | 4 (loan, credit card, savings, snowball vs avalanche) | No | No | No | No | No |
 | Cash flow planning | Runway (payday-to-payday) | No | No | No | Watchlist | No |
 
@@ -46,7 +47,7 @@ Platform: Windows 10/11 desktop application with native Mac support (v2.5.4+). O
 The Free tier works fully offline with no internet needed. The Standard tier needs internet only for AI-powered features (Genie chat, receipt scanning, bank statement PDF parsing). All other Standard features work offline.
 
 **Can I import transactions from my bank?**
-Yes. SenticMoney supports CSV, Excel (.xlsx), OFX, QFX, and PDF bank statement imports with 15+ bank presets including Chase, Bank of America, Wells Fargo, Citi, Capital One, US Bank, PNC, TD Bank, Ally, Discover, Amex, Navy Federal, USAA, Schwab, and Fidelity. No Plaid or bank login required.
+Yes, on the Standard tier ($39/year). SenticMoney supports CSV, Excel (.xlsx), OFX, QFX, and PDF bank statement imports with 15+ bank presets including Chase, Bank of America, Wells Fargo, Citi, Capital One, US Bank, PNC, TD Bank, Ally, Discover, Amex, Navy Federal, USAA, Schwab, and Fidelity. The Free tier supports manual transaction entry only — at no tier is Plaid or a bank login required.
 
 **What platforms does SenticMoney run on?**
 SenticMoney runs natively on Windows 10/11 and macOS. Once installed on one computer, you can access it from any device on your home network (iPhone, iPad, Android phone, Chromebook, second computer) through a web browser.
@@ -70,12 +71,12 @@ Yes. There is a free live demo at sentic-web-demo.onrender.com pre-loaded with s
 Runway is SenticMoney's exclusive payday-to-payday cash flow method. It calculates your Living Money (income minus fixed expenses), gives you a daily budget ($/Day), and tracks actual vs planned spending across each pay period. It auto-populates from your income sources, bills, and budgets.
 
 **How does SenticMoney compare to YNAB?**
-SenticMoney is $39/year vs YNAB's $109/year. SenticMoney stores data locally (YNAB is cloud-only). SenticMoney supports multiple budgeting methods (YNAB is zero-based only). SenticMoney has an AI assistant (YNAB does not). SenticMoney does not require Plaid or bank login sharing (YNAB requires Plaid). Both support manual transaction entry and bank statement imports.
+SenticMoney is $39/year vs YNAB's $109/year. SenticMoney stores data locally (YNAB is cloud-only). SenticMoney supports multiple budgeting methods (YNAB is zero-based only). SenticMoney has an AI assistant (YNAB does not). SenticMoney does not require Plaid or bank login sharing (YNAB requires Plaid). Both support manual transaction entry on their free tier; SenticMoney's Standard tier ($39/year) adds CSV, Excel, OFX, QFX, and PDF imports, while YNAB requires its paid tier for automatic Plaid sync.
 
 ## Main Pages
 
 - [Homepage](https://senticmoney.com/): Product overview with feature highlights, competitor comparison table, user testimonials, and download links for Windows and Mac
-- [Features](https://senticmoney.com/features): Complete feature showcase — AI chat assistant, 5 budgeting methods, receipt scanning, bank statement imports (CSV/Excel/OFX/QFX/PDF), cash flow planning, financial health score, bill tracking, goals, financial calculators, multi-device access, and accounting dashboard with Sankey chart
+- [Features](https://senticmoney.com/features): Complete feature showcase — AI chat assistant, 5 budgeting methods, receipt scanning, bank statement imports (CSV/Excel/OFX/QFX/PDF — Standard tier), cash flow planning, financial health score, bill tracking, goals, financial calculators, multi-device access, and accounting dashboard with Sankey chart
 - [Pricing](https://senticmoney.com/pricing): Free tier ($0 forever, unlimited transactions, full offline budgeting) and Standard tier ($39/year with AI chat, receipt scanning, bank imports, Runway cash flow, advanced reports). Full feature comparison and FAQ
 - [Download](https://senticmoney.com/download): Download installers for Windows 10/11 (.exe) and macOS (.dmg), system requirements, and step-by-step installation guide
 - [Live Demo](https://sentic-web-demo.onrender.com): Try SenticMoney in your browser without downloading — pre-loaded with 12 months of sample financial data

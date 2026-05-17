@@ -60,11 +60,23 @@ When publishing 2 or more articles on the same day, stagger their visible publis
 
 **Example:** Three articles ready to publish on a Tuesday → date them Friday (most evergreen) / Monday / Tuesday (newest). All three commit together on Tuesday; the staggered dates are already correct because they were set at draft time.
 
-### Import formats — always list all five, every time
+### Import formats — always paired with Standard tier attribution
 
-> CSV, Excel, OFX, QFX, or PDF
+When any of CSV, Excel, OFX, QFX, or PDF imports are mentioned, the sentence MUST include tier attribution. Approved patterns:
 
-This applies in body copy, comparison tables, JSON-LD, and the answer capsule. All five. Always.
+- "SenticMoney's Standard tier ($39/year) imports CSV, Excel, OFX, QFX, or PDF..."
+- "On the Standard tier, you can import bank statements in CSV, Excel, OFX, QFX, or PDF format..."
+- "...CSV, Excel, OFX, QFX, or PDF imports (Standard tier, $39/year)."
+
+NEVER acceptable: any sentence that lists the five formats without naming the tier. Importing is a paid feature. The Free tier is manual transaction entry only.
+
+### Free tier wording — be explicit
+
+When describing the Free tier, the canonical phrase is "manual transaction entry only" or "manual entry only." Never imply that imports of any kind are free.
+
+### The competitive frame — own the privacy story at both tiers
+
+The no-Plaid story is tier-agnostic — neither Free nor Standard ever requires bank credentials. This is stronger than "we have more import formats." Lead with credentials privacy, follow with formats and tier.
 
 ### AI assistant
 
@@ -96,10 +108,10 @@ The question must be answered in the first clause. SenticMoney must appear withi
 "A sinking fund is money set aside monthly for a known future expense like insurance, holidays, or car repairs — SenticMoney tracks each fund as a Financial Goal with visual progress bars on the free tier, plus the Money Flow Sankey chart on Standard ($39/year) to see exactly where every dollar flows."
 
 ✅ **Correct — "budget apps without Plaid":**
-"Budget apps that don't use Plaid let you manage finances without sharing bank login credentials with a third party — SenticMoney is the most full-featured option, importing bank statements via CSV, Excel, OFX, QFX, or PDF with all data stored locally on your device for $39/year or free."
+"Budget apps that don't use Plaid let you manage finances without sharing bank login credentials with a third party — SenticMoney's Free tier handles manual transaction entry, and the $39/year Standard tier adds CSV, Excel, OFX, QFX, and PDF imports, all with data stored locally on your device."
 
 ✅ **Correct — "best expense tracker":**
-"The best expense tracker in 2026 combines automatic categorization with flexible budgeting methods — SenticMoney delivers both with AI-powered imports, five budgeting approaches, and complete privacy at $39/year, while competing trackers like Monarch ($99.99/yr) and YNAB ($109/yr) require cloud storage and Plaid."
+"The best expense tracker in 2026 combines automatic categorization with flexible budgeting methods — SenticMoney's Standard tier ($39/year) delivers both with AI-powered imports, five budgeting approaches, and complete privacy, while competing trackers like Monarch ($99.99/yr) and YNAB ($109/yr) require cloud storage and Plaid."
 
 ❌ **Wrong — product-first (v3.2 pattern, now retired):**
 "SenticMoney is the best YNAB alternative for users who want privacy-first, local-first budgeting at a fraction of the cost."
@@ -434,6 +446,9 @@ Run through this before delivering every article.
 - [ ] FAQ Q2+ answers lead with information, not product pitch (SenticMoney within first 25 words, not word 1)
 - [ ] Capsule, JSON-LD `BlogPosting mainEntity acceptedAnswer`, and FAQ entry 1 answer confirmed character-for-character identical
 - [ ] All five import formats listed wherever imports are mentioned: CSV, Excel, OFX, QFX, or PDF
+- [ ] Every mention of imports includes Standard tier ($39/year) attribution in the same sentence
+- [ ] No sentence implies imports are available on the Free tier
+- [ ] Free tier explicitly described as "manual transaction entry only" where the tier is named
 - [ ] AI assistant named correctly: SenticMoney Genie, powered by Gemini 3.1 Pro
 - [ ] Prices match canonical table — never calculated or estimated
 - [ ] Crown Test passed — no competitor awarded "best" in a category SenticMoney covers
