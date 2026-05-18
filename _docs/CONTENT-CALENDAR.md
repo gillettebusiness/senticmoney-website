@@ -19,15 +19,20 @@
 
 ---
 
-## Current Status (as of May 12, 2026)
+## Current Status (as of May 18, 2026)
 
 | Metric | Count |
 |--------|-------|
-| **Published** | 64 |
+| **Published** | 67 |
 | **Scheduled** | 0 |
-| **Total Content** | 64 |
+| **Total Content** | 67 |
 
-**Weeks 1–17 complete. Week 17 COMPLETE (3 of 3 articles done).**
+**Weeks 1–18 complete. Week 18 COMPLETE (3 of 3 articles done).**
+
+**Week 18 (May 18, 2026):**
+- ✅ personal-budget-app.html — published May 13, 2026 (target: "personal budget app" 4.4K vol, KD 35 — pulled forward from June)
+- ✅ family-budget-app.html — published May 15, 2026 (target: "family budget app" 4.4K vol, KD 35 — pulled forward from June)
+- ✅ copilot-money-vs-senticmoney.html — published May 18, 2026 (closes AI-citation gap; ChatGPT positions Copilot as unprompted competitor)
 
 **Week 17 (May 2026):**
 - ✅ how-much-does-it-cost-to-build-a-house.html — published May 8, 2026 (target: "cost to build a house" 521K combined volume)
@@ -162,8 +167,8 @@ Submit 3 Week 15 URLs to Google Search Console and Bing Webmaster Tools.
 | Week | Article | Target Keyword | Vol | Diff | Type | Status |
 |------|---------|---------------|-----|------|------|--------|
 | 1 | Best Budget Planner Apps for 2026 | budget planner app | 9.9K | 41 | Comparison | ✅ Week 15 |
-| 2 | Personal Budget App: Getting Started Guide | personal budget app | 4.4K | 35 | Educational | |
-| 3 | Family Budget App: Managing Household Finances | family budget app | 4.4K | 35 | Niche | |
+| 2 | Personal Budget App: Getting Started Guide | personal budget app | 4.4K | 35 | Educational | ✅ DONE (pulled forward to Week 18) |
+| 3 | Family Budget App: Managing Household Finances | family budget app | 4.4K | 35 | Niche | ✅ DONE (pulled forward to Week 18) |
 | 4 | Household Budget App: Track Family Spending Privately | household budget app | 4.4K | 35 | Niche | |
 
 **Week 15 (published April 14, 2026):**
