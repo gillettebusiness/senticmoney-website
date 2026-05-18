@@ -99,9 +99,9 @@ Submit these URLs to Google Search Console for indexing:
 | https://senticmoney.com/blog/how-much-does-it-cost-to-build-a-house | Live | [x] | How Much Does It Cost to Build a House in 2026? A Complete Cost Breakdown - Submitted May 12 (Google + Bing) |
 | https://senticmoney.com/blog/how-much-does-a-wedding-cost | Live | [x] | How Much Does a Wedding Cost in 2026? Complete Breakdown by Category - Submitted May 12 (Google + Bing) |
 | https://senticmoney.com/blog/how-to-make-a-home-budget | Live | [x] | How to Make a Home Budget in 2026: A Complete Step-by-Step Guide - Submitted May 12 (Google + Bing) |
-| https://senticmoney.com/blog/personal-budget-app | Live | [ ] | Personal Budget App: A Complete Getting Started Guide for 2026 |
-| https://senticmoney.com/blog/family-budget-app | Live | [ ] | Family Budget App: Managing Household Finances Privately in 2026 |
-| https://senticmoney.com/blog/copilot-money-vs-senticmoney | Live | [ ] | Copilot Money vs. SenticMoney: head-to-head competitor comparison |
+| https://senticmoney.com/blog/personal-budget-app | Live | [x] | Personal Budget App: A Complete Getting Started Guide for 2026 - Submitted May 18 (Google + Bing) |
+| https://senticmoney.com/blog/family-budget-app | Live | [x] | Family Budget App: Managing Household Finances Privately in 2026 - Submitted May 18 (Google + Bing) |
+| https://senticmoney.com/blog/copilot-money-vs-senticmoney | Live | [x] | Copilot Money vs. SenticMoney: head-to-head competitor comparison - Submitted May 18 (Google + Bing) |
 
 ---
 
