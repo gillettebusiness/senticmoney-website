@@ -70,7 +70,7 @@ Submit these URLs to Google Search Console for indexing:
 | https://senticmoney.com/blog/financial-management-for-teens | Live | [x] | Teen finance guide - Submitted Jan 29 |
 | https://senticmoney.com/blog/how-to-create-a-monthly-budget | Live | [x] | Monthly budget step-by-step - Submitted Jan 29 |
 | https://senticmoney.com/blog/best-ways-to-budget-your-money | Live | [x] | 7 budgeting methods comparison - Submitted Jan 29 |
-| https://senticmoney.com/blog/is-ynab-worth-it | Live | [ ] | YNAB cost-benefit analysis |
+| https://senticmoney.com/blog/is-ynab-worth-it | Live | [x] | YNAB cost-benefit analysis — snippet rewrite (title/meta/capsule) May 19, re-submitted |
 | https://senticmoney.com/blog/couples-budgeting | Live | [ ] | Joint vs separate finances guide |
 | https://senticmoney.com/blog/budget-software-for-couples | Live | [ ] | Couples budget software comparison |
 | https://senticmoney.com/blog/free-financial-calculators | Live | [ ] | Free financial calculators feature article |
@@ -102,6 +102,14 @@ Submit these URLs to Google Search Console for indexing:
 | https://senticmoney.com/blog/personal-budget-app | Live | [x] | Personal Budget App: A Complete Getting Started Guide for 2026 - Submitted May 18 (Google + Bing) |
 | https://senticmoney.com/blog/family-budget-app | Live | [x] | Family Budget App: Managing Household Finances Privately in 2026 - Submitted May 18 (Google + Bing) |
 | https://senticmoney.com/blog/copilot-money-vs-senticmoney | Live | [x] | Copilot Money vs. SenticMoney: head-to-head competitor comparison - Submitted May 18 (Google + Bing) |
+
+---
+
+## Recent Updates
+
+| Date | URL | Change |
+|------|-----|--------|
+| 2026-05-19 | https://senticmoney.com/blog/is-ynab-worth-it | Snippet rewrite (title/meta/capsule) for CTR optimization. Re-submitted to GSC for re-crawl. |
 
 ---
 
