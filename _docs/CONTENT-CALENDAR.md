@@ -25,14 +25,17 @@
 |--------|-------|
 | **Published** | 67 |
 | **Scheduled** | 0 |
-| **Total Content** | 67 |
+| **Total Content** | 70 |
 
-**Weeks 1–18 complete. Week 18 COMPLETE (3 of 3 articles done).**
+**Weeks 1–18 complete. Week 18 COMPLETE (6 of 6 articles done).**
 
 **Week 18 (May 18, 2026):**
 - ✅ personal-budget-app.html — published May 13, 2026 (target: "personal budget app" 4.4K vol, KD 35 — pulled forward from June)
 - ✅ family-budget-app.html — published May 15, 2026 (target: "family budget app" 4.4K vol, KD 35 — pulled forward from June)
 - ✅ copilot-money-vs-senticmoney.html — published May 18, 2026 (closes AI-citation gap; ChatGPT positions Copilot as unprompted competitor)
+- ✅ how-to-budget-for-a-house.html — published May 26, 2026 (target: "how to budget for a house" house-buying cluster)
+- ✅ budget-app-for-self-employed.html — published May 27, 2026 (target: "budget app for self employed" / freelancer cluster)
+- ✅ budget-app-with-receipt-scanner.html — published May 29, 2026 (target: "budget app with receipt scanner")
 
 **Week 17 (May 2026):**
 - ✅ how-much-does-it-cost-to-build-a-house.html — published May 8, 2026 (target: "cost to build a house" 521K combined volume)
