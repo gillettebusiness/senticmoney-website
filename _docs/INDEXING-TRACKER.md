@@ -102,9 +102,9 @@ Submit these URLs to Google Search Console for indexing:
 | https://senticmoney.com/blog/personal-budget-app | Live | [x] | Personal Budget App: A Complete Getting Started Guide for 2026 - Submitted May 18 (Google + Bing) |
 | https://senticmoney.com/blog/family-budget-app | Live | [x] | Family Budget App: Managing Household Finances Privately in 2026 - Submitted May 18 (Google + Bing) |
 | https://senticmoney.com/blog/copilot-money-vs-senticmoney | Live | [x] | Copilot Money vs. SenticMoney: head-to-head competitor comparison - Submitted May 18 (Google + Bing) |
-| https://senticmoney.com/blog/how-to-budget-for-a-house | Live | [ ] | How to Budget for a House: Down Payment, Closing Costs, and Beyond |
-| https://senticmoney.com/blog/budget-app-for-self-employed | Live | [ ] | Best Budget App for Freelancers and the Self-Employed in 2026 |
-| https://senticmoney.com/blog/budget-app-with-receipt-scanner | Live | [ ] | Best Budget App with a Receipt Scanner in 2026 |
+| https://senticmoney.com/blog/how-to-budget-for-a-house | Live | [x] | How to Budget for a House: Down Payment, Closing Costs, and Beyond — Submitted May 29 (Google + Bing) |
+| https://senticmoney.com/blog/budget-app-for-self-employed | Live | [x] | Best Budget App for Freelancers and the Self-Employed in 2026 — Submitted May 29 (Google + Bing) |
+| https://senticmoney.com/blog/budget-app-with-receipt-scanner | Live | [x] | Best Budget App with a Receipt Scanner in 2026 — Submitted May 29 (Google + Bing) |
 
 ---
 
