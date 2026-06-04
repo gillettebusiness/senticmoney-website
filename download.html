@@ -1058,6 +1058,14 @@
             } else {
                 fetch(DOWNLOAD_RECORD_ENDPOINT, { method: 'POST', body: dlPayload, keepalive: true }).catch(function() {});
             }
+
+            // Google Ads conversion — fires on the REAL installer click, not the page visit.
+            // send_to value comes from the "Real Download (installer click)" conversion action.
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-1065282227/Lz3jCMadzrgcELPV-_sD'
+                });
+            }
         }
 
         function showPlatform(platform) {
