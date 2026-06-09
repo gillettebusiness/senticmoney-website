@@ -40,6 +40,8 @@ Queued audits with no fixed trigger date. Released into Section 1 when the liste
 | Article → download conversion audit | After portfolio CTR audit produces measurable CTR lift | Different bottleneck from snippet conversion. Measures click-to-download rate per landing page. Out of scope until SEO traffic is actually arriving. |
 | Download → paid conversion audit | After download volume becomes statistically meaningful | Product-side audit, not SEO. Free → Standard upgrade flow, in-app prompts, email nurture. Last in the sequence by design. |
 | URL-CONVENTIONS.md standardization | When LFS bandwidth permanent fix is shipped | Documented tech debt from week 16. Not audit-related but lives here because the work is queued and condition-triggered. Pre-condition: installer migration from LFS to GitHub Releases. |
+| Possible keyword cannibalization: `/blog/ynab-alternative` vs `/blog/best-ynab-alternatives-2026` | Resolve during the portfolio-wide CTR audit | Both pages target the ynab alternative(s) query cluster. Rank tracker 2026-06-06: "ynab alternative" position 51.4, "ynab alternatives" position 50.7, 0 clicks each — two pages splitting one query's signals, neither winning. Options: differentiate intent or consolidate with a 301. |
+| Priority optimization candidate: `/blog/budget-management-software-guide` | Next optimization session | GSC 28-day window ending 2026-06-06: "budget management software" 776 impressions (62% of site total), avg position 33.8, 0 clicks. First confirm in GSC that this page is the one ranking, then internal-linking pass and snippet review. |
 
 ---
 

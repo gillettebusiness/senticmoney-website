@@ -83,9 +83,30 @@ Each `PUBLISH-<batch>.md` instantiates these steps with the batch's specifics:
 9. CONTENT-CALENDAR.md — mark the batch complete.
 10. marketing_CLAUDE.md — update state (count, notable decisions).
 11. Commit + push to main (confirm the instruction file is not staged).
-12. Verify live after Render deploy + Cloudflare cache purge:
+12. Verify live after Render deploy — poll with cache-buster, cap at 3 minutes, then escalate
+    to the dashboard (see "Deploy verification" below). Checks per URL:
     `curl -sL -o /dev/null -w "%{http_code}" -A "Mozilla/5.0" https://senticmoney.com/blog/<slug>`
     and `curl -sL ... | tail -c 20` (expect `</html>`).
+
+## Deploy verification (lessons from 2026-06-09)
+
+- **Poll the origin with a cache-buster, and cap the wait.**
+  `curl -s "https://senticmoney-website.onrender.com/<path>?cb=$(date +%s)"`
+  Render serves static sites through its own CDN, so un-busted polls can return stale
+  content even after a successful deploy. If the origin still serves old content after
+  ~3 minutes of polling, stop polling and check the Render dashboard (Events tab).
+  Manual Deploy → Deploy latest commit is the fallback. Render deploys normally take
+  1-3 minutes but have been observed taking 30+.
+- **Cloudflare purge is usually unnecessary.** Site files are served with `s-maxage=300`,
+  so the edge refreshes itself within 5 minutes. For non-urgent changes, wait out the
+  TTL instead of purging.
+- **The CLI has no Render or Cloudflare credentials.** It can push to GitHub and poll
+  URLs, nothing more. Forcing a deploy or a purge is a manual dashboard action unless
+  the operator later creates a Render Deploy Hook and/or Cloudflare API token (operator
+  decision; secrets must live outside the repos).
+- **Wording for future runbooks:** deploy-verification steps should say "poll with
+  cache-buster, cap at 3 minutes, then escalate to the dashboard" rather than
+  open-ended polling.
 
 ## Standing constraints (carry into every PUBLISH-<batch>.md)
 
