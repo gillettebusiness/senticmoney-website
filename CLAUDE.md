@@ -4,6 +4,12 @@ This repo is the live marketing site for senticmoney.com. It auto-deploys to Ren
 
 ---
 
+## Current State
+
+- Index recovery launched 2026-06-09 (commits `d0a34b5`, `63200a2`) - 17 unindexed articles got an internal linking pass (25 links across 20 source articles). GSC URL Inspection submissions due manually: never-crawled 8 on 2026-06-10, crawled-not-indexed 10 on 2026-06-11 (lists in `C:\dev\INDEX-RECOVERY.md` Phase 2). Check-ins logged 2026-06-23 and 2026-07-09 in `_docs/AUDIT-SCHEDULE.md`.
+
+---
+
 ## AEO (Answer Engine Optimization) — Added 2026-04-14
 
 ### Root-Level AI Files
