@@ -88,7 +88,7 @@ Each `PUBLISH-<batch>.md` instantiates these steps with the batch's specifics:
     `curl -sL -o /dev/null -w "%{http_code}" -A "Mozilla/5.0" https://senticmoney.com/blog/<slug>`
     and `curl -sL ... | tail -c 20` (expect `</html>`).
 
-## Deploy verification (lessons from 2026-06-09)
+## Deploy verification
 
 - **Poll the origin with a cache-buster, and cap the wait.**
   `curl -s "https://senticmoney-website.onrender.com/<path>?cb=$(date +%s)"`
@@ -96,7 +96,7 @@ Each `PUBLISH-<batch>.md` instantiates these steps with the batch's specifics:
   content even after a successful deploy. If the origin still serves old content after
   ~3 minutes of polling, stop polling and check the Render dashboard (Events tab).
   Manual Deploy → Deploy latest commit is the fallback. Render deploys normally take
-  1-3 minutes but have been observed taking 30+.
+  1-3 minutes.
 - **Cloudflare purge is usually unnecessary.** Site files are served with `s-maxage=300`,
   so the edge refreshes itself within 5 minutes. For non-urgent changes, wait out the
   TTL instead of purging.
