@@ -126,3 +126,46 @@ Each `PUBLISH-<batch>.md` instantiates these steps with the batch's specifics:
 Content corrections and optional enhancements (e.g. competitor-fact updates, reciprocal
 cross-links) ship as their own commits, never folded into the publish ripple. The instruction
 file lists them under a "NOT part of this commit" heading so the CLI doesn't absorb them.
+
+## Publish ripple repo scoping (mandatory)
+
+Publish ripples are SPLIT BY REPO and each is run from INSIDE that repo - never from
+the dev root (C:\dev).
+
+- PUBLISH-<batch>.md is WEBSITE-REPO ONLY (senticmoney-website, branch main, Render
+  auto-deploys). Run it from inside C:\dev\senticmoney-website\. It covers the live
+  publish: blog/<slug>.html (already placed before the ripple), blog/index.html,
+  author/frank-d-campbell.html, sitemap.xml, llms.txt, _docs/INDEXING-TRACKER.md,
+  _docs/ARTICLE-STATUS.txt, then git add -A / commit / push.
+
+- Marketing-repo doc changes (ARTICLE-TEMPLATE.html, ARTICLE-WRITING-GUIDE.md,
+  LESSONS-LEARNED.md, PUBLISH-FLOW.md) go in a SEPARATE delta run from inside
+  C:\dev\senticmoney-marketing\ (branch master, no deploy).
+
+- NEVER run a ripple from C:\dev. The repos are different working trees on different
+  branches with different deploy behavior; `git add -A` at the dev root would span the
+  wrong scope and could push the wrong branch. Scoping inside one repo makes
+  `git add -A` mean exactly that repo's tree.
+
+- Every batch instruction file MUST state, in its header: which repo it is run from,
+  and the full list of files it touches.
+
+### Pre-commit HTML validation gate (mandatory)
+
+After editing ANY HTML in a ripple (blog/index.html, author/frank-d-campbell.html, an
+article, etc.) and BEFORE git add / commit, run these checks on each edited HTML file.
+Commit ONLY if all pass; if any fails, fix the file first.
+
+1. Tag balance - open `<i ` count MUST equal `</i>` count. An unclosed `<i>` cascades
+   italic and mis-nests the DOM, which silently breaks the font on everything below it:
+     echo "open: $(grep -oE '<i[ >]' FILE | wc -l)  close: $(grep -oE '</i>' FILE | wc -l)  (must be equal)"
+
+2. Zero backslash artifacts - a forward-to-back slash mangle (Windows path gremlin)
+   corrupts closing tags and hrefs (e.g. `<\i>`, `href="\author\..."`):
+     grep -oE '[^ ">]*\\[^ "<]*' FILE | wc -l    # must print 0
+
+3. Recommended: npx html-validate FILE
+
+Why this gate exists: the June 2026 batch shipped 3 blog cards with `<\i>` and
+`\author\...` mangling that broke the blog page font in production. Checks 1 and 2 would
+have caught it pre-commit.
