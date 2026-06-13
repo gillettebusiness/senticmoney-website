@@ -105,6 +105,9 @@ Submit these URLs to Google Search Console for indexing:
 | https://senticmoney.com/blog/how-to-budget-for-a-house | Live | [x] | How to Budget for a House: Down Payment, Closing Costs, and Beyond — Submitted May 29 (Google + Bing) |
 | https://senticmoney.com/blog/budget-app-for-self-employed | Live | [x] | Best Budget App for Freelancers and the Self-Employed in 2026 — Submitted May 29 (Google + Bing) |
 | https://senticmoney.com/blog/budget-app-with-receipt-scanner | Live | [x] | Best Budget App with a Receipt Scanner in 2026 — Submitted May 29 (Google + Bing) |
+| https://senticmoney.com/blog/household-budget-app | Live | [ ] | Household budget app guide - Published Jun 8 |
+| https://senticmoney.com/blog/bill-tracker-app | Live | [ ] | Bill tracker app, free-tier hook - Published Jun 10 |
+| https://senticmoney.com/blog/ai-personal-finance-assistant | Live | [ ] | AI personal finance assistant / Genie - Published Jun 12 |
 
 ---
 

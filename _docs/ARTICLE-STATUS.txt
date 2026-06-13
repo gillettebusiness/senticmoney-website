@@ -1,6 +1,6 @@
 SENTICMONEY BLOG - ARTICLE STATUS TRACKER
 ============================================
-Last Updated: May 29, 2026
+Last Updated: June 13, 2026
 
 This file tracks published vs scheduled articles.
 Update this file whenever you publish or schedule new content.
@@ -79,8 +79,11 @@ PUBLISHED ARTICLES (Live on senticmoney.com/blog)
 68. how-to-budget-for-a-house.html
 69. budget-app-for-self-employed.html
 70. budget-app-with-receipt-scanner.html
+71. household-budget-app.html
+72. bill-tracker-app.html
+73. ai-personal-finance-assistant.html
 
-Total Published: 70
+Total Published: 73
 
 ============================================
 SCHEDULED ARTICLES (In blog/scheduled/)
