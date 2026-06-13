@@ -138,9 +138,17 @@ the dev root (C:\dev).
   author/frank-d-campbell.html, sitemap.xml, llms.txt, _docs/INDEXING-TRACKER.md,
   _docs/ARTICLE-STATUS.txt, then git add -A / commit / push.
 
-- Marketing-repo doc changes (ARTICLE-TEMPLATE.html, ARTICLE-WRITING-GUIDE.md,
-  LESSONS-LEARNED.md, PUBLISH-FLOW.md) go in a SEPARATE delta run from inside
-  C:\dev\senticmoney-marketing\ (branch master, no deploy).
+- Canonical content/publish docs live in senticmoney-website/_docs/ on branch main -
+  including PUBLISH-FLOW.md, ARTICLE-TEMPLATE.html, LESSONS-LEARNED.md,
+  ARTICLE-WRITING-GUIDE.md, INDEXING-TRACKER.md, and ARTICLE-STATUS.txt (plus the other
+  _docs/ files confirmed by Test-Path). Edit them as a SEPARATE doc-only commit, scoped
+  to explicit file paths (never `git add -A`), kept apart from the PUBLISH-<batch>.md
+  publish ripple. Pushing triggers a Render rebuild, but _docs/ is not served, so live
+  pages are unchanged.
+
+- The senticmoney-marketing repo (branch master, no deploy) holds its OWN separate docs
+  (e.g. a growth/Google-Ads LESSONS-LEARNED.md under _state/) - a different file from the
+  website one. Do not conflate the two repos' docs.
 
 - NEVER run a ripple from C:\dev. The repos are different working trees on different
   branches with different deploy behavior; `git add -A` at the dev root would span the
