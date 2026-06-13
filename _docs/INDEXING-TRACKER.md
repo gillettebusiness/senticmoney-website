@@ -2,7 +2,7 @@
 
 Track pages pending Google Search Console indexing requests. Submit URLs daily within rate limits.
 
-**Last Updated:** 2026-05-29
+**Last Updated:** 2026-06-13
 
 ---
 
@@ -113,6 +113,8 @@ Submit these URLs to Google Search Console for indexing:
 | Date | URL | Change |
 |------|-----|--------|
 | 2026-05-19 | https://senticmoney.com/blog/is-ynab-worth-it | Snippet rewrite (title/meta/capsule) for CTR optimization. Re-submitted to GSC for re-crawl. |
+| 2026-06-10 | batch: 8 never-crawled blog articles | GSC URL Inspection - Request Indexing submitted for 8 previously-never-crawled articles. |
+| 2026-06-11 | batch: 10 crawled-not-indexed blog articles | GSC URL Inspection - Request Indexing submitted for 10 crawled-but-declined articles. |
 
 ---
 
