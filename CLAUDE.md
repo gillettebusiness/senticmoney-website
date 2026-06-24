@@ -13,14 +13,14 @@ This repo is the live marketing site for senticmoney.com. It auto-deploys to Ren
 ## AEO (Answer Engine Optimization) — Added 2026-04-14
 
 ### Root-Level AI Files
-- `llms.txt` — AI-optimized content index following the llms.txt spec (llmstxt.org). Curated summary, inline FAQ, comparison table, feature tiers, and top blog links. This is the "recommended reading list" for AI crawlers.
+- `llms.txt` — AI-optimized content index following the llms.txt spec (llmstxt.org). Curated summary, inline FAQ, comparison table, feature tiers, and the full blog catalog (every published article). This is the "recommended reading list" for AI crawlers.
 - `llms-full.txt` — Retired May 29, 2026. Maintain only `llms.txt`.
 - `robots.txt` — Allows all crawlers (including GPTBot, ClaudeBot, PerplexityBot, Google-Extended). Comments reference llms.txt files.
 
 ### Maintenance Rules
 - When features change, pricing changes, or new comparison blog posts are published: update `llms.txt` in the same commit.
 - The FAQ section in `llms.txt` should mirror the most common questions from the support page.
-- Blog list in `llms.txt` is curated to top ~25 highest-AEO-value articles. Not every blog post belongs here — prioritize comparison guides, privacy articles, and budgeting method guides over niche topic posts.
+- Blog list in `llms.txt` is the FULL published catalog — every published article appears exactly once (currently 75). The earlier "curate to top ~25" rule was evaluated and deliberately rejected: for a catalog of distinct articles, full coverage maximizes AI-crawler discovery, which is the file's purpose. Do not prune to a subset. (Parallels the May 29 2026 llms-full.txt retirement: one canonical, complete index.) Add every new article to llms.txt in the publish commit.
 - The comparison table in `llms.txt` is a primary citation source — keep competitor pricing and feature data current.
 
 ### Schema Markup (JSON-LD)
