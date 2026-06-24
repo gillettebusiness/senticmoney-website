@@ -38,8 +38,14 @@ These apply to every article, every time.
 | EveryDollar | ~$79.99/yr (Ramsey+) | $17.99/mo (~$216/yr) |
 | Quicken Simplifi | $71.88/yr | — (annual only) |
 | GoodBudget | Free / $80/yr | $8/mo (~$96/yr) |
+| Rocket Money | N/A (monthly only) | Free / ~$7-$14/mo (pay-what-you-want; volatile, re-verify, as of Jun 2026) |
+| DollarWise (Caleb Hammer) | N/A (monthly only) | No free tier / ~$9.99/mo after 3-day trial |
 
 Always show both annual and monthly. Never estimate. Never calculate from monthly rates.
+
+Rocket Money and DollarWise non-price facts (for comparison bodies; do not auto-add to every per-article table):
+- Rocket Money: bank-linking required (Plaid); mobile + web; focus is subscription cancellation and bill negotiation (35-60% success fee), not budgeting depth. Premium price is a pay-what-you-want sliding scale and changes - re-verify before each use.
+- DollarWise (Caleb Hammer's app, formerly Simpler Budget): iOS + Android, mobile-only; locked to the 50/30/20 rule; bank-linking required (Plaid / Mastercard Data Connect); no free tier (3-day trial, card required); AI is passive insights only, not a conversational assistant.
 
 **Common wrong prices to avoid:**
 - ❌ YNAB "$180/year" — that's monthly × 12, not the annual plan
@@ -59,6 +65,8 @@ When publishing 2 or more articles on the same day, stagger their visible publis
 - `INDEXING-TRACKER.md` "Submitted" date is separate from publish date and should always reflect the actual date the URL was submitted to GSC and Bing.
 
 **Example:** Three articles ready to publish on a Tuesday → date them Friday (most evergreen) / Monday / Tuesday (newest). All three commit together on Tuesday; the staggered dates are already correct because they were set at draft time.
+
+**Card ordering on blog/index.html and the author page is strictly newest-`datePublished`-first.** When a batch instruction file specifies card placement, express order by date (earliest date sits lowest in the list), never by naming which article goes "first" or "on top" - a position label can contradict the date-desc order and place a card wrong. If a position label and the dates ever disagree, the dates win.
 
 ### Import formats — always paired with Standard tier attribution
 
@@ -81,6 +89,11 @@ The no-Plaid story is tier-agnostic — neither Free nor Standard ever requires 
 ### AI assistant
 
 > **SenticMoney Genie**, powered by **Gemini 3.1 Pro**
+
+How Genie handles data (use this framing in any article that discusses Genie privacy): when Genie answers a question, SenticMoney generates an aggregated summary of your local data (totals, category breakdowns, trends, patterns) and sends only that summary to Gemini. Your raw transactions, bank credentials, and account numbers never leave your device, and Genie is entirely optional.
+
+- Never write the absolute claim "nothing ever leaves your device" about Genie. It is false: the aggregated summary does leave. Use the precise framing above.
+- Do NOT claim competitors lack an AI assistant. Conversational assistants are now common (Monarch and others added them in 2026). Genie's edge is the local/aggregated-summary privacy model and the $39/year price, not novelty.
 
 ### Answer capsule rules — enforced as a gate, not a guideline
 
@@ -392,7 +405,7 @@ Both `BlogPosting` and `FAQPage` in a single `@graph`. The `BlogPosting.mainEnti
 
 ## INTERNAL LINKING
 
-Every article must include 1–2 internal links to related published articles. Maximum 1 internal link per 300 words. Use bare slugs without `.html` — Render resolves them correctly.
+Every article must include 1–2 internal links to related published articles. Maximum 1 internal link per 300 words. Internal links to other blog articles use the form `/blog/<slug>`: the `/blog/` directory prefix is REQUIRED, and only the `.html` is removed. Link to `/blog/50-30-20-budget-rule-guide`, never `/50-30-20-budget-rule-guide` (a root path, which 404s). True root pages (features, pricing, download, support, etc.) use `/<slug>` with no prefix. The slugs listed in the table below are article identifiers; in an href each must be written as `/blog/<slug>`.
 
 | Article topic | Link to |
 |--------------|---------|
@@ -406,7 +419,7 @@ Every article must include 1–2 internal links to related published articles. M
 | Teen finance | `budget-advice-for-young-adults`, `how-to-budget-as-a-teenager` |
 | Competitor comparisons | `everydollar-vs-senticmoney`, `goodbudget-vs-sentic-money`, `quicken-simplifi-alternatives`, `monarch-money-alternative` |
 
-Internal links: no `target="_blank"`. Descriptive anchor text only. Bare slugs (no `.html` extension).
+Internal links: no `target="_blank"`. Descriptive anchor text only. Blog-to-blog links use `/blog/<slug>` (directory prefix required, no `.html`); root pages use `/<slug>`.
 
 ---
 
@@ -480,7 +493,8 @@ Run through this before delivering every article.
 - [ ] No 404 links — replaced or removed
 - [ ] mint.intuit.com not used anywhere
 - [ ] External links: `target="_blank" rel="noopener"`
-- [ ] Internal links: no `target="_blank"`, bare slugs (no `.html`)
+- [ ] Internal links: no `target="_blank"`; blog-to-blog links use `/blog/<slug>` (prefix required, no `.html`); root pages use `/<slug>`
+- [ ] Ran internal-link grep gate: every `href="/<article-slug>"` carries the `/blog/` prefix, AND every `/blog/<slug>` link resolves to a real file (no dead targets). Commands at bottom of this file.
 - [ ] 1–2 internal links to related published articles
 - [ ] 1–2 external authoritative links in body content
 
@@ -505,4 +519,21 @@ Run through this before delivering every article.
 
 ---
 
-*Version 3.4 — May 12, 2026. Adds: Multi-article batch publishing date stagger rule. Preserves all v3.3 guardrails. Supersedes v3.3.*
+## INTERNAL-LINK GREP GATE
+
+Run from the website repo root before any publish commit. All three must come back empty/clean:
+
+```bash
+# 1 — bare root-form links to real article slugs (the bug that shipped Jun 24)
+for s in $(ls blog/*.html | xargs -n1 basename | sed 's/.html//'); do grep -lE "href=\"/$s\"" blog/*.html; done | sort -u
+
+# 2 — dead /blog/ targets (typo / renamed / truncated slugs)
+grep -rhoE 'href="(https://senticmoney\.com)?/blog/[a-z0-9-]+' blog/ | sed -E 's#.*/blog/##' | sort -u | while read s; do [ -f "blog/$s.html" ] || echo "DEAD: /blog/$s"; done
+
+# 3 — convention violations (.html or trailing slash on internal /blog/ links)
+grep -rnE 'href="(https://senticmoney\.com)?/blog/[a-z0-9-]+(\.html|/)"' blog/
+```
+
+---
+
+*Version 3.5 — June 24, 2026. Adds: blog-to-blog internal links require the /blog/<slug> prefix, with a pre-publish internal-link grep gate; Genie aggregated-summary egress framing plus two never-claim guardrails; Rocket Money and DollarWise competitor data (canonical lookup table + non-price facts); card-order-by-date rule. Preserves all v3.4 guardrails. Supersedes v3.4.*

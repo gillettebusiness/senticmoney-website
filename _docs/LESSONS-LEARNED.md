@@ -9,6 +9,20 @@
 
 ---
 
+### 2026-06-24 — Internal-link integrity: forward + inverse + brand checks (count ≠ identity)
+- **Tried:** Two new comparison articles (rocket-money, caleb-hammer) shipped, then spot-checked. Found in-body blog-to-blog links written as `/<slug>` (root) instead of `/blog/<slug>`, 404ing. Root cause: the guide's "bare slugs" rule read as "strip to the slug," dropping the required `/blog/` prefix.
+- **Outcome:** Fixed 11 links across the 2 files (commit 1f42fa1). A forward grep (root-form links to existing slugs) confirmed the bug was isolated to those two files. An INVERSE grep (every `/blog/<slug>` link resolving to a real file) then surfaced 3 OTHER pre-existing dead links the forward check structurally could not see: a truncated `50-30-20-budget-rule` and two `everydollar-vs-cognito-money` rebrand leftovers (file renamed COG→SNT, inbound links never updated). Fixed those (commit 6473525). A final case-insensitive brand sweep (`cognito(money|fi)?`) across all .html/.txt/.xml came back empty — rebrand clean in rendered content; survivors had been slug-path-only, invisible to a brand-name grep.
+- **Lesson:** A count reconciles totals; a diff reconciles identity. Same pattern recurred with llms.txt (75=75 line-count vs a true 1:1 slug diff) and the rank-tracker reconcile. Run BOTH link directions plus a brand-name sweep — each catches a class the others cannot. Guardrail added to ARTICLE-WRITING-GUIDE: blog-to-blog hrefs use `/blog/<slug>`, plus a pre-publish internal-link grep gate.
+
+---
+
+### 2026-06-24 — Rank-tracker slug count ≠ published-article count
+- **Tried:** Rank tracker reported 81 tracked slugs while ARTICLE-STATUS.txt and llms.txt both showed 75 published. Spent time questioning whether the canonical docs were stale.
+- **Outcome:** Disk was ground truth: `ls blog/*.html` (minus index) = 75, and ARTICLE-STATUS vs llms.txt diffed to zero against each other. The tracker's 81 = 75 real articles + 6 non-article tracked URLs (alternate-canonical duplicates such as the www/features host-dupe, plus main site pages). No phantom articles, nothing stale in canon.
+- **Lesson:** Reconcile published count against DISK (`ls blog/*.html` excluding index.html), never against the rank tracker or GSC "known pages" (which also counts redirects, 404s, and canonical dupes). Tracker reconciliation is post-publish hygiene, not a publishing blocker.
+
+---
+
 ## External link durability - federal sites are archiving content (June 2026)
 
 A write-time HTTP 200 is NOT durable. The CFPB archived its entire blog
