@@ -108,8 +108,8 @@ Submit these URLs to Google Search Console for indexing:
 | https://senticmoney.com/blog/household-budget-app | Live | [ ] | Household budget app guide - Published Jun 8 |
 | https://senticmoney.com/blog/bill-tracker-app | Live | [ ] | Bill tracker app, free-tier hook - Published Jun 10 |
 | https://senticmoney.com/blog/ai-personal-finance-assistant | Live | [ ] | AI personal finance assistant / Genie - Published Jun 12 |
-| https://senticmoney.com/blog/best-rocket-money-alternatives-2026 | Live | [ ] | Comparison - Rocket Money alternative, AI assistant + privacy angle |
-| https://senticmoney.com/blog/caleb-hammer-budget-app | Live | [ ] | Comparison - DollarWise (Caleb Hammer app) vs SenticMoney |
+| https://senticmoney.com/blog/best-rocket-money-alternatives-2026 | Live | [x] | Comparison - Rocket Money alternative, AI assistant + privacy angle - Submitted Jun 24 (Google + Bing) |
+| https://senticmoney.com/blog/caleb-hammer-budget-app | Live | [x] | Comparison - DollarWise (Caleb Hammer app) vs SenticMoney - Submitted Jun 24 (Google + Bing) |
 
 ---
 
