@@ -65,7 +65,7 @@ slugs, diff against ARTICLE-STATUS.txt, and cross-check the count in marketing C
 Reconcile any gap as part of the next publish. The lesson is not "the tracker lags reality"
 — it is "every count-bearing file can sit at a different number, so verify against disk."
 
-## The 12-step ripple (template)
+## The 13-step ripple (template)
 
 Each `PUBLISH-<batch>.md` instantiates these steps with the batch's specifics:
 
@@ -87,24 +87,18 @@ Each `PUBLISH-<batch>.md` instantiates these steps with the batch's specifics:
     to the dashboard (see "Deploy verification" below). Checks per URL:
     `curl -sL -o /dev/null -w "%{http_code}" -A "Mozilla/5.0" https://senticmoney.com/blog/<slug>`
     and `curl -sL ... | tail -c 20` (expect `</html>`).
-
-### Post-publish: add to the rank tracker (separate repo)
-
-The website publish ripple does NOT touch the rank-tracker repo - new articles
-are NOT auto-discovered. After an article is live and submitted:
-
-1. In `senticmoney-rank-tracker`, add the article's target keywords to
-   `keywords.json` - one object per keyword, keys in this order:
-   `keyword` / `article` (the H1) / `url` (`/blog/<slug>`) / `targetVolume` /
-   `targetDifficulty` / `type` / `status` ("published"). Include the terms the
-   article targets, especially any competitor/brand terms FUNNEL-FEEDBACK.md
-   flags as drawing paid interest. Backfill targetVolume/targetDifficulty from
-   Keyword Planner; 0 is an acceptable placeholder and does not affect tracking.
-2. Run the rankings fetch (`fetch-rankings.js` / `fetch-weekly.bat`).
-3. Commit in the rank-tracker repo (scoped). New rows read "Not ranking" until
-   GSC indexes the page - expected; the point is they are now tracked.
-
-Skip this and the article is invisible to the rank tracker indefinitely.
+13. Add to the rank tracker (separate repo). The publish ripple does NOT touch
+    senticmoney-rank-tracker — new articles are not auto-discovered. After the
+    page is verified live (step 12) and submitted (step 8):
+    a. In senticmoney-rank-tracker, add the article's target keywords to
+       keywords.json — one object per keyword: keyword / article (H1) /
+       url (/blog/<slug>) / targetVolume / targetDifficulty / type /
+       status "published". Include competitor/brand terms FUNNEL-FEEDBACK.md
+       flags as drawing paid interest. targetVolume/targetDifficulty may be 0
+       (backfill from Keyword Planner; does not affect tracking).
+    b. Run the rankings fetch (fetch-rankings.js / fetch-weekly.bat).
+    c. Commit in the rank-tracker repo (scoped). New rows read "Not ranking"
+       until GSC indexes the page — expected; the point is they are now tracked.
 
 ## Deploy verification
 
