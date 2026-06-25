@@ -16,10 +16,10 @@
 
 ---
 
-### 2026-06-24 — Rank-tracker slug count ≠ published-article count
-- **Tried:** Rank tracker reported 81 tracked slugs while ARTICLE-STATUS.txt and llms.txt both showed 75 published. Spent time questioning whether the canonical docs were stale.
-- **Outcome:** Disk was ground truth: `ls blog/*.html` (minus index) = 75, and ARTICLE-STATUS vs llms.txt diffed to zero against each other. The tracker's 81 = 75 real articles + 6 non-article tracked URLs (alternate-canonical duplicates such as the www/features host-dupe, plus main site pages). No phantom articles, nothing stale in canon.
-- **Lesson:** Reconcile published count against DISK (`ls blog/*.html` excluding index.html), never against the rank tracker or GSC "known pages" (which also counts redirects, 404s, and canonical dupes). Tracker reconciliation is post-publish hygiene, not a publishing blocker.
+### 2026-06-24 - Rank tracker is a hand-maintained keyword list, not an article/slug count
+- **Tried:** Rank tracker reported 81 tracked entries while ARTICLE-STATUS.txt and llms.txt showed 75 published. Initially inferred "81 = 75 articles + 6 non-article URLs (canonical dupes + site pages)" without inspecting the tracker's source.
+- **Outcome:** Inspecting `keywords.json` (in the separate `senticmoney-rank-tracker` repo) corrected that: the tracker is a HAND-MAINTAINED target-keyword list, not a slug list and not GSC-derived. It held 81 KEYWORDS mapped across the ~73-article pre-batch catalog - several articles carry multiple keywords (e.g. `50 30 20 rule` + `50/30/20 budget`, `emergency fund` + `how to build emergency fund`), and there are NO site-page rows. The two June-24 articles were absent simply because nothing auto-adds them; their keywords were added by hand (81 -> 87).
+- **Lesson:** Two things. (1) Reconcile published count against DISK (`ls blog/*.html` minus index.html), never the rank tracker - it is a different unit (curated target keywords, many-to-one with articles). (2) CROSS-REPO GAP: the website publish ripple does not touch `senticmoney-rank-tracker`. Every new article needs its target keywords hand-added to `keywords.json` plus a fetch, as an explicit post-publish step. Codified in PUBLISH-FLOW.md. Earlier-session inference about the "+6" composition was wrong because it reasoned from counts instead of opening the source file - same count-vs-identity lesson, one level up.
 
 ---
 
